@@ -29,7 +29,7 @@
   - [ ] Must be able to navigate to the Pokémon details page from the list.
   - [ ] Must be able to favorite the Pokémon.
   - [ ] Must display type(s) for the Pokémon and use a unique color for each type.
-  - [ ] Pokémon detail tabs should be swipeable left and right.
+  - [ ] Pokémon detail tabs, meta data, stats and evolution chain, should be swipeable left and right. (using [React Native TabView](https://github.com/react-navigation/react-navigation/tree/main/packages/react-native-tab-view) for example)
 - [ ] Favorites list is displayed in a FlatList.
   - [ ] Must be able to navigate to the Pokémon details page from the favorites list.
   - [ ] Must be able to unfavorite the Pokémon.
@@ -50,7 +50,7 @@
 - [ ] Uses Typescript with no TS errors.
 - [ ] Uses ESLint with no ESLint errors. (ideally use [React Compiler Linter](https://docs.expo.dev/guides/react-compiler/#enabling-the-linter))
 - [ ] Uses Separation of Concerns (determine a project structure that follows this principle).
-- [ ] Expo Font is used to implement [the font](./assets/fonts.zip).
+- [ ] [Expo Font](https://docs.expo.dev/develop/user-interface/fonts/) is used to implement [the font](./assets/fonts.zip).
 
 
 ### Optional items
@@ -58,7 +58,7 @@ Each optional item is worth 1 extra point.
 
 - [ ] Use of animations (e.g. loading in UI elements).
 - [ ] Dark mode support (making use of theming).
-- [ ] Pokémon list is paginated and infinite scroll is used.
+- [ ] Pokémon [list is paginated](https://tanstack.com/query/v4/docs/framework/react/guides/infinite-queries), fetch 50 items at the time, and [infinite scroll](https://archive.reactnative.dev/docs/0.8/flatlist#onendreached) is used. Tip use infinite queries from Tanstack Query and the `onEndReached` prop from the FlatList component.
 - [ ] Clean Typescript: no use of `any`, typecasting `as SomeType`, or TS ignore comments.
 - [ ] Pixel Perfect Design on either iOS or Android.
 - [ ] No bugs, console errors and use of console.log.
