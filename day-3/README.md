@@ -2,11 +2,11 @@
 
 ## Slide decks
 
-- [Course 3 - Agenda](https://kevinvandenhoek.github.io/inholland-react-native-course-3/slides/course-3.html)
-- [Theming](https://kevinvandenhoek.github.io/inholland-react-native-course-3/slides/theming.html)
-- [Project Structure](https://kevinvandenhoek.github.io/inholland-react-native-course-3/slides/project-structure.html)
-- [Dependencies](https://kevinvandenhoek.github.io/inholland-react-native-course-3/slides/dependencies.html)
-- [Use of AI](https://kevinvandenhoek.github.io/inholland-react-native-course-3/slides/use-ai.html)
+- [Course 3 - Agenda](https://kevinvandenhoek.github.io/inholland-react-native-course/day-3/slides/course-3.html)
+- [Theming](https://kevinvandenhoek.github.io/inholland-react-native-course/day-3/slides/theming.html)
+- [Project Structure](https://kevinvandenhoek.github.io/inholland-react-native-course/day-3/slides/project-structure.html)
+- [Dependencies](https://kevinvandenhoek.github.io/inholland-react-native-course/day-3/slides/dependencies.html)
+- [Use of AI](https://kevinvandenhoek.github.io/inholland-react-native-course/day-3/slides/use-ai.html)
 
 
 ## End Assignment

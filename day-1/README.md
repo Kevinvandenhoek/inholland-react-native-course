@@ -1,11 +1,11 @@
 # React Native Course - 1
 
 ## Slide decks
-- [Brief History of Hybrid Development](https://kevinvandenhoek.github.io/inholland-react-native-course-1/slides/brief-history-of-hybrid-development.html)
+- [Brief History of Hybrid Development](https://kevinvandenhoek.github.io/inholland-react-native-course/day-1/slides/brief-history-of-hybrid-development.html)
 
 ## Homework
 - Start the Pokédex app project:
-    - Complete all four exercises: [Excercises](./excercises/README.md)
+    - Complete all four exercises: [Excercises](./exercises/README.md)
     - Add a search functionality to the Pokédex app:
         - Checkout the [Figma file](https://www.figma.com/design/dsgGXcu5WELIvRW90m5308/Pokemon-Code-Challenge?node-id=1-2&t=YPvOeo8ucY720wJ5-4).
         - Add a search bar to the Pokédex app using the [`TextInput` component](https://reactnative.dev/docs/textinput).
