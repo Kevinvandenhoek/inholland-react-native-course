@@ -24,7 +24,7 @@ Datum: vr 2 okt 2026, ~4 uur.
 | 2:55 | Pauze | 10 min |
 | 3:05 | Debuggen zonder en met AI: React Native DevTools (`j`), netwerk-tab. Dan agent mode: taak afbakenen, context geven via `copilot-instructions.md`, diff reviewen. Tot slot cognitive debt: met een agent gaat het snel en verlies je snel het overzicht; daarom altijd navragen. | slides, 20 min |
 | 3:25 | **Oefening 4 – Agent mode.** A: `copilot-instructions.md` schrijven (stack, mappen, regels; ~10 regels). B: agent laat een Share-knop op de detailpagina maken. Elke regel lezen, lint en tsc, testen op telefoon. C: agent laat een fout oplossen die je nog hebt; geen fout? Gebruik de bug uit de oefening. Tijd op? C wordt huiswerk. D: **vraag het na**, altijd in de les: drie vragen aan de agent over de Share-code, antwoorden in eigen woorden in `docs/dag-2.md`. | doen, 30 min |
-| 3:55 | Afronding, huiswerk. Sjabloon voor het idee-briefje uitreiken en kort toelichten. | 5 min |
+| 3:55 | Afronding, huiswerk. Keuze eindopdracht: startidee melden in Teams, of eigen idee via het idee-briefje. Sjabloon uitreiken en kort toelichten. | 5 min |
 
 Slides max 20 minuten achter elkaar: klopt. Volle dag; oefening 4C mag in het huiswerk.
 
@@ -63,7 +63,7 @@ Sjabloon idee-briefje: `day-2/templates/idea.md`, max tien regels: idee, kernact
 ## Huiswerk (dag 2 → 3, vakantie)
 
 - Les-app af tot het contract: Query, favorieten in SQLite, loading/error, Share. Lint en tsc schoon.
-- Idee-briefje voor de eindopdracht: sjabloon `day-2/templates/idea.md`, max tien regels. Vóór het einde van de vakantie in Teams. Kevin geeft één ronde korte feedback, dag 3 keurt hij definitief goed. Wie geen eigen idee heeft, vult het sjabloon in voor een startidee. Meer huiswerk is er niet: het is vakantie.
+- Idee-briefje voor de eindopdracht: sjabloon `day-2/templates/idea.md`, max tien regels. Vóór het einde van de vakantie in Teams. Kevin geeft één ronde korte feedback, dag 3 keurt hij definitief goed. Wie een startidee kiest meldt alleen welk, in Teams. Meer huiswerk is er niet: het is vakantie.
 - Wie oefening 4C niet af had: bug laten fixen door de agent.
 
 ## Open punten

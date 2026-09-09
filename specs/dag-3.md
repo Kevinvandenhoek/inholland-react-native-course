@@ -13,7 +13,7 @@ Datum: vr 23 okt 2026, ~4 uur. Na de vakantie.
 
 | Tijd | Blok | Vorm |
 |---|---|---|
-| 0:00 | Terugblik. Ideeënrondje: iedereen zegt in één zin zijn idee. Kevin heeft de briefjes in de vakantie gelezen en feedback gegeven; nu de definitieve goedkeuring. Wie niets heeft: een startidee. | gesprek, 20 min |
+| 0:00 | Terugblik. Ideeënrondje: iedereen zegt in één zin zijn idee. Kevin heeft de briefjes van de eigen ideeën in de vakantie gelezen en feedback gegeven; nu de definitieve goedkeuring. Wie niets heeft: een startidee. | gesprek, 20 min |
 | 0:20 | Projectstructuur (feature-based, bike shedding) en dependencies (geldig, compatibel, gezond). | slides, 20 min |
 | 0:40 | **Oefening 1 – Eigen repo.** Nieuwe GitHub-repo vanuit de les-app of leeg Expo-project. Mappen naar features. `copilot-instructions.md` bijwerken voor het eigen product. | doen, 30 min |
 | 1:10 | Pauze | 10 min |
@@ -51,7 +51,7 @@ Templates in `day-3/templates/`: `product.md`, `copilot-instructions.md`, `toeli
 
 ## day-3/README.md
 
-De oude eindopdracht (checklist, deadline 2 november 2025) wordt vervangen door de nieuwe opdracht uit [01-toetsing.md](01-toetsing.md), in het Engels: startideeën (na de brainstorm), API-keuze, technische kern, deliverables, drie competenties en cijferopbouw, inleveren. Templates gelinkt.
+De oude eindopdracht (checklist, deadline 2 november 2025) wordt vervangen door de nieuwe opdracht uit [01-toetsing.md](01-toetsing.md), in het Engels: twee startideeën met hun lijst (bijlage A en B), eigen idee met voorwaarden, technische kern, deliverables, drie competenties en cijferopbouw, inleveren. Templates gelinkt. Figma-link en `assets/fonts.zip` blijven.
 
 ## Vervalt uit Levi's materiaal
 
@@ -65,7 +65,6 @@ Studenten werken zelfstandig door tot de deadline. Geen lesmoment meer. Vragen o
 ## Open punten
 
 - ❓ Deadline.
-- ❓ Startideeën na de brainstorm (toetsing §2); daarna README en slides bijwerken.
 - ❓ "Levi, 2025"-bronnen in project-structure en use-ai.
 - Exportscript en beoordelingsskill moeten af vóór 23 okt: [02-tooling.md](02-tooling.md), nog te schrijven.
 

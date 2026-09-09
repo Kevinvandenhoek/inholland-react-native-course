@@ -58,7 +58,7 @@ Vragen en twijfels over AI in het algemeen (werk, betrouwbaarheid, wat leer ik n
 ## 5. De app
 
 - In de les: Pokédex op basis van PokeAPI en het Figma-design. De bestaande oefeningen blijven bruikbaar.
-- Eindopdracht: eigen product op live data uit een publieke API. PokeAPI is de standaard; een andere API mag als hij zonder inlog of sleutel werkt. Uitwerking in `01-toetsing.md`.
+- Eindopdracht: app op live data uit PokeAPI. Twee startideeën met vaste lijst (Pokédex volgens Figma-design, battle simulator volgens de spelregels), of een eigen idee met eigen specs en design, ook op een andere API zonder inlog of sleutel. Uitwerking in `01-toetsing.md`.
 
 Staat van de les-app aan het eind van elke dag (contract tussen de dagen):
 
@@ -104,4 +104,4 @@ Verschuivingen ten opzichte van Levi's materiaal, om dag 3 te ontlasten:
 - Dev tools (Rozenite, Proxyman) op dag 2 ingekort; agent-debugging neemt een deel over.
 - "Use of AI" is geen losse sessie meer maar de rode draad (§4); de discussie zelf hoort bij de afsluiting van dag 3.
 
-Huiswerk: tussen alle dagen alleen "les-app afmaken tot het contract van §5". Dag 2 → 3 is vakantie; daar komt alleen het **idee-briefje** bij: hooguit tien regels volgens een sjabloon (idee, kernactie, welke API, drie tot vijf user stories van één zin). Vóór het einde van de vakantie in Teams. Kevin geeft één ronde korte feedback, op dag 3 keurt hij definitief goed. De spec zelf wordt op dag 3 geschreven.
+Huiswerk: tussen alle dagen alleen "les-app afmaken tot het contract van §5". Dag 2 → 3 is vakantie; daar komt alleen de keuze bij. Startidee: even melden in Teams. Eigen idee: een **idee-briefje** van hooguit tien regels volgens een sjabloon (idee, kernactie, welke API, drie tot vijf user stories van één zin). Vóór het einde van de vakantie in Teams. Kevin geeft één ronde korte feedback, op dag 3 keurt hij definitief goed. De spec zelf wordt op dag 3 geschreven.

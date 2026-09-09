@@ -15,21 +15,20 @@ Toetsing is op afstand. Er is geen demo op locatie.
 
 ## 2. De opdracht
 
-Bouw een mobiele app op live data uit een publieke API. [PokeAPI](https://pokeapi.co/) is de standaard. Een andere API mag als hij publiek is, zonder inlog of API-sleutel werkt, en genoeg data heeft voor 3–6 user stories. Wat de app doet, bepaal je zelf. Kies een startidee of kom met een eigen idee:
+Bouw een mobiele app op live data uit [PokeAPI](https://pokeapi.co/). Kies één van twee startideeën, of kom met een eigen idee.
 
-1. **Pokédex** — zoeken, details, favorieten (het klassieke idee, met het Figma-design).
-2. **Battle game** — kies Pokémon, vecht op basis van stats en types.
-3. **Tekstavontuur** — een verhaal waarin Pokémon-data (locaties, soorten, evoluties) de keuzes bepaalt.
+**Startidee 1: Pokédex.** De les-app afgemaakt en uitgebreid volgens het [Figma-design](https://www.figma.com/design/dsgGXcu5WELIvRW90m5308/Pokemon-Code-Challenge). Vaste lijst met eisen, streng op design. Zie bijlage A.
 
-❓ De startideeën worden herzien (brainstorm volgt). Pokédex ligt te dicht bij de les-app, tekstavontuur is te vaag. Ze mogen ook op een andere API dan PokeAPI.
+**Startidee 2: Battle simulator.** Kies twee Pokémon en laat ze vechten volgens de echte spelregels: typetabel uit de API, officiële damage-formule, beurten op snelheid. Eigen design. Zie bijlage B.
 
-Goedkeuring in twee stappen. Aan het eind van dag 2 krijgt elke student een sjabloon voor een **idee-briefje** van hooguit tien regels: idee, kernactie, welke API, drie tot vijf user stories van één zin. Dat briefje staat vóór het einde van de vakantie in Teams. Kevin geeft één ronde korte feedback, op dag 3 keurt hij definitief goed. De optie wordt op dag 0 al genoemd, zodat studenten erover kunnen nadenken. Na dag 3 mag je altijd nog terug naar een startidee.
+**Eigen idee.** Mag, op PokeAPI of op een andere API die publiek is, zonder inlog of sleutel werkt, en genoeg data heeft voor 3–6 user stories. Voorwaarden:
+- live data uit de API, geen gedownloade lijst;
+- voldoet aan de technische kern (§3);
+- één duidelijke kernactie voor de gebruiker (zoeken, vechten, plannen, verzamelen, ...);
+- haalbaar: 3–6 user stories, niet meer;
+- eigen specs (`specs/product.md`, §4) en eigen design: een schets per scherm is genoeg, geen Figma nodig.
 
-Een eigen idee moet:
-- live data uit de API gebruiken, geen gedownloade lijst;
-- aan de technische kern (§3) voldoen;
-- één duidelijke kernactie hebben voor de gebruiker (zoeken, vechten, kiezen, verzamelen, ...);
-- haalbaar zijn: 3–6 user stories, niet meer.
+**Goedkeuring.** Wie een startidee kiest meldt dat in Teams, klaar. Een eigen idee gaat in twee stappen. Aan het eind van dag 2 krijgt elke student een sjabloon voor een **idee-briefje** van hooguit tien regels: idee, kernactie, welke API, drie tot vijf user stories van één zin. Dat briefje staat vóór het einde van de vakantie in Teams. Kevin geeft één ronde korte feedback, op dag 3 keurt hij definitief goed. De optie wordt op dag 0 al genoemd, zodat studenten erover kunnen nadenken. Na dag 3 mag je altijd nog terug naar een startidee.
 
 ## 3. Technische kern (verplicht, geldt voor elk product)
 
@@ -42,7 +41,7 @@ Een eigen idee moet:
 - [ ] TypeScript zonder errors. ESLint zonder errors.
 - [ ] Logische projectstructuur: UI, data en logica staan niet door elkaar.
 
-Vervallen als verplicht: TabView, Expo Font, FlatList/ScrollView. Die horen bij één specifiek product, niet in een vrije opdracht. Expo Font staat bij optioneel (§6).
+Dit is de kern voor elk product. De startideeën hebben daarbovenop hun eigen lijst (bijlage A en B). TabView, Expo Font en FlatList staan daarom alleen in bijlage A, niet hier. Voor een eigen idee is Expo Font optioneel (§6).
 
 ## 4. Wat je inlevert
 
@@ -51,7 +50,7 @@ Eén GitHub-repo met:
 | Onderdeel | Wat | Toetst |
 |---|---|---|
 | De app | De code, draaiend in Expo Go | Product |
-| `specs/product.md` | Wat de app doet: doel, 3–6 user stories met acceptatiecriteria, welke API en welke data | Werkwijze |
+| `specs/product.md` | Wat de app doet: doel, 3–6 user stories met acceptatiecriteria, welke API en welke data. Bij een startidee neem je de lijst uit de bijlage over als user stories | Werkwijze |
 | `.github/copilot-instructions.md` | Wat je de agent hebt verteld over je project | Werkwijze |
 | GitHub Issues | Elke taak een issue, gesloten via commits (`closes #12`) | Werkwijze |
 | `chat-history/` | Kopie van je Copilot-chatmap uit VS Code (zie §5) | Werkwijze |
@@ -97,8 +96,8 @@ Optioneel, +1 per item:
 - Dark mode via theming.
 - Paginering met infinite scroll.
 - Clean TypeScript: geen `any`, geen `as`, geen `@ts-ignore`.
-- Pixel-perfect design (bij Pokédex) of eigen design met consistente stijl.
-- Eigen font via Expo Font.
+- Pixel-perfect design (Pokédex) of eigen design met consistente stijl (battle, eigen idee).
+- Eigen font via Expo Font (bij Pokédex al verplicht, telt daar niet).
 - Localisatie.
 - Geen bugs, geen console errors.
 
@@ -137,8 +136,9 @@ Elk verplicht item → waar geleerd → waar geoefend. Volgens het hoog-over pla
 |---|---|---|
 | Expo Go | dag 0 | dag 0 |
 | VS Code + Copilot Student werkend | vooraf (stappenplan) | vooraf, check dag 0 |
-| Eigen idee | dag 0 (aangekondigd), dag 2 (sjabloon idee-briefje) | vakantie: briefje in Teams, feedback Kevin, goedkeuring dag 3 |
-| API-keuze (publiek, zonder sleutel) | dag 2 (bij TanStack Query) | idee-briefje |
+| Startideeën en eigen idee | dag 0 (aangekondigd), dag 2 (sjabloon idee-briefje) | vakantie: keuze of briefje in Teams, feedback Kevin, goedkeuring dag 3 |
+| API-keuze (publiek, zonder sleutel, alleen eigen idee) | dag 2 (bij TanStack Query) | idee-briefje |
+| Typetabel en damage-formule (alleen battle) | niet in de les; bijlage B geeft de bronnen | eindopdracht |
 | Expo Router | dag 1 | dag 1 |
 | Theming | dag 1 | dag 1 |
 | ESLint | dag 1 | dag 1 t/m 3 (aan vanaf het begin) |
@@ -161,3 +161,56 @@ Geen item staat meer op "nergens". Zodra een dag-spec hiervan afwijkt, eerst dez
 ## 9. Let op
 
 - **Privacy.** Student-repos en chatgeschiedenis zijn persoonsgegevens. Afspraak: het script exporteert alleen de chats van het projectmap zelf, niets anders. Studenten horen op dag 0 dát hun chatgeschiedenis wordt beoordeeld en waarop. Kevin acht dit daarmee voldoende; niet apart bij InHolland getoetst.
+
+## Bijlage A. Startidee Pokédex
+
+Grotendeels de lijst van vorig jaar. Wat in de les al gebouwd is staat er ook in: het moet af en volgens design zijn. Design: het Figma-bestand, streng gevolgd (kleuren per type, font, spacing, iconen).
+
+Lijst
+- [ ] Lijst van alle Pokémon in een FlatList, live uit de API.
+- [ ] Zoeken op naam.
+- [ ] Gepagineerd laden met infinite scroll (50 per keer).
+
+Detail
+- [ ] Vanuit lijst en favorieten naar detail.
+- [ ] Naam, nummer, afbeelding, types met de typekleur uit het design.
+- [ ] Drie tabs, swipebaar (bijvoorbeeld React Native TabView): over, stats, evolutielijn.
+- [ ] Evolutielijn live uit de API, klikbaar naar het volgende detail.
+- [ ] Favoriet maken en weer weghalen.
+- [ ] Delen via de Share API.
+
+Favorieten
+- [ ] Eigen scherm, bewaard in SQLite, blijft na herstart.
+- [ ] Lege staat als er nog niets is.
+
+Overig
+- [ ] Loading- en error-state bij lijst, detail en evolutielijn.
+- [ ] Het font uit het design via Expo Font (`day-3/assets/fonts.zip`).
+
+Native functie voor de kern (§3): Share. Optioneel (§6): animaties, dark mode, localisatie, pixel-perfect.
+
+## Bijlage B. Startidee Battle simulator
+
+Eigen design; het Figma-bestand heeft geen battle-scherm. Houd het simpel: twee Pokémon tegenover elkaar, HP-balken, een log van de beurten.
+
+Opzet
+- [ ] Kies twee Pokémon (zoeken of willekeurig), live uit de API.
+- [ ] Beide op hetzelfde level (bijvoorbeeld 50), stats uit de API.
+
+Gevecht
+- [ ] Beurten op volgorde van speed; gelijk is willekeurig.
+- [ ] Elke beurt een aanval met een echte move van die Pokémon uit de API (power, type, accuracy). Geen move met power? Kies er een die het wel heeft.
+- [ ] Damage volgens de officiële formule (Bulbapedia: "Damage", generatie V en later): level, attack/defense of special attack/special defense, power, random 85–100%, STAB ×1,5.
+- [ ] Type-effectiviteit uit de API (`/type/{id}`, `damage_relations`), niet hardgecodeerd. Beide types van de verdediger tellen.
+- [ ] Zichtbaar in de UI: "super effective", "not very effective", "no effect", raak of mis.
+- [ ] Trilling (haptics) bij een treffer.
+- [ ] Winnaar als een HP op nul staat.
+
+Geschiedenis
+- [ ] Elk gevecht bewaard in SQLite: wie, wie, winnaar, aantal beurten. Blijft na herstart.
+- [ ] Scherm met de geschiedenis en een lege staat.
+
+Overig
+- [ ] Loading- en error-state bij zoeken, laden van Pokémon, moves en types.
+
+Native functie voor de kern (§3): haptics. Buiten scope, bewust: abilities, items, statuseffecten, weer, meerdere Pokémon per kant. Wie dat toch bouwt: eerst de lijst af.
