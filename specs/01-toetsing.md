@@ -119,28 +119,29 @@ Chatgeschiedenis is te bewerken en te verwijderen. Daar is niets aan te doen. Da
 
 ## 8. Dekkingsmatrix
 
-Elk verplicht item → waar geleerd → waar geoefend. Huidige stand (vóór de herziening):
+Elk verplicht item → waar geleerd → waar geoefend. Volgens het hoog-over plan (koers §8); de dag-specs moeten dit waarmaken.
 
 | Item | Geleerd | Geoefend |
 |---|---|---|
-| Expo Go | dag 0 | dag 0 huiswerk |
+| Expo Go | dag 0 | dag 0 |
 | VS Code + Copilot Student werkend | vooraf (stappenplan) | vooraf, check dag 0 |
-| TanStack Query | dag 2 | dag 2 oef. 1 |
-| Expo Router | dag 1 | dag 1 oef. 4 |
-| SQLite | dag 2 | dag 2 oef. 3 |
-| Loading/error-states | dag 2 (TanStack) | dag 2 oef. 2 |
-| Native functie (Share etc.) | **nergens** | **nergens** |
+| Eigen idee aangekondigd | dag 0 | huiswerk dag 2 → 3 (paar regels) |
+| Expo Router | dag 1 | dag 1 |
+| Theming | dag 1 | dag 1 |
+| ESLint | dag 1 | dag 1 t/m 3 (aan vanaf het begin) |
 | TypeScript zonder errors | aangenomen | overal |
-| ESLint | dag 2, één bullet | **nergens** |
-| Projectstructuur | dag 3 | **nergens** |
-| Spec schrijven | **nergens** | **nergens** |
-| copilot-instructions.md | **nergens** | **nergens** |
-| Issues + commits koppelen | **nergens** | **nergens** |
-| Agent aansturen en controleren | **nergens** | **nergens** |
-| Toelichting schrijven | **nergens** | **nergens** |
-| Eigen idee aangekondigd | **nergens** (moet dag 0) | — |
+| TanStack Query | dag 2 | dag 2 |
+| SQLite | dag 2 | dag 2 |
+| Loading/error-states | dag 2 | dag 2 |
+| Native functie (Share) | dag 2 | dag 2, via agent mode |
+| copilot-instructions.md | dag 2 | dag 2 |
+| Agent aansturen en controleren | dag 1 (chat), dag 2 (agent mode) | dag 2 en 3 |
+| Projectstructuur | dag 3 | dag 3 |
+| Spec schrijven | dag 3 | dag 3 |
+| Issues + commits koppelen | dag 3 | dag 3 |
+| Toelichting schrijven | dag 3 (uitleg) | na de course |
 
-Alles wat **nergens** staat moet in een dag-spec landen voordat deze toets geldig is.
+Geen item staat meer op "nergens". Zodra een dag-spec hiervan afwijkt, eerst deze tabel en koers §8 aanpassen.
 
 ## 9. Let op
 
