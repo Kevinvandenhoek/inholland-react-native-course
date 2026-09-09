@@ -8,7 +8,7 @@ Dit document staat boven de dag-specs. Elke dag-spec verwijst hiernaar en mag er
 Na vier lesdagen kan een student:
 
 1. Een mobiele app bouwen met Expo en React Native die data ophaalt, lokaal opslaat en tussen schermen navigeert.
-2. Uitleggen waarom de app zo is opgebouwd (state, data, structuur), niet alleen dat hij werkt.
+2. Uitleggen waarom de app zo is opgebouwd (state, data, structuur), niet alleen dat hij werkt. Ook de delen die de agent schreef.
 3. Een coding agent (Copilot in VS Code) een duidelijke opdracht en context geven, en het resultaat kritisch beoordelen.
 4. Werk opdelen in kleine, controleerbare taken en die één voor één afmaken.
 5. Fouten vinden en oplossen, met en zonder AI.
@@ -45,16 +45,20 @@ Per dag komt er één manier van werken met de agent bij:
 | 2 | Data ophalen en opslaan | Agent mode voor één afgebakende taak (Share-knop). Agent laten debuggen. `copilot-instructions.md` aanmaken. |
 | 3 | Eigen product starten | Spec → issues → agent laat bouwen → reviewen. |
 
-Regels die elke dag gelden:
+Drie competenties, waar de toetsing op stuurt (uitwerking in `01-toetsing.md` §7):
 
-- Alles wat de agent maakt lees je, en kun je uitleggen.
-- Klein werken: één taak per keer.
-- Geef context: een spec, instructies, voorbeelden. Geen context = slechte code.
+1. **Aansturen.** Klein werken, één taak per keer. Context geven: spec, instructies, voorbeelden. Zelf kiezen, de agent voert uit.
+2. **Controleren.** Alles wat de agent maakt lees je, test je en corrigeer je. Fout gezien? Dan grijp je in.
+3. **Begrijpen.** Werken met een agent gaat snel, en je verliest even snel het overzicht. Daarom na elke agent-taak: **vraag het na**. Stel de agent vragen over wat hij bouwde tot je het in eigen woorden kunt uitleggen. Vanaf dag 2 is dit de vaste laatste stap van elke agent-oefening.
+
+Wat we bewust niet doen: MCP's, skills, subagents, orchestratieplatforms. Eén agent goed leren aansturen is genoeg voor vier dagen.
+
+Vragen en twijfels over AI in het algemeen (werk, betrouwbaarheid, wat leer ik nog zelf) krijgen ruimte in de les, bij de afsluiting van dag 3. Geen apart vragenuur na de course.
 
 ## 5. De app
 
 - In de les: Pokédex op basis van PokeAPI en het Figma-design. De bestaande oefeningen blijven bruikbaar.
-- Eindopdracht: eigen product op PokeAPI. Een Pokédex mag, maar hoeft niet. Uitwerking in `01-toetsing.md`.
+- Eindopdracht: eigen product op live data uit een publieke API. PokeAPI is de standaard; een andere API mag als hij zonder inlog of sleutel werkt. Uitwerking in `01-toetsing.md`.
 
 Staat van de les-app aan het eind van elke dag (contract tussen de dagen):
 
@@ -88,10 +92,10 @@ Eén tabel die §4, §5 en de toetsitems bij elkaar zet. Elke dag-spec werkt zij
 
 | Dag | Onderwerpen | AI-stap | App na de dag | Toetsitems die hier landen |
 |---|---|---|---|---|
-| 0 Intro | Wat is RN, web vs native, Expo Go. Setup checken (3 tests). Project aanmaken en op telefoon draaien. Eindopdracht en eigen-idee-optie aankondigen, incl. dat chats beoordeeld worden. | Ask mode: Copilot laat het gegenereerde project uitleggen. | Leeg project draait op telefoon. | Expo Go, Copilot werkend, eigen idee aangekondigd |
-| 1 Fundamentals | Componenten, styling + theming, navigatie. ESLint aan vanaf het begin. | Autocomplete en chat. Eén oefening eerst zelf, dan met Copilot. | Lijst + detail, gestyled met thema, navigatie. | Expo Router, TypeScript, ESLint, theming |
-| 2 Data | State, TanStack Query, SQLite, loading/error. Dev tools kort. | Agent mode voor één afgebakende taak: Share-knop. Agent laten debuggen. `copilot-instructions.md` maken. | Data via Query, favorieten in SQLite, loading/error, delen. | TanStack, SQLite, loading/error, native functie, copilot-instructions, agent aansturen |
-| 3 Eigen product | Projectstructuur, dependencies. Spec schrijven (user stories), issues maken, eerste story met agent bouwen en reviewen. Kevin keurt eigen ideeën goed. Inleveren: toelichting, video, exportscript. | Spec → agent → review. | Eigen product gestart: spec, issues, eerste story werkt. | Projectstructuur, spec, issues + commits, toelichting, agent aansturen |
+| 0 Intro | Wat is RN, web vs native, Expo Go. Vast blok "onder de motorkap": JS-thread, bridge, native views, in één plaatje. Setup checken (3 tests). Project aanmaken en op telefoon draaien. Eindopdracht aankondigen met de flowchart spec → issues → agent → review in het klein, eigen-idee-optie, en dat chats beoordeeld worden. | Ask mode: Copilot laat het gegenereerde project uitleggen. | Leeg project draait op telefoon. | Expo Go, Copilot werkend, eigen idee aangekondigd |
+| 1 Fundamentals | Componenten, styling + theming, navigatie. Bij elk onderwerp: wat gebeurt er native (een View wordt een native view, een stack is een echte native stack). ESLint aan vanaf het begin. | Autocomplete en chat. Eén oefening eerst zelf, dan met Copilot. | Lijst + detail, gestyled met thema, navigatie. | Expo Router, TypeScript, ESLint, theming |
+| 2 Data | State, TanStack Query, SQLite, loading/error. Dev tools kort. | Agent mode voor één afgebakende taak: Share-knop. Agent laten debuggen. `copilot-instructions.md` maken. Afsluiten met "vraag het na". | Data via Query, favorieten in SQLite, loading/error, delen. | TanStack, SQLite, loading/error, native functie, copilot-instructions, agent aansturen |
+| 3 Eigen product | Projectstructuur, dependencies. Korte uitleg Spec Driven Development met één flowchart (spec → issues → agent → review → commit), Pokédex als voorbeeld. Spec schrijven (user stories), issues maken, eerste story met agent bouwen, reviewen, navragen. Kevin keurt ideeën definitief goed. Inleveren: toelichting, video, exportscript. Afsluiting: Use of AI, met ruimte voor vragen en twijfels. | Spec → issues → agent → review → vraag het na. | Eigen product gestart: spec, issues, eerste story werkt. | Projectstructuur, spec, issues + commits, toelichting, agent aansturen |
 
 Verschuivingen ten opzichte van Levi's materiaal, om dag 3 te ontlasten:
 
@@ -100,4 +104,4 @@ Verschuivingen ten opzichte van Levi's materiaal, om dag 3 te ontlasten:
 - Dev tools (Rozenite, Proxyman) op dag 2 ingekort; agent-debugging neemt een deel over.
 - "Use of AI" is geen losse sessie meer maar de rode draad (§4); de discussie zelf hoort bij de afsluiting van dag 3.
 
-Huiswerk: tussen alle dagen alleen "les-app afmaken tot het contract van §5". Dag 2 → 3 is vakantie; daar komt alleen bij: kies je idee voor de eindopdracht (een paar regels, geen spec). De spec zelf wordt op dag 3 geschreven.
+Huiswerk: tussen alle dagen alleen "les-app afmaken tot het contract van §5". Dag 2 → 3 is vakantie; daar komt alleen het **idee-briefje** bij: hooguit tien regels volgens een sjabloon (idee, kernactie, welke API, drie tot vijf user stories van één zin). Vóór het einde van de vakantie in Teams. Kevin geeft één ronde korte feedback, op dag 3 keurt hij definitief goed. De spec zelf wordt op dag 3 geschreven.

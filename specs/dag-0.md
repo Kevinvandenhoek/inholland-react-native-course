@@ -6,21 +6,21 @@ Datum: vr 25 sep 2026, ~4 uur.
 ## Doelen en toetsitems
 
 - Koers §1: doel 1 (begin: project draait), doel 3 (begin: Copilot code laten uitleggen).
-- Toetsitems: Expo Go werkt, VS Code + Copilot werkt, eigen idee aangekondigd.
+- Toetsitems: Expo Go werkt, VS Code + Copilot werkt, eigen idee aangekondigd, werkwijze (flowchart) één keer gezien.
 - AI-stap: **ask mode**. Copilot legt uit, de student leest en controleert. Nog geen code laten schrijven.
 
 ## Programma
 
 | Tijd | Blok | Vorm |
 |---|---|---|
-| 0:00 | Welkom, wie is Kevin, hoe de course werkt. Eindopdracht in één zin: eigen app op PokeAPI, proces telt mee. | slides, 15 min |
-| 0:15 | Wat is React Native, waarom (niet), hoe werkt het, Expo, CNG, Expo Go. | slides, 30 min |
+| 0:00 | Welkom, wie is Kevin, hoe de course werkt. Eindopdracht in één zin: eigen app op live data, proces telt mee. | slides, 15 min |
+| 0:15 | Wat is React Native, waarom (niet). Vast blok **onder de motorkap**: JS-thread, bridge, native views, in één plaatje; een `<View>` wordt een echte native view. Dan Expo, CNG, Expo Go. | slides, 30 min |
 | 0:45 | Pauze | 10 min |
 | 0:55 | **Oefening 1 – Setup.** Drie Copilot-tests groen. Expo-project aanmaken, starten, QR scannen, draait op eigen telefoon. Node ontbreekt? Installeren. | doen, 40 min |
 | 1:35 | Web vs Native: wat is hetzelfde, wat is anders. | slides, 25 min |
 | 2:00 | Pauze | 10 min |
 | 2:10 | **Oefening 2 – Laat Copilot het uitleggen.** Ask mode op het gegenereerde project: wat doet `app/_layout.tsx`, waar komt de tab bar vandaan, wat is `app.json`. Daarna één kleine wijziging met de hand (tekst aanpassen), zien dat de app live herlaadt. | doen, 40 min |
-| 2:50 | Eindopdracht uitgelegd: drie startideeën of eigen idee, wat je inlevert, en dat je Copilot-chats onderdeel zijn van de beoordeling. Vraag: denk vóór dag 3 na over je idee. | slides + gesprek, 25 min |
+| 2:50 | Eindopdracht uitgelegd. Hoe je gaat werken: de flowchart spec → issues → agent → review, in het klein (dag 3 doet hem groot). Startideeën of eigen idee, op PokeAPI of een andere publieke API zonder sleutel. Wat je inlevert. De drie competenties (aansturen, controleren, begrijpen) en dat je Copilot-chats onderdeel zijn van de beoordeling. Vraag: denk vóór dag 2 na over je idee, dan krijg je een sjabloon. | slides + gesprek, 25 min |
 | 3:15 | Afronding, huiswerk, buffer voor wie nog niet draait. | 30 min |
 
 Slides nooit langer dan 30 minuten achter elkaar: klopt.
@@ -38,7 +38,7 @@ Oefening 2 is de eerste toepassing van de regel "alles wat de agent zegt, contro
 
 | Deck | Status |
 |---|---|
-| `react-native-intro.md` | Bestaand, aanpassen. "About me" (nu Levi: foto `profile.jpg`, 10+ jaar web, CMD) wordt Kevin: eigen foto en drie regels aanleveren. Teamslide: Kevin toevoegen (`kevin.png`), Levi blijft in het team staan. Showcase en demo-video's blijven (Triple/Hypersolid). "Course Overview" en "Course Exam" volgen de nieuwe toets. |
+| `react-native-intro.md` | Bestaand, aanpassen. "About me" (nu Levi: foto `profile.jpg`, 10+ jaar web, CMD) wordt Kevin: eigen foto en drie regels aanleveren. Teamslide: Kevin toevoegen (`kevin.png`), Levi blijft in het team staan. Showcase en demo-video's blijven (Triple/Hypersolid). "Hoe werkt het" wordt een vast blok van ~3 slides met één nieuw plaatje (`day-0/assets/under-the-hood.png`: JS-thread, bridge, native views). "Course Overview" en "Course Exam" volgen de nieuwe toets: flowchart (`day-0/assets/sdd-flow.png`, dag 3 gebruikt hetzelfde plaatje), drie competenties, API-keuze. |
 | `web-vs-native.md` | Bestaand, inkorten van 30 naar ~15 slides: dev tools en build/deployment eruit, dat komt later of niet. |
 | `setup.md` | Nieuw, kort. Stappenplan Copilot Student (hieronder) + project aanmaken. Los deck zodat studenten het later terugvinden. |
 
