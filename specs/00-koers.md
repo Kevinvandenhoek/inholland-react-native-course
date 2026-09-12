@@ -34,7 +34,12 @@ Na vier lesdagen kan een student:
 
 ## 4. De AI-draad
 
-Stelling van de course: **"De agent schrijft, jij blijft verantwoordelijk."** Alles wat in je repo staat moet je kunnen uitleggen en verdedigen. (Levi's "AI is just another abstraction" kan blijven als context, maar zegt niets over hoe je ermee werkt.)
+Stelling van de course: **"De agent schrijft, jij blijft verantwoordelijk."** Alles wat in je repo staat moet je kunnen uitleggen en verdedigen.
+
+Hoe je AI moet zien, in twee zinnen die op dag 0 en dag 3 terugkomen:
+
+- **Nog een abstractie** (Levi). Assembly → C → JavaScript → React Native → een agent die het schrijft. Elke laag verbergt werk, maar de laag eronder blijft bestaan en blijft jouw probleem als het misgaat.
+- **Veel kennis, iets minder intelligentie** (Kevin). Een model heeft meer gelezen dan wie ook, maar kennis is niet hetzelfde als intelligentie. Het weet alles en snapt jouw situatie net niet. Dat verklaart waarom het foutloos een API-call schrijft en vervolgens een verkeerde aanname doet over wat jij wilde. Daarom: context geven (Aansturen), nakijken (Controleren) en zelf begrijpen (Begrijpen).
 
 Per dag komt er één manier van werken met de agent bij:
 

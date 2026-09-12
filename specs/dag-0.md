@@ -20,7 +20,7 @@ Datum: vr 25 sep 2026, ~4 uur.
 | 1:35 | Web vs Native: wat is hetzelfde, wat is anders. | slides, 25 min |
 | 2:00 | Pauze | 10 min |
 | 2:10 | **Oefening 2 – Laat Copilot het uitleggen.** Ask mode op het gegenereerde project: wat doet `app/_layout.tsx`, waar komt de tab bar vandaan, wat is `app.json`. Daarna één kleine wijziging met de hand (tekst aanpassen), zien dat de app live herlaadt. | doen, 40 min |
-| 2:50 | Eindopdracht uitgelegd. Hoe je gaat werken: de flowchart spec → issues → agent → review, in het klein (dag 3 doet hem groot). Twee startideeën (Pokédex volgens design, battle simulator) of een eigen idee met eigen specs en design. Wat je inlevert. De drie competenties (aansturen, controleren, begrijpen) en dat je Copilot-chats onderdeel zijn van de beoordeling. Vraag: denk vóór dag 2 na over je keuze; voor een eigen idee krijg je dan een sjabloon. | slides + gesprek, 25 min |
+| 2:50 | Eindopdracht uitgelegd. Hoe je gaat werken: de flowchart spec → issues → agent → review, in het klein (dag 3 doet hem groot). Twee startideeën (Pokédex volgens design, battle simulator) of een eigen idee met eigen specs en design. Wat je inlevert. De drie competenties (aansturen, controleren, begrijpen) en dat je Copilot-chats onderdeel zijn van de beoordeling. Eén slide over hoe je AI moet zien: nog een abstractie, en veel kennis maar iets minder intelligentie (koers §4); dag 3 komt hierop terug. Vraag: denk vóór dag 2 na over je keuze; voor een eigen idee krijg je dan een sjabloon. | slides + gesprek, 25 min |
 | 3:15 | Afronding, huiswerk, buffer voor wie nog niet draait. | 30 min |
 
 Slides nooit langer dan 30 minuten achter elkaar: klopt.
