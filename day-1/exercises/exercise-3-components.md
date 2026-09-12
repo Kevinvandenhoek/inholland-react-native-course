@@ -1,95 +1,86 @@
-# Exercise 3: Key Components
+# Exercise 3: Components, twice
 
 ### Objective
-Master the essential React Native components: View, Text, Pressable, ScrollView, and FlatList while building Pokémon-related functionality.
+Build the Pokémon grid: first a card by hand, then the list with Copilot Chat. Then compare. The point is not the grid. The point is seeing what the agent does differently from you.
 
 <video src="../assets/pokemon-page-components.mp4" width="320" controls loop muted autoplay></video>
 
 ### Requirements
 
-#### 1. View Component
-- Understand the basic container component
-- Use View for layout and grouping Pokémon cards
+1. `components/pokemon-card.tsx`: a pressable card with an ID badge and the name, styled with tokens.
+2. `app/(tabs)/index.tsx`: a two-column `FlatList` of cards, data from `constants/pokemon.ts`.
+3. `docs/day-1.md`: three sentences about the difference between part A and part B.
 
-> **📚 Reference:** [React Native View Documentation](https://reactnative.dev/docs/view)
+### Part A: the card, by hand (20 min)
 
-#### 2. Text Component
-- Display Pokémon names and IDs
-- Apply text styling and formatting
+No Copilot Chat. Autocomplete is fine.
 
-> **📚 Reference:** [React Native Text Documentation](https://reactnative.dev/docs/text)
+1. **Add data.** Create `constants/pokemon.ts`:
 
-#### 3. Pressable Component
-- Create interactive Pokémon cards and buttons
-- Handle press events for catching Pokémon
+   ```ts
+   export type Pokemon = { id: number; name: string; type: string }
 
-> **📚 Reference:** [React Native Pressable Documentation](https://reactnative.dev/docs/pressable)
+   export const pokemonData: Pokemon[] = [
+     { id: 1, name: 'Bulbasaur', type: 'Grass' },
+     { id: 2, name: 'Ivysaur', type: 'Grass' },
+     { id: 3, name: 'Venusaur', type: 'Grass' },
+     { id: 4, name: 'Charmander', type: 'Fire' },
+     { id: 5, name: 'Charmeleon', type: 'Fire' },
+     { id: 6, name: 'Charizard', type: 'Fire' },
+     { id: 7, name: 'Squirtle', type: 'Water' },
+     { id: 8, name: 'Wartortle', type: 'Water' },
+     { id: 9, name: 'Blastoise', type: 'Water' },
+     { id: 25, name: 'Pikachu', type: 'Electric' },
+   ]
+   ```
 
-#### 4. FlatList Component
-- Display lists of Pokémon efficiently
-- Implement proper Pokémon list rendering and performance
+2. **Build the card.** Create `components/pokemon-card.tsx` with a `PokemonCard` component that takes `pokemon: Pokemon` and `onPress: () => void`.
+   - `Pressable` as the outer element. Lower the opacity while pressed.
+   - Top section: the ID as a badge, formatted `001` with `String(id).padStart(3, '0')`.
+   - Bottom section: the name.
+   - Colours via `useThemeColor`, spacing and radius from `Spacing` and `Radius`. Shadow: `shadow*` for iOS, `elevation` for Android.
 
-> **📚 Reference:** [React Native FlatList Documentation](https://reactnative.dev/docs/flatlist)
+   > **📚 Reference:** [Pressable](https://reactnative.dev/docs/pressable) · [View](https://reactnative.dev/docs/view) · [Text](https://reactnative.dev/docs/text) · [Shadow props](https://reactnative.dev/docs/shadow-props)
 
-### Steps to Complete
+3. **Show one card** on the Pokémon screen with `pokemonData[0]`. `onPress` shows an `Alert` with the name for now.
 
-#### Step 1: Create Basic Screen Structure
-Start with the empty `pokemon.tsx` file from the previous exercise and create the basic screen structure with `SafeAreaView`, a title, and basic styling.
+4. Lint, tsc, commit: `Exercise 3A: PokemonCard by hand`.
 
-#### Step 2: Add Pokémon Data
-Add a Pokémon data to `contansts/pokemon.ts`. Add 10 Pokémon entries, each containing `id`, `name`, and `type` properties.
+### Part B: the grid, with Copilot Chat (15 min)
 
-```typescript
-export const pokemonData = [
-  { id: 1, name: "Pikachu", type: "Electric" },
-  { id: 2, name: "Charmander", type: "Fire" },
-  { id: 3, name: "Squirtle", type: "Water" },
-  { id: 4, name: "Bulbasaur", type: "Grass" },
-  { id: 5, name: "Charizard", type: "Fire" },
-  { id: 6, name: "Blastoise", type: "Water" },
-  { id: 7, name: "Venusaur", type: "Grass" },
-  { id: 8, name: "Gengar", type: "Ghost" },
-  { id: 9, name: "Mewtwo", type: "Psychic" },
-  { id: 10, name: "Mew", type: "Psychic" },
-];
+1. **Open Copilot Chat in Ask mode.** Open `app/(tabs)/index.tsx` and `components/pokemon-card.tsx` so they are in context.
 
-```
+2. **Ask for the grid.** Be specific. For example:
 
-#### Step 3: Create a Simple Pokémon Card with View and Text
-Replace the title with a simple card using `View` and `Text` components to display a Pokémon name, and add appropriate styles for the card and text.
+   > Replace the single card in this screen with a FlatList that renders a PokemonCard for every item in pokemonData from constants/pokemon.ts. Two columns, 16 gap between cards and rows, padding around the list from the Spacing tokens. Keep the title above the list.
 
-#### Step 4: Add FlatList for Multiple Pokémon
-Import `FlatList` and replace the single card with a `FlatList` that renders all Pokémon from the data array, using `renderItem` and `keyExtractor` props.
+3. **Read the answer before you paste it.** Does it import from the right files? Does it use `keyExtractor`? Does it invent a colour or a number that should be a token? Change what is wrong, then apply it.
 
-#### Step 5: Create Two-Column Layout
-Add `numColumns={2}` and `columnWrapperStyle` to create a two-column layout, and update the card styles to use flex for even distribution.
+   > **📚 Reference:** [FlatList](https://reactnative.dev/docs/flatlist)
 
-#### Step 6: Add Pokémon ID Display
-Enhance the card to show Pokémon ID with proper formatting using `padStart(3, "0")`, and add styles for the ID badge with purple background and white text.
+4. **Run it.** Grid works? Lint and tsc clean? Fix what is not.
 
-#### Step 7: Add Interactive Pressable
-Import `Pressable` and `Alert`, then replace the `View` with `Pressable` to make cards interactive, showing an alert when pressed.
+5. **Ask one follow-up** about something in the code you did not fully understand. For example: *"Why does FlatList need keyExtractor?"* or *"What does columnWrapperStyle do that contentContainerStyle does not?"*
 
-#### Step 8: Enhance Card Design with Background Section
-Add a background section to the card with a light purple background, proper aspect ratio, and rounded corners, separating the ID area from the name area.
+6. Commit: `Exercise 3B: grid with Copilot`.
 
-#### Step 9: Add React Native Shadows
-Add shadow properties to the `pokemonCard` style including iOS shadow properties (`shadowColor`, `shadowOffset`, `shadowOpacity`, `shadowRadius`) and Android elevation.
+### Part C: compare (10 min, in class)
 
-#### Step 10: Improve Layout Structure
-Separate header and content areas by wrapping the title in a header `View` and adding `contentContainerStyle` to the `FlatList` for better spacing and organization.
+Create `docs/day-1.md` and answer in three sentences:
 
-### Deliverables
+1. What did Copilot do differently from how you built the card?
+2. What was better, yours or Copilot's, and why?
+3. What in Copilot's code do you not fully understand yet?
 
-Complete all 10 steps to build the pokemon.tsx component:
+Commit: `Exercise 3C: notes`. We discuss the answers together.
 
-1. ✅ Create basic screen structure with SafeAreaView and title
-2. ✅ Add Pokémon data array with 10 Pokémon entries
-3. ✅ Create simple Pokémon card using View and Text components
-4. ✅ Implement FlatList to display multiple Pokémon
-5. ✅ Create two-column layout with evenly distributed spacing
-6. ✅ Add Pokémon ID display with proper formatting (padStart)
-7. ✅ Make cards interactive using Pressable with Alert functionality
-8. ✅ Enhance card design with background sections and improved styling
-9. ✅ Add React Native shadows for iOS and Android platforms
-10. ✅ Improve layout structure with separate header and content areas
+### What happens natively
+
+A `FlatList` is a `UIScrollView` / `RecyclerView`. It creates native views only for the rows on screen and **reuses** them when you scroll. A `ScrollView` with `.map()` would create all of them at once.
+
+### Done when
+
+- ✅ `PokemonCard` built by hand, with tokens
+- ✅ Two-column grid built with Copilot, checked and corrected by you
+- ✅ `docs/day-1.md` with three sentences
+- ✅ Lint and tsc clean, three commits pushed

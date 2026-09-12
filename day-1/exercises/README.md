@@ -1,55 +1,32 @@
-# React Native Course Exercises - Pokedex App
+# Day 1 exercises
 
-This README contains all the exercise information for building a Pokedex app using React Native. Each exercise builds upon the previous one, teaching you the fundamentals of React Native development with Expo and TypeScript while creating a functional Pokémon application.
+All four exercises continue in the `Pokedex` project from day 0.
 
-## Table of Contents
+1. [Exercise 1: ESLint and TypeScript](./exercise-1-lint-and-types.md)
+2. [Exercise 2: Styling and theming](./exercise-2-styling.md)
+3. [Exercise 3: Components, twice](./exercise-3-components.md)
+4. [Exercise 4: Navigation](./exercise-4-navigation.md)
 
-1. [Exercise 1: Setup a Project](./exercise-1-setup.md)
-2. [Exercise 2: Creating a Page and Styling It](./exercise-2-styling.md)
-3. [Exercise 3: Key Components](./exercise-3-components.md)
-4. [Exercise 4: Navigation - Stacks and Tabs](./exercise-4-navigation.md)
+## Rules from today on
 
----
+- Every exercise ends with `npx expo lint` and `npx tsc --noEmit`, both clean, then a commit and push.
+- No hex code outside `constants/theme.ts`.
+- Copilot Chat: read the answer before you paste it. Something you do not understand? Ask a follow-up.
+- Exercise 2 and part A of exercise 3 are **by hand**. The rest may use Copilot Chat.
 
-## General Submission Guidelines
+## Helpful commands
 
-For all exercises:
+- `npx expo start` starts the dev server
+- `npx expo start --clear` when things look stale
+- `npx expo lint` runs ESLint
+- `npx tsc --noEmit` runs the type checker
+- `npx expo install <package>` installs a package in the version that fits your Expo SDK
 
-1. **Create a GitHub repository** for your project
-2. **Commit your code** after completing each exercise
-3. **Write clear commit messages** describing what you implemented
-4. **Test your app** ideally on both iOS and Android.
-5. **Push your code to GitHub** and share the repository with [me via Teams](https://teams.microsoft.com/l/chat/48:notes/conversations?context=%7B%22contextType%22%3A%22chat%22%7D).
+> **📚 Reference:** [Expo CLI](https://docs.expo.dev/more/expo-cli/)
 
-## Helpful Commands
+## Documentation
 
-- `npx expo start` - Start development server
-- `npx expo start --clear` - Start with cleared cache
-- `npx expo doctor` - Check for common issues
-- `npx expo install [package]` - Install Expo-compatible packages
-
-> **📚 Reference:** [Expo CLI Commands](https://docs.expo.dev/more/expo-cli/)
-
-## Additional Resources
-
-### Documentation Links
-- [Expo Documentation](https://docs.expo.dev/) - Complete Expo guide
-- [React Native Documentation](https://reactnative.dev/) - Official React Native docs
-- [Expo Router Documentation](https://docs.expo.dev/router/introduction/) - Navigation guide
-- [React Native Components](https://reactnative.dev/docs/components-and-apis) - All available components
-
-### Learning Resources
-- [Expo Snack](https://snack.expo.dev/) - Online code editor for testing
-- [Expo Go App](https://expo.dev/client) - Test your apps on your phone
-- [React Native Tutorial](https://reactnative.dev/docs/tutorial) - Official tutorial
-
-## Troubleshooting
-
-If you encounter issues:
-1. Make sure you have Node.js installed (version 18+)
-2. Try `npx expo start --clear` to clear cache
-3. Restart your terminal and try again
-4. Check the [Expo documentation](https://docs.expo.dev/)
-5. Ask your instructor for help!
-
-Good luck with your Pokedex app! 🚀
+- [Expo Router](https://docs.expo.dev/router/introduction/)
+- [React Native components](https://reactnative.dev/docs/components-and-apis)
+- [StyleSheet](https://reactnative.dev/docs/stylesheet)
+- [Figma: Pokemon Code Challenge](https://www.figma.com/design/dsgGXcu5WELIvRW90m5308/Pokemon-Code-Challenge)

@@ -1,6 +1,6 @@
 # Dag 1 – Fundamentals
 
-Status: concept. Open punten ❓. Volgt [00-koers.md](00-koers.md) §8, rij 1.
+Status: uitgewerkt, slides en oefeningen staan in `day-1/`. Open punten ❓. Volgt [00-koers.md](00-koers.md) §8, rij 1.
 Datum: di 29 sep 2026, ~4 uur.
 
 ## Doelen en toetsitems
@@ -31,21 +31,21 @@ Slides max 25 minuten achter elkaar: klopt. Dag zit vol; oefening 4 mag doorlope
 
 `day-1/exercises/`, bestaand, aanpassen:
 
-1. **exercise-1** – Was "setup". Wordt **ESLint en TypeScript**: lint en typecheck aanzetten en schoon krijgen. Klaar als: beide commando's geven nul meldingen. Vanaf nu elke oefening afsluiten met deze twee commando's.
-2. **exercise-2** – Styling, plus theming: één `constants/theme.ts` met kleuren en spacing uit Figma. Klaar als: geen hexcode buiten dat bestand.
-3. **exercise-3** – Componenten, met de expliciete split: deel A met de hand, deel B met Copilot chat, deel C drie zinnen opschrijven over het verschil. Klaar als: grid werkt én deel C staat in de repo (`docs/dag-1.md`).
-4. **exercise-4** – Navigatie, ongewijzigd. Data blijft een hardcoded array; PokeAPI komt dag 2.
+1. **exercise-1-lint-and-types** – Was "setup" (verwijderd). Lint en typecheck draaien, iets bewust kapotmaken, Copilot laat de melding uitleggen, student fixt zelf. Klaar als: beide commando's geven nul meldingen. Vanaf nu elke oefening afsluiten met deze twee commando's.
+2. **exercise-2-styling** – Explore-tab weg, index-tab wordt "Pokémons". Theming: `constants/theme.ts` van het template uitbreiden (Colors.light én dark, zelfde waarden) plus `Spacing` en `Radius`; kleuren via `useThemeColor`. Klaar als: geen hexcode buiten dat bestand.
+3. **exercise-3-components** – Deel A: `components/pokemon-card.tsx` met de hand (20 min). Deel B: Copilot chat maakt de FlatList-grid, student leest en corrigeert vóór het plakken, één vervolgvraag (15 min). Deel C: drie zinnen in `docs/day-1.md` (10 min, klassikaal). Drie commits. Klaar als: grid werkt én deel C staat in de repo.
+4. **exercise-4-navigation** – Herschreven maar inhoudelijk gelijk: `components/pokemon-list.tsx`, favorieten-tab (eerste twee), `app/pokemon/[id].tsx` met not-found-tekst, header-titel. Data blijft een hardcoded array; PokeAPI komt dag 2.
 
-De stijl Objective → Requirements → Steps → Deliverables met 📚-links blijft.
+De stijl Objective → Requirements → Steps → Done when met 📚-links blijft. Elke oefening heeft een blokje "What happens natively".
 
 ## Slides
 
 | Deck | Status |
 |---|---|
 | `brief-history-of-hybrid-development.md` | Bestaand, houden. |
-| `fundamentals.md` | Nieuw, ~20 slides in twee delen (componenten + styling + theming; navigatie). Nu staat die stof alleen in de oefeningen; een korte uitleg vooraf scheelt vragen. Rode draad door het deck: "wat gebeurt er native", sluit aan op het motorkap-plaatje van dag 0. |
+| `fundamentals.md` | Nieuw, 21 slides in twee delen: deel 1 (View, Text, Pressable, ScrollView vs FlatList, StyleSheet, safe area, theming-probleem, tokens, tokens gebruiken, lint en tsc) en deel 2 (bestanden zijn routes, tabs in stack, navigeren, native navigatie). Opent met het motorkap-plaatje van dag 0 (`../../day-0/assets/under-the-hood.svg`). Elk component één regel "Native:". |
 
-Theming: **design tokens in één bestand**, geen ThemeProvider of presets. Levi's theming-deck (dag 3, context + presets) is te zwaar voor beginners en het Expo-template heeft al `constants/Colors.ts` met `useThemeColor`; daar bouwen we op voort. Levi's deck vervalt. ❓ Akkoord?
+Theming: **design tokens in één bestand**, geen ThemeProvider of presets. Levi's theming-deck (dag 3, context + presets) is te zwaar voor beginners en het Expo-template heeft al `constants/theme.ts` met `useThemeColor`; daar bouwen we op voort. Levi's deck vervalt. Uitgewerkt als aangenomen akkoord; Kevin heeft de spec gereviewd zonder bezwaar.
 
 ## Vervalt uit Levi's materiaal
 
@@ -59,7 +59,8 @@ Theming: **design tokens in één bestand**, geen ThemeProvider of presets. Levi
 
 ## Open punten
 
-- ❓ Theming als tokens-bestand in plaats van Levi's provider-aanpak.
+- Theming als tokens-bestand: uitgewerkt, zie boven. Zeg het als je toch Levi's aanpak wilt.
+- Figma-kleuren staan als voorbeeldwaarden in de slides (`#E8F0FE`, `#5B3DF5`, `#1D1F4A`), afgelezen van de screenshot. De oefening laat studenten de echte waarden uit Figma halen.
 
 ## Retro
 

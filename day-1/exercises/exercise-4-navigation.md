@@ -1,108 +1,68 @@
-# Exercise 4: Navigation - Pokemon List and Detail Screens
+# Exercise 4: Navigation
 
 ### Objective
-Build a complete Pokemon list interface with navigation to detail screens, implementing both tab navigation and stack navigation patterns in your Pokedex app.
+Go from list to detail with a stack, and add a Favorites tab. Both list screens reuse one component.
 
 <video src="../assets/stack-navigation.mp4" width="320" controls loop muted autoplay></video>
 
-### Overview
-This exercise focuses on creating a functional Pokemon list that displays Pokemon data in a grid layout, with navigation to individual Pokemon detail screens. You'll implement both the "All Pokemon" tab and "Favorites" tab, each showing Pokemon lists that navigate to detailed views.
+Autocomplete and Copilot Chat are allowed. Keep the rules: read before you paste, no hex codes outside the theme, lint and tsc clean.
 
 ### Requirements
 
-#### 1. Pokemon List Component
-- Create a reusable `PokemonList` component that displays Pokemon in a 2-column grid
-- Implement Pokemon cards with Pokemon ID, name, and visual styling
-- Add touch interactions for navigation to detail screens
-- Use FlatList for efficient rendering of Pokemon data
+1. `components/pokemon-list.tsx`: the grid from exercise 3 as a reusable component with a `pokemon: Pokemon[]` prop.
+2. Two tabs: **Pokémons** (all) and **Favorites** (for now: the first two).
+3. `app/pokemon/[id].tsx`: a detail screen that opens when you press a card, with a working back button.
 
-#### 2. Tab Navigation Implementation
-- **All Pokemon Tab**: Display complete Pokemon list from data source
-- **Favorites Tab**: Display filtered Pokemon list (e.g., first 2 Pokemon as favorites)
-
-#### 3. Stack Navigation for Pokemon Details
-- Create dynamic Pokemon detail screen using route parameters
-- Implement navigation from Pokemon list items to detail screens
-- Handle Pokemon data lookup and display
-- Add proper back navigation from detail screens
-
-> **📚 Reference:** [Expo Router Stack Navigation](https://docs.expo.dev/router/advanced/stack/)
-> **📚 Reference:** [Expo Router Tabs](https://docs.expo.dev/router/advanced/tabs/)
-> **📚 Reference:** [Expo Router Nested Navigation](https://docs.expo.dev/router/advanced/nesting-navigators/)
-
-### Technical Implementation
-
-#### Pokemon List Component Structure
-```typescript
-// PokemonList component should include:
-- FlatList with numColumns={2} for grid layout
-- Pokemon cards with Pressable for navigation
-- Pokemon ID display with proper formatting
-- Pokemon name display
-- Navigation to /pokemon/[id] route
 ```
-
-#### Navigation Structure
-```
-Tabs Navigation:
-├── index (All Pokemon)
-│   └── PokemonList (all data)
-└── favorites (Favorites)
-    └── PokemonList (filtered data)
-
-Stack Navigation:
+app/
+├── _layout.tsx           Stack
+├── (tabs)/
+│   ├── _layout.tsx       Tabs
+│   ├── index.tsx         → /            PokemonList (all)
+│   └── favorites.tsx     → /favorites   PokemonList (first two)
 └── pokemon/
-    └── [id] (Dynamic Pokemon Detail)
+    └── [id].tsx          → /pokemon/25  Detail
 ```
 
-#### Pokemon Data Structure
-```typescript
-interface Pokemon {
-  id: number;
-  name: string;
-  type: string;
-}
-```
+> **📚 Reference:** [Expo Router: Stack](https://docs.expo.dev/router/advanced/stack/) · [Tabs](https://docs.expo.dev/router/advanced/tabs/) · [Nesting navigators](https://docs.expo.dev/router/advanced/nesting-navigators/)
 
 ### Steps to Complete
 
-#### Step 1: Build PokemonList Component
-1. Create `components/ui/pokemon-list.tsx`
-2. Implement FlatList with 2-column grid layout
-3. Create Pokemon card design with:
-   - Pokemon ID badge
-   - Pokemon name
-   - Card styling with shadows and borders
-4. Add Pressable navigation to Pokemon detail screen
-5. Use proper TypeScript types for props
+1. **Extract the list.** Move the `FlatList` from `index.tsx` into `components/pokemon-list.tsx`. Props: `pokemon: Pokemon[]`. The card's `onPress` now navigates:
 
-#### Step 2: Implement Tab Screens
-1. **All Pokemon Tab (`app/(tabs)/index.tsx`)**:
-   - Import PokemonList component
-   - Pass complete Pokemon data
-   - Add page title "All Pokémon"
-   - Implement proper styling
+   ```tsx
+   import { router } from 'expo-router'
 
-2. **Favorites Tab (`app/(tabs)/favorites.tsx`)**:
-   - Import PokemonList component
-   - Pass filtered Pokemon data (e.g., first 2 Pokemon)
-   - Add page title "Favorites"
-   - Use same styling as All Pokemon tab
+   router.push(`/pokemon/${item.id}`)
+   ```
 
-#### Step 3: Create Pokemon Detail Screen
-1. Create `app/pokemon/[id].tsx` for dynamic routing
-2. Implement Pokemon lookup by ID from route parameters
-3. Display Pokemon information:
-   - Pokemon name and ID
-   - Pokemon type with color-coded badge
-   - Proper error handling for invalid Pokemon IDs
-4. Add navigation back to previous screen
+   > **📚 Reference:** [Navigating between pages](https://docs.expo.dev/router/basics/navigation/)
 
-### Deliverables
+2. **Favorites tab.** Create `app/(tabs)/favorites.tsx` with the same layout as `index.tsx`, title "Favorites", and `pokemonData.slice(0, 2)`. Register it in `app/(tabs)/_layout.tsx` with a heart icon. Real favorites come on day 2, with SQLite.
 
-1. ✅ **PokemonList Component**: Reusable component with 2-column grid layout
-2. ✅ **All Pokemon Tab**: Complete Pokemon list with navigation to details
-3. ✅ **Favorites Tab**: Filtered Pokemon list with same navigation functionality
-4. ✅ **Pokemon Detail Screen**: Dynamic screen showing individual Pokemon information
-5. ✅ **Navigation Configuration**: Proper tab and stack navigation setup
-6. ✅ **Navigation Flow**: Complete user journey from list to detail and back
+3. **Detail screen.** Create `app/pokemon/[id].tsx`.
+   - Read the parameter: `const { id } = useLocalSearchParams<{ id: string }>()`. It is always a string.
+   - Look up the Pokémon: `pokemonData.find((p) => p.id === Number(id))`.
+   - Not found? Show a short message instead of crashing.
+   - Show name, formatted ID and type. The type gets a badge with a token colour.
+
+   > **📚 Reference:** [Dynamic routes](https://docs.expo.dev/router/basics/notation/#square-brackets) · [useLocalSearchParams](https://docs.expo.dev/router/reference/hooks/#uselocalsearchparams)
+
+4. **Header.** In `app/_layout.tsx`, add `<Stack.Screen name="pokemon/[id]" options={{ title: 'Pokémon' }} />`. Bonus: set the title to the Pokémon's name from inside the screen with `<Stack.Screen options={{ title: pokemon.name }} />`.
+
+   > **📚 Reference:** [Stack: configure header](https://docs.expo.dev/router/advanced/stack/#configure-header-bar)
+
+5. **Test on your phone.** Press a card, the detail slides in. Swipe from the left edge (iOS) or use the back gesture (Android). Switch tabs and back: the tab remembers where you were.
+
+6. **Lint, tsc, commit.** Message: `Exercise 4: navigation`.
+
+### What happens natively
+
+The stack is a real `UINavigationController` on iOS and a fragment stack on Android. The header, the back button, the slide animation and the swipe-back gesture are drawn and handled by the platform. That is why it feels right, and why you did not have to build any of it.
+
+### Done when
+
+- ✅ `PokemonList` used by both tabs
+- ✅ Card → detail → back works, including swipe back
+- ✅ Unknown ID shows a message, no crash
+- ✅ Lint and tsc clean, committed and pushed
