@@ -1,6 +1,6 @@
 # Dag 0 – Intro
 
-Status: concept. Open punten ❓. Volgt [00-koers.md](00-koers.md) §8, rij 0.
+Status: uitgewerkt, slides en oefeningen staan in `day-0/`. Open punten ❓. Volgt [00-koers.md](00-koers.md) §8, rij 0.
 Datum: vr 25 sep 2026, ~4 uur.
 
 ## Doelen en toetsitems
@@ -27,7 +27,7 @@ Slides nooit langer dan 30 minuten achter elkaar: klopt.
 
 ## Oefeningen
 
-`day-0/exercises/` (nieuw; dag 0 had nog geen oefeningen).
+`day-0/exercises/` (nieuw; dag 0 had nog geen oefeningen). Beide oefeningen eindigen met een commit en push; het project staat vanaf oefening 1 op GitHub.
 
 1. **01-setup.md** – Copilot-tests A/B/C, Node LTS check, `npx create-expo-app Pokedex` (default tabs-template), `npx expo start`, Expo Go op telefoon. Dit is het Pokédex-project waar dag 1 t/m 3 in verder werken. Windows: Expo Go op telefoon, Android-emulator is optioneel huiswerk. Klaar als: app draait op telefoon én Copilot antwoordt.
 2. **02-ask-copilot.md** – Vaste vragen aan Copilot over het project, antwoord in eigen woorden opschrijven (3 regels per bestand). Eén handmatige wijziging. Klaar als: student kan zonder te kijken zeggen wat `app/`, `components/` en `app.json` doen.
@@ -38,9 +38,10 @@ Oefening 2 is de eerste toepassing van de regel "alles wat de agent zegt, contro
 
 | Deck | Status |
 |---|---|
-| `react-native-intro.md` | Bestaand, aanpassen. "About me" (nu Levi: foto `profile.jpg`, 10+ jaar web, CMD) wordt Kevin: eigen foto en drie regels aanleveren. Teamslide: Kevin toevoegen (`kevin.png`), Levi blijft in het team staan. Showcase en demo-video's blijven (Triple/Hypersolid). "Hoe werkt het" wordt een vast blok van ~3 slides met één nieuw plaatje (`day-0/assets/under-the-hood.png`: JS-thread, bridge, native views). "Course Overview" en "Course Exam" volgen de nieuwe toets: flowchart (`day-0/assets/sdd-flow.png`, dag 3 gebruikt hetzelfde plaatje), drie competenties, API-keuze. |
-| `web-vs-native.md` | Bestaand, inkorten van 30 naar ~15 slides: dev tools en build/deployment eruit, dat komt later of niet. |
-| `setup.md` | Nieuw, kort. Stappenplan Copilot Student (hieronder) + project aanmaken. Los deck zodat studenten het later terugvinden. |
+| `react-native-intro.md` | Herschreven. "About me" is Kevin: ❓ foto als `day-0/assets/kevin.png` en drie regels aanleveren (nu placeholder). Teamslide: Kevin toegevoegd, Levi blijft staan. Showcase en demo-video's blijven. "Onder de motorkap" is een vast blok van 3 slides met `day-0/assets/under-the-hood.svg` (JS-thread, bridge, native views) en een tabel View → UIView / android.view.View. "Course overview" volgt het hoog-over plan, "The final assignment" is hier één teaser-slide; de uitleg zit in `final-assignment.md`. Excalidraw-iframes en de tweede "Why Expo"-tabel zijn weg. |
+| `web-vs-native.md` | Ingekort van 30 naar 20 slides: dev tools, build/deployment, platform-specifieke code en generieke JS-slides eruit. Navigatie-voorbeeld is nu Expo Router in plaats van React Navigation, AsyncStorage vervangen door expo-sqlite, TouchableOpacity door Pressable. Elke "different"-slide eindigt met wat er native gebeurt. |
+| `setup.md` | Nieuw, 12 slides. Stappenplan Copilot Student (hieronder), drie tests, Node LTS, project aanmaken, Expo Go, Windows, "done when". Los deck zodat studenten het later terugvinden. |
+| `final-assignment.md` | Nieuw, 13 slides, voor het blok van 2:50. Drie routes in één tabel, technische kern, flowchart (`day-0/assets/sdd-flow.svg`, dag 3 gebruikt hetzelfde plaatje), inleveren, cijfer, drie competenties, chats als bewijs, hoe je AI ziet (koers §4), stelling, keuze vóór dag 2. Los deck omdat studenten dit terug moeten kunnen lezen. Volgt `01-toetsing.md`; wijzigt de toetsing, dan ook dit deck. |
 
 ## Vervalt uit Levi's materiaal
 

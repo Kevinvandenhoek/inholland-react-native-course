@@ -45,7 +45,7 @@ Templates in `day-3/templates/`: `product.md`, `copilot-instructions.md`, `toeli
 | `project-structure.md` | Bestaand, houden. "Levi, 2025" als bron: ❓ Kevins eigen mening ervoor, of laten staan met naam. |
 | `dependencies.md` | Bestaand, houden. |
 | `theming.md` | Vervalt, is dag 1 geworden. |
-| `spec-and-issues.md` | Nieuw, ~12 slides. Opent met de SDD-flowchart, hetzelfde plaatje als dag 0 (`../../day-0/assets/sdd-flow.png`, werkt omdat de hele repo gedeployed wordt). Voorbeeldspec voor de Pokédex erbij zodat het concreet wordt. |
+| `spec-and-issues.md` | Nieuw, ~12 slides. Opent met de SDD-flowchart, hetzelfde plaatje als dag 0 (`../../day-0/assets/sdd-flow.svg`, werkt omdat de hele repo gedeployed wordt). Voorbeeldspec voor de Pokédex erbij zodat het concreet wordt. |
 | `hand-in.md` | Nieuw, ~8 slides. Deliverables, drie competenties met weging, toelichting, video, exportscript, deadline. Los deck zodat het terug te vinden is. |
 | `use-ai.md` | Bestaand, herschrijven: Levi's "another abstraction" blijft, Kevin voegt "veel kennis, iets minder intelligentie" toe met één voorbeeld uit de les waar de agent iets wist maar niet snapte (koers §4). Kapotte `ai-perspective.png` eruit of vervangen, poll blijft. Eén slide met open vragen als aanzet voor het gesprek. Geen vooruitblik op MCP's, tools of platforms. Sluit af met de stelling van de course. |
 

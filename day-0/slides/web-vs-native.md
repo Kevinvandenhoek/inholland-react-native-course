@@ -4,22 +4,28 @@ theme: default
 class: invert
 ---
 
-# React vs React Native 0
-## Key Differences and Commonalities
+# React vs React Native
+## What is the same, what is different
 
-![bg right](./assets/ven-diagram.avif)
-
----
-
-# Commonalities
-## What React Web and React Native Share
-![bg right](./assets/react-is-same.jpg)
+![bg right](../assets/ven-diagram.avif)
 
 ---
 
-## JSX Syntax
+# What is the same
+
+![bg right](../assets/react-is-same.jpg)
+
+- JSX
+- Hooks
+- Components and props
+- File-based routing
+- Component-scoped styles
+
+---
+
+## JSX
 ```jsx
-// Both use the same JSX syntax
+// Same syntax in both
 const Welcome = ({ name }) => {
   return <Text>Hello, {name}!</Text>
 }
@@ -33,135 +39,92 @@ const Welcome = ({ name }) => {
 
 ---
 
-## React Hooks
+## Hooks
 ```jsx
-// useState - same in both
+// useState: same
 const [count, setCount] = useState(0)
 
-// useEffect - same lifecycle
+// useEffect: same
 useEffect(() => {
   fetchData()
 }, [dependency])
 
-// Custom hooks work identically
-const { data, loading } = useApi('/users')
+// Custom hooks: same
+const { data, isLoading } = usePokemon('pikachu')
 ```
 
 ---
 
-## JavaScript Runtime
-```jsx
-// Same JavaScript features
-const processData = async (data) => {
-  const filtered = data.filter(item => item.active)
-  const sorted = filtered.sort((a, b) => a.name.localeCompare(b.name))
-  return sorted
-}
-
-// Same async/await patterns
-const fetchUser = async (id) => {
-  const response = await api.get(`/users/${id}`)
-  return response.data
-}
+## File-based routing: Next.js
 ```
-
----
-
-## File-based Routing - Next.js
-```jsx
-// Next.js - app directory
 app/
 ├── page.js           // → /
 ├── about/
 │   └── page.js       // → /about
-├── blog/
-│   ├── page.js       // → /blog
-│   └── [slug]/
-│       └── page.js   // → /blog/:slug
-└── api/
-    └── users/
-        └── route.js  // → /api/users
+└── blog/
+    ├── page.js       // → /blog
+    └── [slug]/
+        └── page.js   // → /blog/:slug
 ```
 
 ---
 
-## File-based Routing - Expo Router
-```jsx
-// Expo Router - app directory
+## File-based routing: Expo Router
+```
 app/
-├── index.js          // → /
-├── about.js          // → /about
-├── blog/
-│   ├── index.js      // → /blog
-│   └── [slug].js     // → /blog/:slug
-└── _layout.js        // Root layout
+├── _layout.tsx       // root layout
+├── index.tsx         // → /
+├── about.tsx         // → /about
+└── pokemon/
+    └── [name].tsx    // → /pokemon/pikachu
 ```
 
+Same idea. This is what the default Expo template gives you.
+
 ---
 
-## Styling Philosophy
+# What is different
+
+![bg right contain](../assets/react-diff.jpg)
+
+- No DOM, no browser
+- Native components instead of HTML
+- Touch instead of mouse
+- A subset of CSS, no units
+- Navigation is a native stack
+
+---
+
+## Runtime: web
 ```jsx
-// Similar approach - component-scoped styles
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 20,
-    backgroundColor: '#fff'
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold'
-  }
-})
-
-// CSS-in-JS also works in both
-const StyledButton = styled.button`
-  background: blue;
-  color: white;
-`
-```
-
----
-
-# Key Differences
-## Where React Web and React Native Diverge
-
-![bg right contain](./assets/react-diff.jpg)
-
----
-
-## JS Runtime Environment - React Web
-```jsx
-// React Web - DOM available
+// The browser is there
 document.getElementById('root')
 window.location.href
 localStorage.setItem('key', 'value')
-
-// Browser APIs available
 navigator.userAgent
-window.addEventListener('resize', handler)
 ```
 
 ---
 
-## JS Runtime Environment - React Native
+## Runtime: React Native
 ```jsx
-// React Native - No DOM
-import { AsyncStorage } from '@react-native-async-storage/async-storage'
+// No window, no document, no localStorage
 import { Linking } from 'react-native'
+import * as SQLite from 'expo-sqlite'
 
-// No window, document, or browser APIs
-// Use native modules instead
+// Everything that touches the phone goes through a native module
+Linking.openURL('https://pokeapi.co')
 ```
+
+Under the hood: your JavaScript asks the native side to do it.
 
 ---
 
-## HTML Elements - React Web
+## Elements: web
 ```jsx
-// React Web - HTML elements
 <div className="container">
   <h1>Title</h1>
-  <p>Paragraph text</p>
+  <p>Paragraph</p>
   <button onClick={handleClick}>Click me</button>
   <input type="text" value={value} onChange={onChange} />
   <img src="/image.jpg" alt="Description" />
@@ -171,264 +134,128 @@ import { Linking } from 'react-native'
 
 ---
 
-## Native Components - React Native
+## Elements: React Native
 ```jsx
-// React Native - Native components
 <View style={styles.container}>
   <Text style={styles.title}>Title</Text>
-  <Text>Paragraph text</Text>
-  <TouchableOpacity onPress={handlePress}>
-    <Text>Click me</Text>
-  </TouchableOpacity>
+  <Text>Paragraph</Text>
+  <Pressable onPress={handlePress}>
+    <Text>Press me</Text>
+  </Pressable>
   <TextInput value={value} onChangeText={onChangeText} />
-  <Image source={{uri: 'https://...'}} />
-  <TouchableOpacity onPress={() => Linking.openURL('https://...')}>
-    <Text>Link</Text>
-  </TouchableOpacity>
+  <Image source={{ uri: 'https://...' }} />
+  <Link href="/about">Link</Link>
 </View>
 ```
 
+Every one of these becomes a **real native view**. Text only goes inside `<Text>`.
+
 ---
 
-## Navigation - React Router (Web)
+## Navigation: web
 ```jsx
-// React Web - React Router
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 <BrowserRouter>
   <Routes>
     <Route path="/" element={<Home />} />
-    <Route path="/profile" element={<Profile />} />
-    <Route path="/blog/:slug" element={<BlogPost />} />
+    <Route path="/pokemon/:name" element={<Pokemon />} />
   </Routes>
 </BrowserRouter>
 
-// URL-based navigation
-navigate('/profile')
+navigate('/pokemon/pikachu')
 ```
+
+The URL changes. The page swaps.
 
 ---
 
-## Navigation - React Navigation (Native)
-```jsx
-// React Native - React Navigation
-import { NavigationContainer } from '@react-navigation/native'
-import { createStackNavigator } from '@react-navigation/stack'
+## Navigation: Expo Router
+```tsx
+import { Link, router } from 'expo-router'
 
-const Stack = createStackNavigator()
-<NavigationContainer>
-  <Stack.Navigator>
-    <Stack.Screen name="Home" component={Home} />
-    <Stack.Screen name="Profile" component={Profile} />
-  </Stack.Navigator>
-</NavigationContainer>
+<Link href="/pokemon/pikachu">Pikachu</Link>
 
-// Screen-based navigation
-navigation.navigate('Profile')
+router.push('/pokemon/pikachu')
 ```
+
+A **native stack**: the new screen slides in, swipe back works, the OS animates it. Day 1.
 
 ---
 
-## User Interactions - React Web
+## Interaction: web
 ```jsx
-// React Web - Mouse & Keyboard
-<div 
+<div
   onClick={handleClick}
   onMouseOver={handleHover}
-  onMouseLeave={handleLeave}
   onKeyDown={handleKeyPress}
-  onFocus={handleFocus}
 >
   Interactive element
 </div>
-
-// Hover states, focus management
 ```
+
+Mouse, keyboard, hover, focus.
 
 ---
 
-## User Interactions - React Native
+## Interaction: React Native
 ```jsx
-// React Native - Touch & Gestures
-<TouchableOpacity onPress={handlePress}>
+<Pressable onPress={handlePress} onLongPress={handleLongPress}>
   <Text>Press me</Text>
-</TouchableOpacity>
-
-<PanGestureHandler onGestureEvent={handlePan}>
-  <Animated.View>
-    <Text>Drag me</Text>
-  </Animated.View>
-</PanGestureHandler>
-
-// Touch feedback, haptics
+</Pressable>
 ```
+
+Touch, long press, swipe, pinch. No hover. Haptics instead.
 
 ---
 
-## Styling - React Web
+## Styling: web
 ```css
-/* React Web - Full CSS support */
 .container {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
   margin: 10px;
-  padding: 20px;
   border: 1px solid #ccc;
-  border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   background: linear-gradient(45deg, #f0f0f0, #fff);
-  position: absolute;
-  z-index: 10;
 }
-
-/* CSS Modules, Styled Components, etc. */
 ```
+
+Full CSS. Cascading. Classes.
 
 ---
 
-## Styling - React Native
+## Styling: React Native
 ```jsx
-// React Native - Limited CSS subset
-const nativeStyles = StyleSheet.create({
-  container: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-    margin: 10,        // No units
-    padding: 20,       // No units
-    borderWidth: 1,    // Different property names
-    borderColor: '#ccc',
-    borderRadius: 8,
-    // No boxShadow - use elevation on Android
-    elevation: 2,
-    // No gradients - use LinearGradient component
-    position: 'absolute'
-  }
-})
-```
-
----
-
-## Platform-Specific Code - React Web
-```jsx
-// React Web - Browser detection
-const isChrome = /Chrome/.test(navigator.userAgent)
-const isSafari = /Safari/.test(navigator.userAgent)
-
-// Browser-specific features
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js')
-}
-
-// CSS browser prefixes handled by build tools
-```
-
----
-
-## Platform-Specific Code - React Native
-```jsx
-// React Native - Platform detection
-import { Platform } from 'react-native'
-
 const styles = StyleSheet.create({
   container: {
-    paddingTop: Platform.OS === 'ios' ? 20 : 25,
-    ...Platform.select({
-      ios: { shadowColor: '#000' },
-      android: { elevation: 5 }
-    })
-  }
+    flexDirection: 'row',   // flex is the default layout
+    margin: 10,             // no units
+    borderWidth: 1,         // different property names
+    borderColor: '#ccc',
+    // no boxShadow (use elevation / shadow*), no gradients, no cascade
+  },
 })
-
-// Platform-specific components
-const Button = Platform.OS === 'ios' ? TouchableOpacity : TouchableNativeFeedback
 ```
 
----
-
-## Development Tools - React Web
-
-- Browser DevTools (Elements, Console, Network)
-- React DevTools extension
-- Hot reload in browser
-- Network tab for API debugging
-- Lighthouse for performance
-- Webpack/Vite dev server
+A subset of CSS as JavaScript objects. Flexbox everywhere. Day 1.
 
 ---
 
-## Development Tools - React Native
+# Summary
 
-- Chrome Dev Tools / Rozenite
-- Proxyman (or any proxy tool)
-- Device/Simulator testing
-- Fast Refresh
-- Xcode for iOS
-- Android Studio for Android
-
----
-
-## Development Tools - React Native
-
-<iframe src="https://link.excalidraw.com/readonly/Iu3u5LjJ3OffkXZEhBAy?darkMode=true" width="100%" height="100%" style="border: none;"></iframe>
+| Same | Different |
+|---|---|
+| ✅ JSX | 🔄 No DOM, native runtime |
+| ✅ Hooks | 🔄 Native components |
+| ✅ Components | 🔄 Touch, not mouse |
+| ✅ File-based routing | 🔄 Native stack navigation |
+| ✅ Scoped styles | 🔄 CSS subset, no units |
 
 ---
 
-## Build & Deployment - Web
+# Next: exercise 2
 
-<iframe src="https://link.excalidraw.com/readonly/IJz3bL7qQjQIaG2vtPMS?darkMode=true" width="800" height="100%" style="border: none;"></iframe>
+Ask Copilot to explain the project you just created.
 
-
----
-
-## Build & Deployment - Mobile
-
-<iframe src="https://link.excalidraw.com/readonly/Wjl2GcYgUDM8XHwode0p?darkMode=true" width="800" height="100%" style="border: none;"></iframe>
-
----
-
-## Summary - Commonalities
-### What React Web and React Native Share
-- ✅ JSX syntax
-- ✅ React hooks
-- ✅ JavaScript runtime
-- ✅ Component architecture
-- ✅ File-based routing
-- ✅ Styling philosophy
-- ✅ State management patterns
-
----
-
-## Summary - Key Differences
-### Where React Web and React Native Diverge
-- 🔄 JS runtime (DOM vs Native)
-- 🔄 Navigation systems
-- 🔄 User interactions
-- 🔄 Styling capabilities
-- 🔄 Platform-specific features
-- 🔄 Development tools
-- 🔄 Build processes
-
---- 
-
-# The saga continues...
-
-## Next time
-- Brief history of hybrid development
-- Setup a project
-- Creating a page and styling it
-- Key components: View, Text, Pressable, Scrollview, Flatlist
-- Navigation: stack & tabs
-
----
-
-# Homework
-- Visit: [get started with Expo](https://docs.expo.dev/get-started/introduction/)
-- Follow the steps:
-    - _Create a project_
-    - _Setup your environment_
-    - _Start developing_
-
-![bg right w:350](./assets/github-qr.png)
+Then, at the end of today: the final assignment.
