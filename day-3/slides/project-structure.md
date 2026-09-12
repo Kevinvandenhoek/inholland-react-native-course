@@ -121,3 +121,71 @@ src/features/awesome-feature
 |
 +-- utils       # utility functions for a specific feature
 ```
+---
+
+# What we used in the course
+
+<style scoped>pre { font-size: 0.75em; }</style>
+
+```
+app/          # screens, Expo Router turns files into routes
+components/   # reusable UI
+constants/    # theme tokens, static data
+hooks/        # data hooks (TanStack Query), shared logic
+services/     # API calls and SQLite
+```
+
+Technical based, and fine for one small app. It is what `create-expo-app` gives you.
+
+---
+
+# When to go feature based
+
+The moment you open `components/` and cannot find anything.
+
+```
+features/
++-- battle/
+|   +-- components/
+|   +-- hooks/
+|   +-- battle-engine.ts
++-- favorites/
+    +-- components/
+    +-- favorites-db.ts
+```
+
+`app/` stays routes only. Shared stuff stays in the top level folders.
+
+---
+
+# The rule that actually matters
+
+**UI, data and logic do not live in the same file.**
+
+- A screen renders. It does not fetch and it does not write SQL.
+- A hook gets data. It does not render.
+- A service talks to the API or the database. It knows nothing about screens.
+
+Whatever you name the folders, that separation is what gets graded.
+
+---
+
+# Tell the agent
+
+Your structure only exists if the agent knows about it.
+
+```markdown
+- Screens live in `app/`, reusable UI in `components/`,
+  API and database code in `services/`, hooks in `hooks/`.
+- Do not put fetch calls in screens.
+```
+
+That goes in `.github/copilot-instructions.md`. You wrote a first version on day 2.
+
+---
+
+# Exercise 1
+
+Your own repo, your own structure, instructions updated for **your** product.
+
+Pick one and move on. Bike shedding is not a grade.

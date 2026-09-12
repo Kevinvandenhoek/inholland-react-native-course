@@ -69,3 +69,36 @@ VS
 - Documentation?
 - Tests, passing CI/CD, etc.
 - Secure? [Shai Hulud anyone?](https://www.stepsecurity.io/blog/ctrl-tinycolor-and-40-npm-packages-compromised)
+
+---
+
+# The agent will add dependencies
+
+It reaches for a package the way it saw others do it. It does not know
+whether that package works in Expo Go, or whether it was last updated in 2019.
+
+- Say it in your instructions: **ask before adding a dependency**.
+- Check the diff for changes to `package.json` you did not ask for.
+- Run the three checks yourself. The agent is not accountable, you are.
+
+---
+
+# In Expo, install like this
+
+```bash
+npx expo install <package>
+```
+
+Picks the version that matches your SDK, instead of the newest one on npm.
+
+Needs native code and is not in the Expo SDK? Then it does not run in Expo Go.
+For this course that means: **do not use it.**
+
+---
+
+# Fewest dependencies wins
+
+Every package is code you did not write, cannot explain, and have to update.
+
+Before you install: can this be twenty lines of your own?
+Often it can. Then write the twenty lines.

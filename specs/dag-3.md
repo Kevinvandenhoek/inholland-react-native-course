@@ -1,6 +1,6 @@
 # Dag 3 – Eigen product
 
-Status: concept. Open punten ❓. Volgt [00-koers.md](00-koers.md) §8, rij 3.
+Status: uitgewerkt. Open punten ❓. Volgt [00-koers.md](00-koers.md) §8, rij 3.
 Datum: vr 23 okt 2026, ~4 uur. Na de vakantie.
 
 ## Doelen en toetsitems
@@ -31,27 +31,27 @@ Slides max 20 minuten achter elkaar: klopt.
 
 `day-3/exercises/` (nieuw; dag 3 had geen oefeningen):
 
-1. **exercise-1-repo.md** – Eigen repo, feature-structuur, instructions bijgewerkt. Klaar als: repo op GitHub, app draait, lint en tsc schoon.
-2. **exercise-2-spec.md** – `specs/product.md` volgens template, issues aangemaakt, peer review gehad. Klaar als: elke story is een issue met acceptatiecriteria.
-3. **exercise-3-first-story.md** – Eén issue van begin tot eind met de agent, afgesloten met vraag het na. Klaar als: commit sluit het issue, student kan elke regel uitleggen, antwoorden staan in `docs/`.
+1. **exercise-1-repo.md** – Eigen repo, structuur, instructions bijgewerkt. Uitgewerkt: starten vanuit de les-app of `create-expo-app`, repo aanmaken (met `gh` of via github.com), mappen, template overnemen en herschrijven, lint en tsc, commit. Feature-mappen genoemd als optie voor wie meer bouwt dan lijst + detail; de regel die telt is scherm rendert / hook haalt data / service praat met API of database.
+2. **exercise-2-spec.md** – `specs/product.md` volgens template, issues aangemaakt, peer review gehad. Uitgewerkt: spec invullen (20 min), stories naar issues met criteria als checkboxes (10 min), buurman stelt twee vragen en het antwoord gaat terug de spec in (10 min), commit. Startidee: de lijst uit de bijlage overschrijven als stories.
+3. **exercise-3-first-story.md** – Eén issue van begin tot eind met de agent. Uitgewerkt in acht stappen: issue kiezen, prompt met wat/waar-context/wat-niet, meekijken, diff regel voor regel tegen de criteria, lint + tsc + telefoon + vliegtuigmodus, drie vragen navragen in `docs/day-3.md`, commit met `closes #1`, volgende issue.
 
-Templates in `day-3/templates/`: `product.md`, `copilot-instructions.md`, `toelichting.md`. Dit zijn de bestanden die ingeleverd worden (toetsing §4).
+Templates in `day-3/templates/`: `product.md` (doel, kernactie, stories met criteria, data, technische kern, buiten scope), `copilot-instructions.md` (tien tot twintig regels, doorontwikkeld uit dag 2) en `toelichting.md` (de vier vragen). Dit zijn de bestanden die ingeleverd worden (toetsing §4).
 
 ## Slides
 
 | Deck | Status |
 |---|---|
-| `course-3.md` | Bestaand, agenda vervangen. |
-| `project-structure.md` | Bestaand, houden. "Levi, 2025" als bron: ❓ Kevins eigen mening ervoor, of laten staan met naam. |
-| `dependencies.md` | Bestaand, houden. |
-| `theming.md` | Vervalt, is dag 1 geworden. |
-| `spec-and-issues.md` | Nieuw, ~12 slides. Opent met de SDD-flowchart, hetzelfde plaatje als dag 0 (`../../day-0/assets/sdd-flow.svg`, werkt omdat de hele repo gedeployed wordt). Voorbeeldspec voor de Pokédex erbij zodat het concreet wordt. |
-| `hand-in.md` | Nieuw, ~8 slides. Deliverables, drie competenties met weging, toelichting, video, exportscript, deadline. Los deck zodat het terug te vinden is. |
-| `use-ai.md` | Bestaand, herschrijven: Levi's "another abstraction" blijft, Kevin voegt "veel kennis, iets minder intelligentie" toe met één voorbeeld uit de les waar de agent iets wist maar niet snapte (koers §4). Kapotte `ai-perspective.png` eruit of vervangen, poll blijft. Eén slide met open vragen als aanzet voor het gesprek. Geen vooruitblik op MCP's, tools of platforms. Sluit af met de stelling van de course. |
+| `course-3.md` | Agenda vervangen. 4 slides: titel, programma van 8 punten, ideeënrondje, "na vandaag werk je zelfstandig door". |
+| `project-structure.md` | Levi's deck gehouden, 5 slides erachter: de mappen van de les-app, wanneer je naar features gaat, de regel die telt (scherm rendert, hook haalt data, service praat met API of database), zet het in je instructions, oefening 1. "Levi, 2025" bij bike shedding blijft staan met naam: ❓ Kevins eigen mening ervoor. |
+| `dependencies.md` | Levi's deck gehouden, 3 slides erachter: de agent voegt zelf dependencies toe, `npx expo install` en wat niet in Expo Go past, zo min mogelijk dependencies. |
+| `theming.md` | Vervallen, is dag 1 geworden. Deck en de zeven theming-assets verwijderd; staan in de geschiedenis. |
+| `spec-and-issues.md` | Nieuw, 13 slides. Opent met de SDD-flowchart van dag 0 (`../../day-0/assets/sdd-flow.svg`). Waarom een spec (koppelt aan "veel kennis, iets minder intelligentie"), wat erin staat, user story met criteria, vaag versus scherp als tabel, voorbeeldspec Pokédex, story naar issue, prompt met context, reviewen, `closes #3`, de loop, oefening 2. |
+| `hand-in.md` | Nieuw, 8 slides. Deliverables als tabel, technische kern, weging 40/20/20/20 met optionele items, de vier vragen, video, chatgeschiedenis, deadline. |
+| `use-ai.md` | Herschreven, 15 slides. Drie polls blijven. "Twee manieren om ernaar te kijken": Levi's abstractie (met `programming-abstractions.png`) en Kevins veel kennis / iets minder intelligentie. Voorbeeld: de bug van oefening 4C op dag 2, waar de agent `invalidateQueries` perfect kende maar de eigen sleutel niet, en sommigen een `useFocusEffect`-workaround kregen. Daarna waar het helpt, waar het pijn doet, een slide open vragen voor het gesprek, en de stelling. De kapotte `ai-perspective.png` is eruit; "How I use AI" met Cursor en MCP's is eruit. |
 
 ## day-3/README.md
 
-De oude eindopdracht (checklist, deadline 2 november 2025) wordt vervangen door de nieuwe opdracht uit [01-toetsing.md](01-toetsing.md), in het Engels: twee startideeën met hun lijst (bijlage A en B), eigen idee met voorwaarden, technische kern, deliverables, drie competenties en cijferopbouw, inleveren. Templates gelinkt. Figma-link en `assets/fonts.zip` blijven.
+Herschreven. De oude checklist-eindopdracht (deadline 2 november 2025) is vervangen door de opdracht uit [01-toetsing.md](01-toetsing.md), in het Engels: drie routes, technische kern, deliverables met links naar de templates, de vier vragen, chatgeschiedenis, cijfer met weging en optionele items, bijlage A (Pokédex) en bijlage B (battle simulator). Figma-link en `assets/fonts.zip` blijven; de battle-video blijft als link. Deadline staat als `<date>` met een HTML-comment voor Kevin, ook op de laatste slide van `hand-in.md`.
 
 ## Vervalt uit Levi's materiaal
 
@@ -64,9 +64,9 @@ Studenten werken zelfstandig door tot de deadline. Geen lesmoment meer. Vragen o
 
 ## Open punten
 
-- ❓ Deadline.
-- ❓ "Levi, 2025"-bronnen in project-structure en use-ai.
-- Exportscript en beoordelingsskill moeten af vóór 23 okt: [02-tooling.md](02-tooling.md), nog te schrijven.
+- ❓ Deadline. Staat nu als `<date>` op de laatste slide van `hand-in.md` en bovenin `day-3/README.md`, beide met een comment.
+- ❓ "Levi, 2025" bij bike shedding in `project-structure.md`. In `use-ai.md` is dit opgelost: Levi's quote staat er met naam, die van Kevin ernaast.
+- Exportscript en beoordelingsskill moeten af vóór 23 okt: [02-tooling.md](02-tooling.md), nog te schrijven. `hand-in.md` en de README verwijzen er al naar ("een script in deze repo").
 
 ## Retro
 
