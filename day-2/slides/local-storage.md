@@ -88,17 +88,9 @@ await FileSystem.writeAsStringAsync(fileUri, imageData, {
 
 ## Example: Pokemon Favorites Database
 ```typescript
-// Initialize database and create tables
-await databaseService.initDatabase();
-
-// Add favorite Pokemon
-await databaseService.addFavorite(25, "pikachu", "image_url");
-
-// Check if Pokemon is favorite
-const isFavorite = await databaseService.isFavorite(25);
-
-// Get all favorites
-const favorites = await databaseService.getAllFavorites();
+await addFavorite(25, 'pikachu')
+const favorites = await getFavorites()
+const liked = await isFavorite(25)
 ```
 
 ---
@@ -122,84 +114,71 @@ d) SQLite 👈
 
 ---
 
-# `npm install expo-sqlite`
-
-## Example: Database Service Setup
-```typescript
-import * as SQLite from "expo-sqlite";
-
-class DatabaseService {
-  private db: SQLite.SQLiteDatabase | null = null;
-  
-  async initDatabase(): Promise<void> {
-    this.db = await SQLite.openDatabaseAsync("pokedex.db");
-    await this.createTables();
-  }
-}
-```
-
----
-
-## Example: Create Tables
+# `npx expo install expo-sqlite`
 
 ```typescript
-await this.db.execAsync(`
+// services/favorites-db.ts
+import * as SQLite from 'expo-sqlite'
+
+const db = SQLite.openDatabaseSync('pokedex.db')
+
+db.execSync(`
   CREATE TABLE IF NOT EXISTS favorites (
     id INTEGER PRIMARY KEY,
     name TEXT NOT NULL,
-    image_url TEXT,
-    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+    created_at TEXT DEFAULT CURRENT_TIMESTAMP
   );
-`);
+`)
 ```
+
+Open once, create the table if it is not there. A module, not a class. Import the functions where you need them.
 
 ---
 
-## Example: Add Favorite
+# Create, Read, Delete
 
 ```typescript
-try {
-  await this.db.runAsync(
-    "INSERT OR REPLACE INTO favorites (id, name, image_url) VALUES (?, ?, ?)",
-    [pokemonId, name, imageUrl || ""]
-  );
-} catch (error) {
-  console.error("Error adding favorite:", error);
-  throw error;
+export async function addFavorite(id: number, name: string) {
+  await db.runAsync('INSERT OR REPLACE INTO favorites (id, name) VALUES (?, ?)', [id, name])
+}
+
+export async function getFavorites() {
+  return db.getAllAsync<{ id: number; name: string }>('SELECT id, name FROM favorites ORDER BY created_at DESC')
+}
+
+export async function isFavorite(id: number) {
+  const row = await db.getFirstAsync('SELECT id FROM favorites WHERE id = ?', [id])
+  return row !== null
+}
+
+export async function removeFavorite(id: number) {
+  await db.runAsync('DELETE FROM favorites WHERE id = ?', [id])
 }
 ```
 
-## Example: Is Favorited?
+`?` placeholders, always. Never glue user input into SQL.
+
+---
+
+# SQLite + TanStack Query
 
 ```typescript
-const result = await this.db.getFirstAsync<{ count: number }>(
-  "SELECT COUNT(*) as count FROM favorites WHERE id = ?",
-  [pokemonId]
-);
-return (result?.count || 0) > 0;
+useQuery({ queryKey: ['favorites'], queryFn: getFavorites })
+
+useMutation({
+  mutationFn: ({ id, name }) => addFavorite(id, name),
+  onSuccess: () => queryClient.invalidateQueries({ queryKey: ['favorites'] }),
+})
 ```
 
-## Example: Remove Favorite
+- The database is a data source like PokeAPI. Same hook, same loading and error states.
+- A **mutation** changes data and then **invalidates** the query. Every screen showing favorites refreshes.
+- **Native:** SQLite is the platform's own database library. The file lives in your app's sandbox and survives restarts.
 
-```typescript
-try {
-  await this.db.runAsync("DELETE FROM favorites WHERE id = ?", [pokemonId]);
-} catch (error) {
-  console.error("Error removing favorite:", error);
-  throw error;
-}
-```
+---
 
-## Example: Get all favorites
+# Exercise 3
 
-```typescript
-try {
-  const result = await this.db.getAllAsync<FavoritePokemon>(
-    "SELECT * FROM favorites ORDER BY created_at DESC"
-  );
-  return result;
-} catch (error) {
-  console.error("Error getting favorites:", error);
-  return [];
-}
-```
+Favorites in SQLite. Heart on the detail page, Favorites tab from the database, empty state.
+
+Kill the app. Open it. Still there.

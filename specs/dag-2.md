@@ -1,6 +1,6 @@
 # Dag 2 – Data
 
-Status: concept. Open punten ❓. Volgt [00-koers.md](00-koers.md) §8, rij 2.
+Status: uitgewerkt, slides, oefeningen en sjabloon staan in `day-2/`. Open punten ❓. Volgt [00-koers.md](00-koers.md) §8, rij 2.
 Datum: vr 2 okt 2026, ~4 uur.
 
 ## Doelen en toetsitems
@@ -23,19 +23,19 @@ Datum: vr 2 okt 2026, ~4 uur.
 | 2:15 | **Oefening 3 – Favorieten in SQLite.** Toevoegen, verwijderen, lijst; blijft staan na herstart. Chat mag. | doen, 40 min |
 | 2:55 | Pauze | 10 min |
 | 3:05 | Debuggen zonder en met AI: React Native DevTools (`j`), netwerk-tab. Dan agent mode: taak afbakenen, context geven via `copilot-instructions.md`, diff reviewen. Tot slot cognitive debt: met een agent gaat het snel en verlies je snel het overzicht; daarom altijd navragen. | slides, 20 min |
-| 3:25 | **Oefening 4 – Agent mode.** A: `copilot-instructions.md` schrijven (stack, mappen, regels; ~10 regels). B: agent laat een Share-knop op de detailpagina maken. Elke regel lezen, lint en tsc, testen op telefoon. C: agent laat een fout oplossen die je nog hebt; geen fout? Gebruik de bug uit de oefening. Tijd op? C wordt huiswerk. D: **vraag het na**, altijd in de les: drie vragen aan de agent over de Share-code, antwoorden in eigen woorden in `docs/dag-2.md`. | doen, 30 min |
+| 3:25 | **Oefening 4 – Agent mode.** A: `copilot-instructions.md` schrijven (stack, mappen, regels; ~10 regels). B: agent laat een Share-knop op de detailpagina maken. Elke regel lezen, lint en tsc, testen op telefoon. C: agent laat een fout oplossen die je nog hebt; geen fout? Gebruik de bug uit de oefening. Tijd op? C wordt huiswerk. D: **vraag het na**, altijd in de les: drie vragen aan de agent over de Share-code, antwoorden in eigen woorden in `docs/day-2.md`. | doen, 30 min |
 | 3:55 | Afronding, huiswerk. Keuze eindopdracht: startidee melden in Teams, of eigen idee via het idee-briefje. Sjabloon uitreiken en kort toelichten. | 5 min |
 
 Slides max 20 minuten achter elkaar: klopt. Volle dag; oefening 4C mag in het huiswerk.
 
 ## Oefeningen
 
-`day-2/exercises/`, bestaand, aanpassen:
+`day-2/exercises/`, herschreven in de korte stijl van dag 0 en 1 (Levi's versies waren copy-paste-tutorials van 250–500 regels):
 
-1. **exercise-1** – TanStack toevoegen en lijst uit PokeAPI. Klaar als: lijst laadt live, spinner en foutmelding zichtbaar (test met vliegtuigstand).
-2. **exercise-2** – Detail uit PokeAPI. Klaar als: elke Pokémon opent met eigen data, loading en error.
-3. **exercise-3** – Favorieten in SQLite. Klaar als: favoriet blijft na app herstarten; lint en tsc schoon.
-4. **exercise-4** (nieuw) – Agent mode in vier delen: instructions, Share-knop, bug laten fixen, vraag het na. Klaar als: Share werkt op telefoon, `copilot-instructions.md` staat in de repo, de student kan van elke regel in de diff zeggen wat hij doet, en de antwoorden van deel D staan in `docs/dag-2.md`.
+1. **exercise-1-tanstack-query** – TanStack via `npx expo install`, `services/pokeapi.ts` met gewone `fetch` (geen pokenode-ts: minder dependencies, en de student ziet de JSON zelf), `hooks/use-pokemon-list.ts`, drie states op de lijst met retry. Klaar als: lijst laadt live met artwork, spinner en foutmelding zichtbaar (test met vliegtuigstand).
+2. **exercise-2-pokemon-detail** – `fetchPokemon(id)` met eigen type (alleen wat gebruikt wordt), `usePokemon(id)` met key `['pokemon', id]`, detail met artwork, types en stats. Klaar als: elke Pokémon opent met eigen data, loading en error, onbekend id crasht niet.
+3. **exercise-3-favorites-sqlite** – `services/favorites-db.ts` als module met vier functies (`openDatabaseSync`, placeholders), `hooks/use-favorites.ts` met query en mutation + invalidate, hart op detail, favorieten-tab met empty state. Klaar als: favoriet blijft na app herstarten; lint en tsc schoon.
+4. **exercise-4-agent-mode** – Vier delen: A instructions (voorbeeld van ~10 regels in de oefening), B Share-knop met reviewlijst, C bug (zie hieronder), D vraag het na met drie voorbeeldvragen, antwoorden in `docs/day-2.md`. Klaar als: Share werkt op telefoon, `copilot-instructions.md` staat in de repo, de student kan van elke regel in de diff zeggen wat hij doet, en de antwoorden van deel D staan in `docs/day-2.md`.
 
 Bij oefening 4B hoort een reviewlijstje in de oefening: wat heeft de agent toegevoegd dat je niet vroeg? Klopt het met je instructions? Wat zou je zelf anders doen?
 
@@ -47,12 +47,12 @@ Sjabloon idee-briefje: `day-2/templates/idea.md`, max tien regels: idee, kernact
 
 | Deck | Status |
 |---|---|
-| `intro.md` | Bestaand, houden (huiswerkreview). |
-| `state-management.md` | Bestaand, SQLite CRUD-slides eruit. |
-| `tanstack-query.md` | Bestaand, SQLite CRUD-slides eruit. Twee slides erbij: wat is een publieke API, waar let je op bij een eigen keuze. |
-| `local-storage.md` | Bestaand. De SQLite CRUD-slides komen hier, één keer. |
-| `dev-tools.md` | Vervalt als deck. Rozenite en Proxyman eruit; RN DevTools wordt twee slides in het nieuwe deck. |
-| `debugging-and-agent-mode.md` | Nieuw, ~14 slides: debuggen zonder AI, dan agent mode, `copilot-instructions.md`, hoe je een diff reviewt, cognitive debt en "vraag het na" (2 slides). |
+| `intro.md` | Bestaand, agenda en huiswerkvragen aangepast (zoekbalk: waar leeft de query?). |
+| `state-management.md` | SQLite CRUD-slides eruit. Form-state-voorbeeld was web (`<form>`, `<input>`); is nu een `TextInput` met `useState`, gekoppeld aan de zoekbalk van het huiswerk. |
+| `tanstack-query.md` | SQLite CRUD-slides eruit. Twee slides erbij: wat is een publieke API (PokeAPI als voorbeeld), en een checklist voor een eigen keuze (geen sleutel, genoeg data, stabiel, JSON, gratis) met een paar voorbeelden. |
+| `local-storage.md` | Eerste helft (soorten opslag, quiz) ongewijzigd. SQLite-deel herschreven naar de module-aanpak van oefening 3 (`openDatabaseSync`, vier functies, placeholders) plus één slide SQLite + TanStack Query (query, mutation, invalidate). Was één slide met vijf `##`-koppen die van het scherm liep. |
+| `dev-tools.md` | Verwijderd. Rozenite en Proxyman eruit; dev menu en RN DevTools zijn twee slides in het nieuwe deck. |
+| `debugging-and-agent-mode.md` | Nieuw, 14 slides: dev menu, RN DevTools, debuggen zonder AI in vijf stappen, ask vs agent, kleine taken, `copilot-instructions.md`, diff reviewen, lint/tsc/telefoon, agent laten debuggen (oorzaak vs workaround), cognitive debt, vraag het na, oefening 4, keuze eindopdracht. |
 
 ## Vervalt uit Levi's materiaal
 
@@ -68,7 +68,8 @@ Sjabloon idee-briefje: `day-2/templates/idea.md`, max tien regels: idee, kernact
 
 ## Open punten
 
-- ❓ Welke "bug uit de oefening" voor 4C? Voorstel: een klein bestand met een query-key die verkeerd staat, zodat de lijst niet ververst.
+- Bug voor 4C: de student verandert zelf de key in `invalidateQueries` van `['favorites']` naar `['favourites']` in `hooks/use-favorites.ts`. De favorieten-tab ververst dan niet meer na een hart. Staat in de oefening, met de waarschuwing dat een `refetch`-on-focus een workaround is en geen fix. Uitgewerkt als aangenomen akkoord met het voorstel.
+- Geen pokenode-ts meer; oefeningen gebruiken `fetch`. Dat is één dependency minder en past bij de org-regel. Wil je pokenode-ts toch, dan zijn oefening 1 en 2 het enige dat verandert.
 
 ## Retro
 

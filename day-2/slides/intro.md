@@ -6,22 +6,19 @@ class: invert
 
 # Data Flow & Debugging
 
-```diff
-+ • Review homework
-• State management & types of state.
-• Performing network calls using Tanstack Query.
-• Mapping data to views.
-+• Saving data to user's device.
-• Debugging using developer tools.
-- • Using eslint.
-- • Advanced Typescript.
-```
+- Review homework: the search bar
+- Five kinds of state
+- TanStack Query: live data from PokeAPI
+- Saving on the phone: SQLite
+- Debugging, then **agent mode** for the first time
+- At the end: your final assignment route
 ---
 
-# Review Homework
+# Review homework
 
-- What went well?
-- What was hard to do?
+- Show your search bar.
+- Where does the query live: component state, or somewhere else?
+- What was hard?
 
 ![bg right fit](../assets/stack-navigation.gif)
 
