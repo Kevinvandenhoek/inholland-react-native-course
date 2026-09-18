@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" font-family="Helvetica, Arial, sans-serif" fill="#eee">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#bbb"/>
+    </marker>
+  </defs>
+
+  <!-- boxes -->
+  <g font-size="26" font-weight="bold" text-anchor="middle">
+    <rect x="40"  y="140" width="180" height="90" rx="14" fill="#1e2a3a" stroke="#4aa3ff" stroke-width="3"/>
+    <text x="130" y="195">Spec</text>
+    <rect x="280" y="140" width="180" height="90" rx="14" fill="#1e2a3a" stroke="#4aa3ff" stroke-width="3"/>
+    <text x="370" y="195">Issues</text>
+    <rect x="520" y="140" width="180" height="90" rx="14" fill="#2a2a1e" stroke="#ffcc4a" stroke-width="3"/>
+    <text x="610" y="195">Agent</text>
+    <rect x="760" y="140" width="180" height="90" rx="14" fill="#1e3a2a" stroke="#4aff9a" stroke-width="3"/>
+    <text x="850" y="195">Review</text>
+    <rect x="1000" y="140" width="180" height="90" rx="14" fill="#1e3a2a" stroke="#4aff9a" stroke-width="3"/>
+    <text x="1090" y="195">Commit</text>
+  </g>
+
+  <!-- forward arrows -->
+  <g stroke="#bbb" stroke-width="3" marker-end="url(#a)">
+    <line x1="220" y1="185" x2="280" y2="185"/>
+    <line x1="460" y1="185" x2="520" y2="185"/>
+    <line x1="700" y1="185" x2="760" y2="185"/>
+    <line x1="940" y1="185" x2="1000" y2="185"/>
+  </g>
+
+  <!-- loop: review -> agent (not right yet) -->
+  <path d="M850,140 C850,80 610,80 610,140" fill="none" stroke="#ffcc4a" stroke-width="3" marker-end="url(#a)"/>
+  <text x="730" y="78" text-anchor="middle" font-size="18" fill="#ffcc4a">not right? ask again</text>
+
+  <!-- loop: commit -> issues (next issue) -->
+  <path d="M1090,230 C1090,330 370,330 370,230" fill="none" stroke="#4aff9a" stroke-width="3" marker-end="url(#a)"/>
+  <text x="730" y="350" text-anchor="middle" font-size="18" fill="#4aff9a">closes #12 → next issue</text>
+
+  <!-- captions -->
+  <g font-size="17" fill="#bbb" text-anchor="middle">
+    <text x="130" y="260">what the app does</text>
+    <text x="130" y="282">user stories</text>
+    <text x="370" y="260">one small task</text>
+    <text x="370" y="282">per issue</text>
+    <text x="610" y="260">Copilot builds it</text>
+    <text x="610" y="282">with your context</text>
+    <text x="850" y="260">read, run, test</text>
+    <text x="850" y="282">then: ask about it</text>
+    <text x="1090" y="260">you sign off</text>
+    <text x="1090" y="282">on what's in the repo</text>
+  </g>
+
+  <text x="600" y="405" text-anchor="middle" font-size="20" font-style="italic" fill="#ddd">The agent writes. You stay responsible.</text>
+</svg>
