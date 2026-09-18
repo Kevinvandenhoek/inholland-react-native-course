@@ -1,17 +1,18 @@
 # Exercise 3: your first story with the agent
 
 ### Objective
-One issue, from prompt to closed. The full loop: context, build, review, test,
+One issue, from prompt to closed. The full loop: context, plan, build, review, test,
 ask, update your instructions, commit. This is the loop you repeat until the
 deadline.
 
 ### Requirements
 
-1. One issue implemented by the agent, reviewed by you.
-2. Lint and tsc clean, the feature works on your phone.
-3. A commit that closes the issue.
-4. Your answers to the follow-up questions in `docs/day-3.md`.
-5. At least one new rule in `.github/copilot-instructions.md`, or a note in
+1. The agent's plan as a comment on the issue, approved by you before any code.
+2. One issue implemented by the agent, reviewed by you.
+3. Lint and tsc clean, the feature works on your phone.
+4. A commit that closes the issue.
+5. Your answers to the follow-up questions in `docs/day-3.md`.
+6. At least one new rule in `.github/copilot-instructions.md`, or a note in
    `docs/day-3.md` why nothing needed to change.
 
 ### Steps to Complete
@@ -38,12 +39,28 @@ Agent mode. Open the files it needs, so they are in context.
 Three things in that prompt: **what** to build, **where the context is**, and
 **what not to touch**. Leave out any one of them and you get surprises.
 
-#### 3. Watch it work (5 min)
+#### 3. Plan first (5 min)
+
+Your instructions tell the agent to plan before it codes, and to post that
+plan as a comment on the issue. It will ask to run `gh issue comment`. Allow
+it. Starts coding straight away? Stop it and point at the rule.
+
+Open the issue on GitHub and read the plan against the criteria:
+
+- Does it cover **every** criterion? Nothing more?
+- Does it stay inside the files you named?
+- Does it want a dependency you did not ask for?
+
+Wrong or vague? Say so in the chat. It updates the comment. Right? Say "go".
+Fixing a plan costs three lines. Fixing the code it would have written costs
+your afternoon.
+
+#### 4. Watch it work (3 min)
 
 It reads files, proposes edits, may want to run commands. Read what it is
 doing while it does it. Do not accept yet.
 
-#### 4. Review the diff (10 min)
+#### 5. Review the diff (10 min)
 
 Line by line. Every changed file.
 
@@ -55,7 +72,7 @@ Line by line. Every changed file.
 Something wrong? Say so in the same chat and let it fix it. You can also just
 fix it yourself. Both are fine, neither is optional.
 
-#### 5. Check it yourself (5 min)
+#### 6. Check it yourself (5 min)
 
 ```bash
 npx eslint .
@@ -65,7 +82,7 @@ npx tsc --noEmit
 Then run it on your phone. Green checks are not a working app.
 Test the error state too: turn on airplane mode.
 
-#### 6. Ask until you understand it (10 min)
+#### 7. Ask until you understand it (10 min)
 
 The last step of every agent task. Ask three questions about what it built:
 
@@ -76,16 +93,16 @@ The last step of every agent task. Ask three questions about what it built:
 Write the answers **in your own words** in `docs/day-3.md`. Not a copy of the
 chat. If you cannot write it down, you do not understand it yet. Ask again.
 
-#### 7. Update your instructions (3 min)
+#### 8. Update your instructions (3 min)
 
-Did you correct the agent in step 4? Explain something it could have known?
+Did you correct the agent in step 3 or 5? Explain something it could have known?
 That becomes a line in `.github/copilot-instructions.md`. One rule per
 finding, as short as it can be.
 
 Nothing to correct this time? Write one line in `docs/day-3.md` saying so.
 Most issues will give you something.
 
-#### 8. Commit and close (3 min)
+#### 9. Commit and close (3 min)
 
 ```bash
 git add .
@@ -95,12 +112,13 @@ git push
 
 GitHub closes the issue and links it to your commit. Check that it did.
 
-#### 9. Next issue
+#### 10. Next issue
 
 New chat. Same loop. That is the rest of the assignment.
 
 ### Done when
 
+- ✅ The plan is a comment on the issue, approved by you before the code
 - ✅ One issue closed by a commit
 - ✅ The feature works on your phone, including the error state
 - ✅ Lint and tsc clean

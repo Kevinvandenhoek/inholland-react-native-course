@@ -20,7 +20,7 @@ One GitHub repo with:
 | The app | Code that runs in Expo Go |
 | `specs/product.md` | Goal, 3 to 6 stories with acceptance criteria, API and data |
 | `.github/copilot-instructions.md` | What you told the agent about your project |
-| GitHub Issues | Every task an issue, closed by a commit |
+| GitHub Issues | Every task an issue, the agent's plan as a comment, closed by a commit |
 | `chat-history/` | A copy of your Copilot chats from VS Code |
 | `docs/toelichting.md` | Max 2 pages, six questions |
 

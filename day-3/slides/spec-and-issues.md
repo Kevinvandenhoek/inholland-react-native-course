@@ -149,6 +149,21 @@ Three things in there: **what**, **where the context is**, **what not to touch**
 
 ---
 
+# Plan first
+
+Code is expensive to correct. A plan is three lines.
+
+Before the agent touches a file, it posts a plan as a comment on the issue:
+which files, how, what it is unsure about. You read it against the criteria.
+Wrong? Say so. Right? "Go."
+
+Put it in your instructions once, and it happens every issue:
+
+> Before you write code: post a short plan as a comment on the issue with
+> `gh issue comment <number>`. Then wait for my go.
+
+---
+
 # Then you review
 
 The agent is done. You are not.
@@ -173,14 +188,14 @@ git push
 
 GitHub closes issue #3 and links it to the commit.
 
-That link is half your grade for the way you work: the issue says what was
-planned, the commit says what happened, the chat says how it got there.
+That link is half your grade for the way you work: the issue holds the criteria
+and the plan, the commit says what happened, the chat says how it got there.
 
 ---
 
 # The loop
 
-**spec → issue → new chat → prompt → review → ask → update instructions → commit → next issue**
+**spec → issue → new chat → prompt → plan → review → ask → update instructions → commit → next issue**
 
 Same loop tomorrow, same loop in three weeks, same loop at work.
 

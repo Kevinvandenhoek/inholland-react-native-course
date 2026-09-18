@@ -75,7 +75,7 @@ One GitHub repo with:
 | The app | The code, running in Expo Go | |
 | `specs/product.md` | Goal, 3 to 6 user stories with acceptance criteria, which API and which data | [template](./templates/product.md) |
 | `.github/copilot-instructions.md` | What you told the agent about your project | [template](./templates/copilot-instructions.md) |
-| GitHub Issues | Every task an issue, closed by a commit (`closes #12`) | |
+| GitHub Issues | Every task an issue, the agent's plan as a comment, closed by a commit (`closes #12`) | |
 | `chat-history/` | A copy of your Copilot chat folder from VS Code | |
 | `docs/toelichting.md` | Max 2 pages, six questions | [template](./templates/toelichting.md) |
 

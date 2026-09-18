@@ -31,6 +31,9 @@ expo-sqlite. Runs in Expo Go, so no packages that need a custom native build.
 - Install packages with `npx expo install`. Ask me before adding a dependency.
 - Keep changes small. Do not refactor files you were not asked to touch.
 
-## Specs
+## Workflow
 
-The product spec is in `specs/product.md`. Open issues describe what is next.
+- The product spec is in `specs/product.md`. Open issues describe what is next.
+- One issue per chat. Before you write code: post a short plan as a comment
+  on the issue with `gh issue comment <number>`. Which files you will touch,
+  how, and what you are unsure about. Then wait for my go.

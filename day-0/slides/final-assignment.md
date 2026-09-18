@@ -56,9 +56,10 @@ You learn all of this on days 1 and 2.
 
 1. **Spec**: write what the app does, as user stories.
 2. **Issues**: one small task per GitHub issue.
-3. **Agent**: Copilot builds one issue, with your spec as context.
-4. **Review**: you read it, run it, test it. Then you *ask about it* until you understand it, and put what you learned in your instructions.
-5. **Commit**: `closes #12`. Next issue, new chat.
+3. **Plan**: the agent posts a plan on the issue. You approve it before any code.
+4. **Agent**: Copilot builds one issue, with your spec as context.
+5. **Review**: you read it, run it, test it. Then you *ask about it* until you understand it, and put what you learned in your instructions.
+6. **Commit**: `closes #12`. Next issue, new chat.
 
 Today you see this once. Day 3 you do it for real.
 

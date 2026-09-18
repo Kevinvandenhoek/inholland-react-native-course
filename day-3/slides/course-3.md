@@ -16,7 +16,7 @@ class: invert
 1. **Your idea** - one sentence each, final approval
 2. **Project structure and dependencies** - slides
 3. **Exercise 1** - your own repo
-4. **Spec Driven Development** - spec → issues → agent → review → commit
+4. **Spec Driven Development** - spec → issues → plan → agent → review → commit
 5. **Exercise 2** - your spec and your issues
 6. **Exercise 3** - your first story, built by the agent
 7. **Hand-in** - what, how, when
