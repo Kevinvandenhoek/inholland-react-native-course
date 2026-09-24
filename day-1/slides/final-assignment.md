@@ -105,7 +105,7 @@ One GitHub repo with:
 - `chat-history/`: the chat of at least one issue, start to finish, exported from your agent tool
 - `docs/toelichting.md`: 2 pages, 6 questions
 
-Full git history, no squashing. Link in Teams before **Friday 6 November 2026, 23:59**.
+Full git history: no squashing, **never force-push**. Link in Teams before **Friday 6 November 2026, 23:59**.
 
 ---
 
