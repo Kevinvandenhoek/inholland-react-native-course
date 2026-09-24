@@ -25,7 +25,7 @@ A complete product gets you to a 6. Above that, the product counts most: 80%. Ho
 |---|---|---|---|
 | **What** | The course app, finished and extended | Two Pokémon fight by the real rules | Anything with one clear core action |
 | **Design** | Figma, strict | Your own | Your own: a sketch per screen |
-| **Specs** | Fixed list (appendix A) | Fixed list (appendix B) | You write them: 3–6 features |
+| **Specs** | Fixed list (appendix A), plus one feature you design: compare two Pokémon | Fixed list (appendix B) | You write them: 3–6 features |
 | **API** | PokeAPI | PokeAPI | PokeAPI or any public API without login or key |
 | **Approval** | Tell me in Teams | Tell me in Teams | Idea note (template on day 3), feedback in the holiday, final go on day 4 |
 
