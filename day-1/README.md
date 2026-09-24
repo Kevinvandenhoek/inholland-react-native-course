@@ -11,7 +11,7 @@
 ## Homework
 
 - The Pokedex app runs on your phone, if it did not work in class.
-- Read the final assignment in [`day-4/README.md`](../day-4/README.md) and think about your route: Pokédex, battle simulator, or your own idea.
+- Read the [final assignment slides](https://kevinvandenhoek.github.io/inholland-react-native-course/day-1/slides/final-assignment.html#1) again and think about your route: Pokédex, battle simulator, or your own idea. Own idea? Find an API and test it in your browser.
 - Optional (Windows): set up an [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/).
 
 ## References

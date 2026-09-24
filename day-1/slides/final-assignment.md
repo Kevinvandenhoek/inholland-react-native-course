@@ -33,6 +33,33 @@ Think about your choice **before day 3**.
 
 ---
 
+# Your own idea
+
+**Conditions**
+- Live data from a public API. No login, no key, no list you put in the code yourself.
+- One clear core action: search, plan, collect, compare, ...
+- 3 to 6 features. Not more.
+- It meets the technical core (next slides).
+
+**Test the API.** Open an endpoint in your browser. JSON without a key? Usable. Ideas: [public-apis list](https://github.com/public-apis/public-apis).
+
+**The idea note** (day 3, max 10 lines): the idea, the core action, the API, 3–5 features in one sentence each, which native feature and where, what goes in SQLite and why.
+
+Not working out? After day 4 you can still switch to a starter idea.
+
+---
+
+# What is a good size?
+
+| Good | Too big | Not suitable |
+|---|---|---|
+| A weather planner on Open-Meteo: pick a city, see the week, save favorite places | A social app with accounts and posts | An API that needs a key or a login |
+| A reading list on Open Library: search books, keep what you want to read | A clone of an app with 20 screens | A list of data you type into the code |
+
+One core action, a few screens, live data. If you cannot say it in one sentence, it is two apps.
+
+---
+
 # Technical core (every route)
 
 - Runs in **Expo Go** via QR code
@@ -138,5 +165,4 @@ Everything in your repo, you can explain and defend.
 # Before day 3
 
 - Think about your route: Pokédex, battle simulator, or your own idea.
-- Own idea? On day 3 you get the template for the idea note.
-- Read the full assignment in `day-4/README.md`.
+- Own idea? Find an API and test it in your browser. On day 3 you get the template for the idea note.
