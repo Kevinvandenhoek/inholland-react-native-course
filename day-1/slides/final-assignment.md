@@ -26,8 +26,8 @@ A complete product gets you to a 6. Above that, the product counts most: 80%. Ho
 | **What** | The course app, finished and extended | Two Pokémon fight by the real rules | Anything with one clear core action |
 | **Design** | Figma, strict | Your own | Your own: a sketch per screen |
 | **Specs** | Fixed list (appendix A), plus one feature you design: compare two Pokémon | Fixed list (appendix B) | You write them: 3–6 features |
-| **API** | PokeAPI | PokeAPI | PokeAPI or any public API without login or key |
-| **Approval** | Tell me in Teams | Tell me in Teams | Idea note (template on day 3), feedback in the holiday, final go on day 4 |
+| **API** | PokeAPI | PokeAPI | PokeAPI or any public API without login. A free key is fine |
+| **Approval** | No need | No need | Idea note (template on day 3), feedback in the holiday, final go on day 4 |
 
 Think about your choice **before day 3**.
 
@@ -36,14 +36,16 @@ Think about your choice **before day 3**.
 # Your own idea
 
 **Conditions**
-- Live data from a public API. No login, no key, no list you put in the code yourself.
+- Live data from a public API. No login, no list you put in the code yourself.
 - One clear core action: search, plan, collect, compare, ...
 - 3 to 6 features. Not more.
 - It meets the technical core (next slides).
 
-**Test the API.** Open an endpoint in your browser. JSON without a key? Usable. Ideas: [public-apis list](https://github.com/public-apis/public-apis).
+**Test the API.** Open an endpoint in your browser. JSON back? Usable. Ideas: [public-apis list](https://github.com/public-apis/public-apis).
 
 **The idea note** (day 3, max 10 lines): the idea, the core action, the API, 3–5 features in one sentence each, which native feature and where, what goes in SQLite and why.
+
+**Needs a key?** A free one is fine. Put it in `.env`, never in your repo: send me the `.env` in Teams with your link.
 
 Not working out? After day 4 you can still switch to a starter idea.
 
@@ -53,7 +55,7 @@ Not working out? After day 4 you can still switch to a starter idea.
 
 | Good | Too big | Not suitable |
 |---|---|---|
-| A weather planner on Open-Meteo: pick a city, see the week, save favorite places | A social app with accounts and posts | An API that needs a key or a login |
+| A weather planner on Open-Meteo: pick a city, see the week, save favorite places | A social app with accounts and posts | An API that needs a login, or a paid key |
 | A reading list on Open Library: search books, keep what you want to read | A clone of an app with 20 screens | A list of data you type into the code |
 
 One core action, a few screens, live data. If you cannot say it in one sentence, it is two apps.
