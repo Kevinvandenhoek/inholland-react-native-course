@@ -38,13 +38,13 @@ Think about your choice **before day 3**.
 - Runs in **Expo Go** via QR code
 - Live data from a public API with **TanStack Query**
 - At least **2 screens** with **Expo Router**
-- Something saved in **SQLite** that survives a restart
+- Something saved in **SQLite** that survives a restart (you pick what)
 - Every load has a **loading** and an **error** state
 - At least **1 native feature** (Share, haptics, camera, ...)
 - **TypeScript** and **ESLint** without errors
 - **Logical structure**: UI, data and logic are not mixed
 
-You learn all of this on days 2 and 3.
+You learn all of this on days 2 and 3. The assignment says **what** the app does, not **how**: you choose, and explain why.
 
 ---
 
