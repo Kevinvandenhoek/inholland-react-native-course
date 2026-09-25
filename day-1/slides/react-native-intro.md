@@ -104,7 +104,7 @@ class: invert
 # Course overview
 
 <style>
-.col-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1rem; }
+.col-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1rem; font-size: 0.85em; }
 .col-4 h4 { margin-bottom: 0.3rem; }
 .col-4 em { color: #ffcc4a; font-style: normal; }
 </style>
@@ -215,6 +215,8 @@ Your React code does **not** draw pixels.
 
 # Under the hood
 
+<style scoped>section { font-size: 23px; }</style>
+
 ```tsx
 <View style={{ padding: 16 }}>
   <Text>Hello</Text>
@@ -295,13 +297,13 @@ Native scrolling, native text rendering, native touch handling. Every day we wil
 
 # CNG: Continuous Native Generation
 
-![expo starter clean](../assets/expo-starter-clean.png)
+![expo starter clean h:440](../assets/expo-starter-clean.png)
 
 ---
 
 # CNG: Continuous Native Generation
 
-![cng](../assets/cng.png)
+![cng h:360](../assets/cng.png)
 
 The `ios/` and `android/` folders are **generated** from your config. You do not edit them. You need this for widgets, build variants or custom native code. Not in this course.
 
@@ -309,13 +311,13 @@ The `ios/` and `android/` folders are **generated** from your config. You do not
 
 # Keep it simple
 
-![kiss expo](../assets/kiss-expo.png)
+![kiss expo h:440](../assets/kiss-expo.png)
 
 ---
 
 # Expo Go
 
-![expo go](../assets/expo-go.png)
+![expo go h:440](../assets/expo-go.png)
 
 ---
 

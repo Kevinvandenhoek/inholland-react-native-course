@@ -14,7 +14,7 @@
     <rect x="415"  y="140" width="170" height="90" rx="14" fill="#2a2a1e" stroke="#ffcc4a" stroke-width="3"/>
     <text x="500"  y="195">Plan</text>
     <rect x="615"  y="140" width="170" height="90" rx="14" fill="#2a2a1e" stroke="#ffcc4a" stroke-width="3"/>
-    <text x="700"  y="195">Agent</text>
+    <text x="700"  y="195">Build</text>
     <rect x="815"  y="140" width="170" height="90" rx="14" fill="#1e3a2a" stroke="#4aff9a" stroke-width="3"/>
     <text x="900"  y="195">Review</text>
     <rect x="1015" y="140" width="170" height="90" rx="14" fill="#1e3a2a" stroke="#4aff9a" stroke-width="3"/>
@@ -30,7 +30,7 @@
     <line x1="985" y1="185" x2="1015" y2="185"/>
   </g>
 
-  <!-- loop: review -> agent (not right yet) -->
+  <!-- loop: review -> build (not right yet) -->
   <path d="M900,140 C900,80 700,80 700,140" fill="none" stroke="#ffcc4a" stroke-width="3" marker-end="url(#a)"/>
   <text x="800" y="78" text-anchor="middle" font-size="18" fill="#ffcc4a">not right? ask again</text>
 
@@ -40,8 +40,8 @@
 
   <!-- captions -->
   <g font-size="17" fill="#bbb" text-anchor="middle">
-    <text x="100"  y="260">what the app does</text>
-    <text x="100"  y="282">one file per feature</text>
+    <text x="100"  y="260">you write what it does</text>
+    <text x="100"  y="282">the agent grills you</text>
     <text x="300"  y="260">one small task</text>
     <text x="300"  y="282">per issue</text>
     <text x="500"  y="260">agent proposes</text>

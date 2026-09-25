@@ -1,6 +1,6 @@
 # InHolland React Native Course
 
-Four days of React Native for ICT students at InHolland. One app runs through all four days: a Pokédex built on [PokeAPI](https://pokeapi.co/) and this [Figma design](https://www.figma.com/design/dsgGXcu5WELIvRW90m5308/Pokemon-Code-Challenge).
+Four days of React Native for ICT students at InHolland. One app runs through all four days: a Pokédex built on [PokeAPI](https://pokeapi.co/) and this [Figma design](https://www.figma.com/design/dsgGXcu5WELIvRW90m5308/Pokemon-Code-Challenge?node-id=0-1&p=f).
 
 | Day | Topic | |
 |---|---|---|

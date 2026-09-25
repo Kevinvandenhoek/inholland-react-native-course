@@ -27,7 +27,7 @@ A complete product gets you to a 6. Above that, the product counts most: 80%. Ho
 | **Design** | Figma, strict | Your own | Your own: a sketch per screen |
 | **Specs** | Fixed list (appendix A), plus one feature you design: compare two Pokémon | Fixed list (appendix B) | You write them: 3–6 features |
 | **API** | PokeAPI | PokeAPI | PokeAPI or any public API without login. A free key is fine |
-| **Approval** | No need | No need | Idea note (template on day 3), feedback in the holiday, final go on day 4 |
+| **Approval** | No need | No need | Idea note (day 3), feedback, go on day 4 |
 
 Think about your choice **before day 3**.
 
@@ -35,19 +35,20 @@ Think about your choice **before day 3**.
 
 # Your own idea
 
+<style scoped>section { font-size: 25px; }</style>
+
 **Conditions**
 - Live data from a public API. No login, no list you put in the code yourself.
 - One clear core action: search, plan, collect, compare, ...
-- 3 to 6 features. Not more.
-- It meets the technical core (next slides).
+- 3 to 6 features. It meets the technical core.
 
 **Test the API.** Open an endpoint in your browser. JSON back? Usable. Ideas: [public-apis list](https://github.com/public-apis/public-apis).
 
-**The idea note** (day 3, max 10 lines): the idea, the core action, the API, 3–5 features in one sentence each, which native feature and where, what goes in SQLite and why.
+**The idea note** (template on day 3): the first version of your `product.md`. The idea, core action, 3–6 features, API, what goes in SQLite, which native feature.
 
-**Needs a key?** A free one is fine. Put it in `.env`, never in your repo: send me the `.env` in Teams with your link.
+**Needs a key?** Free only. In `.env`, never in your repo. Send me the `.env` in Teams.
 
-Not working out? After day 4 you can still switch to a starter idea.
+Not working out? After day 4 you can switch to a starter idea.
 
 ---
 
@@ -63,6 +64,8 @@ One core action, a few screens, live data. If you cannot say it in one sentence,
 ---
 
 # Technical core (every route)
+
+<style scoped>section { font-size: 26px; }</style>
 
 - Runs in **Expo Go** via QR code
 - Live data from a public API with **TanStack Query**
@@ -83,11 +86,11 @@ You learn all of this on days 2 and 3. The assignment says **what** the app does
 
 # How you will work
 
-1. **Spec**: write what the app does, one file per feature.
+1. **Spec**: write what the app does, one file per feature. Let the agent ask questions until it is sharp.
 2. **Issues**: one small task per GitHub issue.
 3. **Plan**: the agent posts a plan and a task list on the issue. You approve it before any code.
-4. **Agent**: the agent builds one issue, with your spec as context.
-5. **Review**: you read it, run it, test it. Then you *ask about it* until you understand it, and put what you learned in your instructions.
+4. **Build**: the agent builds one issue, with your spec as context.
+5. **Review**: read, run, test. *Ask about it* until you understand it. Update your instructions.
 6. **Commit**: `closes #12`. Next issue, new chat.
 
 Today you see this once. Day 4 you do it for real.
@@ -96,13 +99,15 @@ Today you see this once. Day 4 you do it for real.
 
 # What you hand in
 
+<style scoped>section { font-size: 27px; }</style>
+
 One GitHub repo with:
 
 - The **app**
 - `specs/`: what the app is, and one file per feature (3–6)
 - `AGENTS.md`: what you told the agent about your project
 - **GitHub Issues**, closed by commits
-- `chat-history/`: the chat of at least one issue, start to finish, exported from your agent tool
+- `chat-history/`: the chat of at least one issue, start to finish
 - `docs/toelichting.md`: 2 pages, 6 questions
 
 Full git history: no squashing, **never force-push**. Link in Teams before **Friday 6 November 2026, 23:59**.
@@ -111,6 +116,8 @@ Full git history: no squashing, **never force-push**. Link in Teams before **Fri
 
 # Your grade
 
+<style scoped>section { font-size: 25px; } table { font-size: 0.85em; }</style>
+
 **A 6** when the technical core is complete, everything is handed in, and the app does what your spec says. Missing any of it: a 5 at most.
 
 From 6 to 8:
@@ -118,7 +125,7 @@ From 6 to 8:
 | Part | Weight | We look at |
 |---|---|---|
 | Product | 80% | Works, complete, code quality |
-| Steering and checking | 10% | Small tasks, context, plan first, your own choices, instructions that grow. You read, tested and corrected the agent's work |
+| Steering and checking | 10% | Small tasks, context, plan first, own choices, growing instructions. You checked the agent's work |
 | Understanding | 10% | Your explanation matches the code |
 
 Bonus, +0.5 each up to a 10: three Reanimated animations, dark mode, infinite scroll, clean TypeScript, pixel-perfect or consistent design, custom font, localisation, zero bugs.
