@@ -93,7 +93,6 @@ class: invert
 # How this course works
 
 - **4 days.** Each day: short slides, then you build.
-- **One app.** We build a Pokédex together, day 1 to day 4.
 - **Copilot from day 1.** Today it explains code. Later it writes code, on your instructions.
 - **Final assignment.** Your own app on live data. Your *process* counts as much as your product.
 
