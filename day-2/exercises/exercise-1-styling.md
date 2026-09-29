@@ -13,13 +13,13 @@ You work in your `Pokedex` project from day 1.
 
 **The design colours:**
 
-| Token | Value | For |
-|---|---|---|
-| `text` | `#22303C` | titles and text |
-| `background` | `#F5F2EC` | screen background |
-| `card` | `#FFFFFF` | rows (exercise 3) |
-| `badge` | `#2E7D5B` | category badge (exercise 3) |
-| `badgeText` | `#FFFFFF` | text in the badge |
+| Token | Light | Dark | For |
+|---|---|---|---|
+| `text` | `#22303C` | `#F2F4F5` | titles and text |
+| `background` | `#F5F2EC` | `#171A1D` | screen background |
+| `card` | `#FFFFFF` | `#202529` | rows (exercise 3) |
+| `badge` | `#2E7D5B` | `#347A59` | category badge (exercise 3) |
+| `badgeText` | `#FFFFFF` | `#FFFFFF` | text in the badge |
 
 > **Behind, or no project?** Start from the [exercise 1 starter](./starters/exercise-1/).
 
@@ -42,7 +42,8 @@ You work in your `Pokedex` project from day 1.
    > **📚 Reference:** [Native tabs](https://docs.expo.dev/router/advanced/native-tabs/)
 
 2. **Extend the theme.** Open `src/constants/theme.ts`.
-   - `Colors.light` and `Colors.dark` are already there. `text` and `background` exist already: change their values to the design colours above. Add the new keys `card`, `badge` and `badgeText`. Do this in **both** `light` and `dark`, with the same values for now; dark mode is a bonus later.
+   - `Colors.light` and `Colors.dark` are already there. `text` and `background` exist already: change their values to the Light column above. Add the new keys `card`, `badge` and `badgeText`.
+   - Do the same in `dark`, with the values from the Dark column. The template picks `light` or `dark` from the setting of your phone, so both need every key. Leave the other keys from the template as they are.
    - `Spacing` is already there too (`Spacing.two` is 8, `Spacing.three` is 16). Use it.
    - Add radius tokens:
 

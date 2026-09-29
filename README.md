@@ -11,4 +11,6 @@ Four days of React Native for ICT students at InHolland. One app runs through al
 
 Slides: `https://kevinvandenhoek.github.io/inholland-react-native-course/day-<n>/slides/<deck>.html`. Each day's README links to its decks.
 
+The app does not load on your phone? See [Using Expo Go](https://kevinvandenhoek.github.io/inholland-react-native-course/troubleshooting/slides/using-expo-go.html).
+
 The **final assignment** follows with day 4.

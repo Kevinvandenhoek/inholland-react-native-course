@@ -118,6 +118,8 @@ npx expo start
    npx expo start --tunnel
    ```
 
+Still stuck? See [Using Expo Go](../../troubleshooting/slides/using-expo-go.html).
+
 ---
 
 # 10. Put it on GitHub

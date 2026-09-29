@@ -114,7 +114,7 @@ export const Colors = {
     badge: '#2E7D5B',        // new
     badgeText: '#FFFFFF',    // new
   },
-  dark: { /* same keys and values for now. Dark mode is a bonus. */ },
+  dark: { /* same keys, values from the Dark column */ },
 } as const;
 
 export const Spacing = { half: 2, one: 4, two: 8, three: 16, /* … */ } // already there
