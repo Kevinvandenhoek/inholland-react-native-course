@@ -71,7 +71,7 @@ app/
 
 ## File-based routing: Expo Router
 ```
-app/
+src/app/
 ├── _layout.tsx       // root layout
 ├── index.tsx         // → /
 ├── about.tsx         // → /about
@@ -79,7 +79,7 @@ app/
     └── [name].tsx    // → /pokemon/pikachu
 ```
 
-Same idea. This is what the default Expo template gives you.
+Same idea. In the default Expo template, routes live in `src/app/`.
 
 ---
 

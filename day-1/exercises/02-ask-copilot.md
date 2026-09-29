@@ -7,7 +7,7 @@ Today Copilot only **explains**. It does not write code yet. The rule for the wh
 
 ### Requirements
 
-1. You can say in your own words what `app/`, `components/` and `app.json` do.
+1. You can say in your own words what `src/app/`, `src/components/` and `app.json` do.
 2. You checked at least one answer against the Expo docs.
 3. You made one change by hand.
 
@@ -21,10 +21,10 @@ Today Copilot only **explains**. It does not write code yet. The rule for the wh
 
    | File | Ask |
    |---|---|
-   | `app/_layout.tsx` | "What does this file do, and what is a root layout?" |
-   | `app/(tabs)/_layout.tsx` | "Where does the tab bar come from? What do the parentheses in the folder name mean?" |
-   | `app/(tabs)/index.tsx` | "Which screen is this, and why is it called index?" |
-   | `components/` | "What is the difference between a file in app/ and a file in components/?" |
+   | `src/app/_layout.tsx` | "What does this file do, and what is a root layout?" |
+   | `src/components/app-tabs.tsx` | "Where does the tab bar come from? What makes `NativeTabs` native?" |
+   | `src/app/index.tsx` | "Which screen is this, and why is it called index?" |
+   | `src/components/` | "What is the difference between a file in src/app/ and a file in src/components/?" |
    | `app.json` | "What is this file for? Which settings matter when I run the app in Expo Go?" |
 
    > **📚 Reference:** [Expo Router: file-based routing](https://docs.expo.dev/router/basics/core-concepts/)
@@ -35,7 +35,7 @@ Today Copilot only **explains**. It does not write code yet. The rule for the wh
 
 4. **Ask one follow-up.** Something you did not understand in an answer. Keep asking until you get it. This is the habit we grade later: **ask about it**.
 
-5. **Change something by hand.** Rename one tab in `app/(tabs)/_layout.tsx` (the `title`) and change the text on that screen. See it reload on your phone. No Copilot for this one.
+5. **Change something by hand.** Rename one tab in `src/components/app-tabs.tsx` (the text in `NativeTabs.Trigger.Label`) and change the text on that screen. See it reload on your phone. No Copilot for this one.
 
 6. **Commit.** Add `NOTES.md` and your change. Commit message: `Exercise 2: explore the project`.
 
@@ -46,4 +46,4 @@ Today Copilot only **explains**. It does not write code yet. The rule for the wh
 - ✅ One tab is renamed and the app shows it
 - ✅ Committed and pushed
 
-Close your laptop and tell your neighbour what `app/`, `components/` and `app.json` do. Without looking.
+Close your laptop and tell your neighbour what `src/app/`, `src/components/` and `app.json` do. Without looking.

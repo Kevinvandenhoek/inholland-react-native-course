@@ -95,9 +95,28 @@ npx expo start
 - Install **Expo Go** from the App Store or Play Store
 - Phone and laptop on the **same Wi-Fi**
 - Scan the QR code in your terminal (iPhone: camera app; Android: Expo Go app)
-- Wi-Fi blocks it? Run `npx expo start --tunnel`
+- Wi-Fi blocks it? Use a tunnel, see the next slide.
 
 ![bg right fit](../assets/expo-start.png)
+
+---
+
+# Wi-Fi blocks it? Use a tunnel
+
+1. Make a free account on [expo.dev/signup](https://expo.dev/signup).
+2. Log in with that account in **Expo Go** (profile tab).
+3. Log in with the same account in the **terminal**:
+
+   ```bash
+   npx expo login          # email and password
+   npx expo login --sso    # signed up with Google or GitHub
+   ```
+
+4. Start with a tunnel and scan the QR code again:
+
+   ```bash
+   npx expo start --tunnel
+   ```
 
 ---
 
@@ -121,7 +140,7 @@ npx expo start
 
 - ✅ Tests B, C and D are green in your agent tool
 - ✅ The Pokedex app runs on your phone
-- ✅ You change one text in `app/(tabs)/index.tsx` and see it reload
+- ✅ You change one text in `src/app/index.tsx` and see it reload
 - ✅ The project is on GitHub
 
 Stuck? Raise your hand. Wait for the rest: open exercise 2.

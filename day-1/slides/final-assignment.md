@@ -23,13 +23,13 @@ A complete product gets you to a 6. Above that, the product counts most: 80%. Ho
 
 | | Pokédex | Battle simulator | Your own idea |
 |---|---|---|---|
-| **What** | The course app, finished and extended | Two Pokémon fight by the real rules | Anything with one clear core action |
+| **What** | A Pokédex: list, detail, favorites and more | Two Pokémon fight by the real rules | Anything with one clear core action |
 | **Design** | Figma, strict | Your own | Your own: a sketch per screen |
 | **Specs** | Fixed list (appendix A), plus one feature you design: compare two Pokémon | Fixed list (appendix B) | You write them: 3–6 features |
 | **API** | PokeAPI | PokeAPI | PokeAPI or any public API without login. A free key is fine |
-| **Approval** | No need | No need | Idea note (day 3), feedback, go on day 4 |
+| **Approval** | No need | No need | Idea note before day 3, feedback on day 3, go on day 4 |
 
-Think about your choice **before day 3**.
+Own idea? Hand in the idea note **before day 3**.
 
 ---
 
@@ -44,7 +44,7 @@ Think about your choice **before day 3**.
 
 **Test the API.** Open an endpoint in your browser. JSON back? Usable. Ideas: [public-apis list](https://github.com/public-apis/public-apis).
 
-**The idea note** (template on day 3): the first version of your `product.md`. The idea, core action, 3–6 features, API, what goes in SQLite, which native feature.
+**The idea note** (template on day 2, hand in before day 3): the first version of your `product.md`. The idea, core action, 3–6 features, API, what goes in SQLite, which native feature.
 
 **Needs a key?** Free only. In `.env`, never in your repo. Send me the `.env` in Teams.
 
@@ -171,7 +171,7 @@ Everything in your repo, you can explain and defend.
 
 ---
 
-# Before day 3
+# Before day 2
 
 - Think about your route: Pokédex, battle simulator, or your own idea.
-- Own idea? Find an API and test it in your browser. On day 3 you get the template for the idea note.
+- Own idea? Find an API and test it in your browser. On day 2 you get the template for the idea note.

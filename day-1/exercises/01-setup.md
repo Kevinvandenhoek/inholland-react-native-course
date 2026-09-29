@@ -46,7 +46,7 @@ Get your tools working and create the Pokédex app you will build on for the res
 
    > **📚 Reference:** [Expo Go](https://docs.expo.dev/get-started/set-up-your-environment/?mode=expo-go)
 
-6. **Change something.** Open `app/(tabs)/index.tsx`, change a text, save. Your phone updates without a restart.
+6. **Change something.** Open `src/app/index.tsx`, change a text, save. Your phone updates without a restart.
 
 7. **Put it on GitHub.** Create a repository `Pokedex`, commit, push. Every exercise in this course ends with a commit.
 
