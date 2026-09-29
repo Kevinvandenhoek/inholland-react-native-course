@@ -17,7 +17,7 @@
 
 - Finish exercises 1 to 4: list, detail, Bag tab, theme, lint and tsc clean.
 - Add search: a [`TextInput`](https://reactnative.dev/docs/textinput) above the list that filters the items by name while you type.
-- **Own idea for the final assignment?** Fill in the [idea note](./templates/idea.md) and post it in Teams before day 3. On day 3 you hear if it is suitable, or what must change. Final go on day 4. Pokédex or battle simulator: no need to tell me.
+- **Own idea for the final assignment?** Fill in the [idea note](./templates/idea.md) (see the [example](./templates/idea-example.md)) and post it in Teams before day 3. On day 3 you hear if it is suitable, or what must change. Final go on day 4. Pokédex or battle simulator: no need to tell me.
 
 ## References
 

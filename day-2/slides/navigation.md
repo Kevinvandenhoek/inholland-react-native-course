@@ -106,5 +106,5 @@ Autocomplete is allowed. Finish with `npx expo lint` and `npx tsc --noEmit`.
 
 - Finish exercises 1 to 4. Lint and tsc clean.
 - Search: a `TextInput` above the list that filters the items by name.
-- **Own idea for the final assignment?** Fill in the [idea note](https://github.com/kevinvandenhoek/inholland-react-native-course/blob/main/day-2/templates/idea.md) and post it in Teams **before day 3**. On day 3 you hear if it is suitable.
+- **Own idea for the final assignment?** Fill in the [idea note](https://github.com/kevinvandenhoek/inholland-react-native-course/blob/main/day-2/templates/idea.md) ([example](https://github.com/kevinvandenhoek/inholland-react-native-course/blob/main/day-2/templates/idea-example.md)) and post it in Teams **before day 3**. On day 3 you hear if it is suitable.
 - Pokédex or battle simulator? No need to tell me.

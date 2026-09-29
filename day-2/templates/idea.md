@@ -2,7 +2,7 @@
 
 Only needed for your **own idea**.
 
-**Hand in:** copy this template, fill it in (max ten lines of your own text), and post it in Teams **before day 3**. On day 3 I tell you if the idea is suitable, or what must change. Final go on day 4.
+**Hand in:** copy this template, fill it in (max ten lines of your own text), and post it in Teams **before day 3**. See the [example](./idea-example.md). On day 3 I tell you if the idea is suitable, or what must change. Final go on day 4.
 
 **Your idea must meet these conditions:**
 
