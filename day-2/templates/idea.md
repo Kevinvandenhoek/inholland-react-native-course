@@ -6,7 +6,7 @@ Only needed for your **own idea**.
 
 **Your idea must meet these conditions:**
 
-- Live data from a public API, with enough data for your features. No login. A key is fine if it is free.
+- Live data from an API, with enough data for your features. Any API is fine, as long as I can run your app. A key or a login is fine too.
 - Test the API first: open an endpoint in your browser. JSON back? Usable.
 - One clear core action for the user.
 - 3 to 6 features, not more.

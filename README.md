@@ -1,6 +1,6 @@
 # InHolland React Native Course
 
-Four days of React Native for ICT students at InHolland. One app runs through all four days: a Pokédex built on [PokeAPI](https://pokeapi.co/) and this [Figma design](https://www.figma.com/design/dsgGXcu5WELIvRW90m5308/Pokemon-Code-Challenge?node-id=0-1&p=f).
+Four days of React Native for ICT students at InHolland. One app runs through the lessons: an item catalogue built on [PokeAPI](https://pokeapi.co/).
 
 | Day | Topic | |
 |---|---|---|
@@ -13,4 +13,4 @@ Slides: `https://kevinvandenhoek.github.io/inholland-react-native-course/day-<n>
 
 The app does not load on your phone? See [Using Expo Go](https://kevinvandenhoek.github.io/inholland-react-native-course/troubleshooting/slides/using-expo-go.html).
 
-The **final assignment** follows with day 4.
+The **final assignment**: [exam/README.md](./exam/README.md).

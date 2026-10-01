@@ -11,7 +11,7 @@ class: invert
 
 # In one sentence
 
-> Build a mobile app on **live data** from a public API, with a coding agent, and show us **how** you worked.
+> Build a mobile app on **live data** from an API, with a coding agent, and show us **how** you worked.
 
 A complete product gets you to a 6. Above that, the product counts most: 80%. How you worked with the agent and how well you understand it: 20%.
 
@@ -26,7 +26,7 @@ A complete product gets you to a 6. Above that, the product counts most: 80%. Ho
 | **What** | A Pokédex: list, detail, favorites and more | Two Pokémon fight by the real rules | Anything with one clear core action |
 | **Design** | Figma, strict | Your own | Your own: a sketch per screen |
 | **Specs** | Fixed list (appendix A), plus one feature you design: compare two Pokémon | Fixed list (appendix B) | You write them: 3–6 features |
-| **API** | PokeAPI | PokeAPI | PokeAPI or any public API without login. A free key is fine |
+| **API** | PokeAPI | PokeAPI | Any API I can run. A key or a login is fine |
 | **Approval** | No need | No need | Idea note before day 3, feedback on day 3, go on day 4 |
 
 Own idea? Hand in the idea note **before day 3**.
@@ -38,7 +38,7 @@ Own idea? Hand in the idea note **before day 3**.
 <style scoped>section { font-size: 25px; }</style>
 
 **Conditions**
-- Live data from a public API. No login, no list you put in the code yourself.
+- Live data from an API. No list you put in the code yourself.
 - One clear core action: search, plan, collect, compare, ...
 - 3 to 6 features. It meets the technical core.
 
@@ -46,7 +46,7 @@ Own idea? Hand in the idea note **before day 3**.
 
 **The idea note** (template on day 2, hand in before day 3): the first version of your `product.md`. The idea, core action, 3–6 features, API, what goes in SQLite, which native feature.
 
-**Needs a key?** Free only. In `.env`, never in your repo. Send me the `.env` in Teams.
+**Needs a key or a login?** Fine. Key in `.env`, never in your repo. Send me the `.env` and a test account in Teams.
 
 Not working out? After day 4 you can switch to a starter idea.
 
@@ -56,7 +56,7 @@ Not working out? After day 4 you can switch to a starter idea.
 
 | Good | Too big | Not suitable |
 |---|---|---|
-| A weather planner on Open-Meteo: pick a city, see the week, save favorite places | A social app with accounts and posts | An API that needs a login, or a paid key |
+| A weather planner on Open-Meteo: pick a city, see the week, save favorite places | A social app with accounts and posts | An API I cannot run: it only works on your network, or the key runs out |
 | A reading list on Open Library: search books, keep what you want to read | A clone of an app with 20 screens | A list of data you type into the code |
 
 One core action, a few screens, live data. If you cannot say it in one sentence, it is two apps.
@@ -68,7 +68,7 @@ One core action, a few screens, live data. If you cannot say it in one sentence,
 <style scoped>section { font-size: 26px; }</style>
 
 - Runs in **Expo Go** via QR code
-- Live data from a public API with **TanStack Query**
+- Live data from an API with **TanStack Query**
 - At least **2 screens** with **Expo Router**
 - Something saved in **SQLite** that survives a restart (you pick what)
 - Every load has a **loading** and an **error** state
@@ -108,9 +108,9 @@ One GitHub repo with:
 - `AGENTS.md`: what you told the agent about your project
 - **GitHub Issues**, closed by commits
 - `chat-history/`: the chat of at least one issue, start to finish
-- `docs/toelichting.md`: 2 pages, 6 questions
+- `docs/explanation.md`: 3 questions
 
-Full git history: no squashing, **never force-push**. Link in Teams before **Friday 6 November 2026, 23:59**.
+Keep the full git history: don't squash, don't force-push. Link in Teams before **Friday 6 November 2026, 23:59**.
 
 ---
 
@@ -128,7 +128,7 @@ From 6 to 8:
 | Steering and checking | 10% | Small tasks, context, plan first, own choices, growing instructions. You checked the agent's work |
 | Understanding | 10% | Your explanation matches the code |
 
-Bonus, +0.5 each up to a 10: three Reanimated animations, dark mode, infinite scroll, clean TypeScript, pixel-perfect or consistent design, custom font, localisation, zero bugs.
+Bonus, +0.5 each up to a 10: three Reanimated animations, dark mode, pagination, clean TypeScript, design (pixel perfect or a consistent own style), localisation, no warnings, offline, tests, CI, accessibility, optimistic update. Pick the ones you like.
 
 ---
 
