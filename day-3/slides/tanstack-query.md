@@ -132,7 +132,7 @@ Exercise 1: test this with airplane mode.
 | `isLoading` | `isPending` **and** `isFetching`: no data, and a fetch runs now. |
 
 - Use `isPending` for the first spinner. `isLoading` is false when no fetch runs, for example when the query is off (`enabled: false`). Then you show nothing.
-- Old tutorials and AI answers use `isLoading` as the name for "no data yet". In TanStack v4 it was. In v5 it is `isPending`.
+- In TanStack v4, `isLoading` meant "no data yet". In v5 that is `isPending`, and `isLoading` means something narrower. Old tutorials and AI answers often still use `isLoading` for the first spinner. Use `isPending`.
 
 ---
 
