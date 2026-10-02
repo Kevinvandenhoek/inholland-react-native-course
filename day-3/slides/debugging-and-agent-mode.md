@@ -193,11 +193,10 @@ The file grows with your project. Your commits on it show how you learned to ste
 
 **A.** Write `AGENTS.md`.
 **B.** Agent plans, then builds the Share button. You check the plan, review, lint, test on your phone.
-**C.** Two bugs: one you find yourself, one the agent fixes. Cause, not workaround.
-**D.** Ask about it. Three answers in your own words in `docs/day-3.md`.
-**E.** Update your instructions. One new rule from B or C, committed.
+**C.** Ask about it. Three answers in your own words in `docs/day-3.md`.
+**D.** Update your instructions. One new rule from B, committed.
 
-All five in class, about an hour.
+All four in class, about 40 minutes.
 
 ---
 

@@ -3,7 +3,7 @@
 ### Objective
 Let Copilot write code for the first time, on your terms. Small task, good context, a plan first, every line reviewed, then ask until you understand it.
 
-This is the way of working we grade in the final assignment. Five parts: A instructions, B build, C fix two bugs, D ask, E update your instructions.
+This is the way of working we grade in the final assignment. Four parts: A instructions, B build, C ask, D update your instructions.
 
 > **Behind, or no project?** Start from the [exercise 4 starter](./starters/exercise-4/).
 
@@ -11,9 +11,8 @@ This is the way of working we grade in the final assignment. Five parts: A instr
 
 1. `AGENTS.md` in the root of your repo, with about ten lines of your own on top.
 2. A Share button on the detail screen, built by the agent, reviewed by you, working on your phone.
-3. Two bugs fixed: one by you, one by the agent.
-4. `docs/day-3.md` with your answers to three questions about the Share code.
-5. `AGENTS.md` updated with at least one rule you learned in B or C.
+3. `docs/day-3.md` with your answers to three questions about the Share code.
+4. `AGENTS.md` updated with at least one rule you learned in B.
 
 ### Part A: instructions (5 min)
 
@@ -77,23 +76,7 @@ Commit: `Exercise 4A: AGENTS.md`.
 
 7. Commit: `Exercise 4B: share button (agent)`.
 
-### Part C: fix two bugs (20 min)
-
-Two small apps, each with one bug. The first one you find yourself, the second one the agent fixes. Copy each folder to your own place, then `npm install` and `npx expo start`.
-
-**C1. Yourself, no AI (10 min).** Start [`debug-yourself`](./starters/debug-yourself/). Tap any item: the detail screen shows an error. Find the cause with the five steps from the slides: reproduce, locate, read the error, guess, test. Press `j` and look at the **Network** tab: what does the app ask PokeAPI for? Fix it. Write in `docs/day-3.md` how you found it.
-
-> **📚 Reference:** [React Native DevTools](https://reactnative.dev/docs/react-native-devtools)
-
-**C2. With the agent (10 min).** Start [`debug-agent`](./starters/debug-agent/). Tap "Add to bag": the button does not change, and the Bag tab does not update until you restart. Do not look for the cause yourself. Let the agent fix it:
-
-> When I add an item to the bag, the Bag tab does not update until I restart the app. Find the cause and fix it. Explain what was wrong.
-
-Read the explanation. Is that the actual cause? Read the diff. Did it fix the cause, or work around it (a refetch on focus, a `useEffect`)? A workaround is not a fix. Push back if needed.
-
-Which bug was harder to find: yours, or the agent's? Write one sentence about it in `docs/day-3.md`.
-
-### Part D: ask about it (10 min)
+### Part C: ask about it (10 min)
 
 Working with an agent is fast. Losing track of your own codebase is faster. So after every agent task: **ask until you can explain it**.
 
@@ -103,29 +86,28 @@ Ask the agent (Ask mode is fine) three questions about the Share code. Examples,
 - What happens if sharing fails or the user cancels? Where is that handled?
 - Where would this code go in my folder structure if I wanted to reuse it on the list screen?
 
-Write the answers **in your own words** in `docs/day-3.md`. Not a copy of the chat. Commit: `Exercise 4D: notes`.
+Write the answers **in your own words** in `docs/day-3.md`. Not a copy of the chat. Commit: `Exercise 4C: notes`.
 
-### Part E: update your instructions (5 min)
+### Part D: update your instructions (5 min)
 
-Look back at B and C. Did you correct the agent, or explain something it could have known? A hex code instead of a token. A `TouchableOpacity`. A workaround instead of a fix. A dependency you did not want.
+Look back at B. Did you correct the agent, or explain something it could have known? A hex code instead of a token. A `TouchableOpacity`. A dependency you did not want. A file it changed without asking.
 
 Every one of those becomes a rule in `AGENTS.md`. One line each, for example:
 
 ```markdown
-- Fix the cause of a bug, not the symptom. No refetch-on-focus to hide a stale query.
+- Only change the files I name. Ask before you add a dependency.
 ```
 
 Nothing to correct? Then add the rule you were most afraid it would break.
 
 This is the last step of every agent task from now on. The file grows with your project, and the commits on it show how you learned to steer.
 
-Commit: `Exercise 4E: update instructions`.
+Commit: `Exercise 4D: update instructions`.
 
 ### Done when
 
 - ✅ `AGENTS.md` in the repo, and the check "What do you know about this project?" names your rules
 - ✅ Share works on your phone, you can explain every line of the diff
-- ✅ Two bugs fixed: one by you, one by the agent. Cause and fix understood
-- ✅ `docs/day-3.md` with how you found bug C1, and three answers in your own words
-- ✅ `AGENTS.md` has at least one new rule from B or C
-- ✅ Commits for A, B, D and E, lint and tsc clean
+- ✅ `docs/day-3.md` with three answers in your own words
+- ✅ `AGENTS.md` has at least one new rule from B
+- ✅ Four commits, lint and tsc clean

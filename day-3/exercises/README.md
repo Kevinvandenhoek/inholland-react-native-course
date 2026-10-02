@@ -2,7 +2,7 @@
 
 All four continue in the project from the catch-up at the start of the day: the item catalogue with the tabs Items and Bag.
 
-**Fell behind, or no project?** Every exercise has a starter: a complete project at the point where that exercise begins. See [`starters/`](./starters/): `exercise-1` is the result of the catch-up, `exercise-2` is the result of exercise 1, and so on. `debug-yourself` and `debug-agent` are the two apps with a bug for exercise 4C.
+**Fell behind, or no project?** Every exercise has a starter: a complete project at the point where that exercise begins. See [`starters/`](./starters/): `exercise-1` is the result of the catch-up, `exercise-2` is the result of exercise 1, and so on.
 
 1. [Exercise 1: Live data with TanStack Query](./exercise-1-tanstack-query.md)
 2. [Exercise 2: Detail page from PokeAPI](./exercise-2-item-detail.md)
