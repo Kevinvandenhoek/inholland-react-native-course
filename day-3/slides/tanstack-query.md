@@ -165,7 +165,7 @@ useQuery({ queryKey: ['item', 'list'], queryFn: fetchItemList, select: (items) =
 [pokeapi.co/api/v2/item/17](https://pokeapi.co/api/v2/item/17)
 
 - A URL that returns **JSON**. Anyone can call it.
-- **No login.** PokeAPI needs no key. Your own idea may use an API with a key or a login.
+- **No login needed** for PokeAPI, and no key. Your own idea may use an API with a key or a login.
 - Documented: you can read what comes back before you write code.
 - Rate limits: be polite, cache. TanStack Query does that for you.
 
@@ -183,7 +183,7 @@ Check before you commit to an idea:
 |---|---|
 | Key or login? | Fine, if I can run it. A key in your app is readable by anyone: in `.env`, never in the repo. Login is not taught. |
 | Enough data for 3 to 6 features? | One endpoint with one list is too thin. |
-| Stable and documented? | You have four weeks. Not the time for a moving target. |
+| Stable and documented? | You have five weeks. Not the time for a moving target. |
 | Returns JSON over HTTPS? | Anything else is extra work. |
 | Free for this use? | Read the terms. |
 

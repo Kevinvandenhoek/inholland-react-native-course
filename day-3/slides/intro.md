@@ -11,7 +11,7 @@ class: invert
 - TanStack Query: live data from PokeAPI
 - Saving on the phone: SQLite
 - Debugging, then **agent mode** for the first time
-- At the end: your final assignment route
+- At the end: a look at day 4
 
 ---
 
@@ -28,10 +28,12 @@ class: invert
 
 Everyone starts from the same point. We build it step by step:
 
-1. A tab bar: Items and Bag
-2. A list of items
-3. A stack around the tabs
-4. A detail screen
+1. A second tab: Bag
+2. The data
+3. A row
+4. The list
+5. A stack around the tabs
+6. A detail screen
 
 At the end, everyone has the same working app. That is the start for today.
 

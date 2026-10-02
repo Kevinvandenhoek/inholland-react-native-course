@@ -171,7 +171,7 @@ After every agent task, before you move on:
 - *Where would this go in my folder structure?*
 - *Explain this line like I have never seen it.*
 
-Ask until you can explain it in your own words. Write that down. The chat is evidence; your words are the grade.
+Ask until you can explain it in your own words. Write that down.
 
 ---
 

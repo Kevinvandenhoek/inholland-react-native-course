@@ -16,6 +16,7 @@
 
 - Finish exercises 1 to 4: live data, the bag in SQLite, loading and error everywhere, Share. Lint and tsc clean.
 - **Final assignment route.** Own idea: process my feedback in your [idea note](../day-2/templates/idea.md) before the end of the holiday; final approval on day 4. Pokédex or battle simulator: no need to tell me.
+- The [final assignment](../exam/README.md) is already online. Want to start early? Go ahead.
 
 That is all. It is a holiday.
 

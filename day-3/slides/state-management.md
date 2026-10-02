@@ -49,7 +49,7 @@ const UserList = () => {
 
 ![bg right](../assets/state-route.gif)
 
-**Characteristics:** Every screen has a URL • Deep linking • Back stack keeps it
+**Characteristics:** Every screen has a URL • Back stack keeps it
 
 ---
 
@@ -189,7 +189,7 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
 |---|---|---|
 | Server | The item list, one item | TanStack Query, from PokeAPI |
 | URL | `/item/17` | Expo Router: `useLocalSearchParams` |
-| Form | The search text | `useState` in the screen |
+| Form | A search field, a form | `useState` in the screen |
 | Component | A section that is open or closed | `useState` in the component |
 | Global | Light or dark theme | The `ThemeProvider` from the template |
 
