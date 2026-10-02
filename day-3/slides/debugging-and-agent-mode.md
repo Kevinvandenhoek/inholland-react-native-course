@@ -5,7 +5,7 @@ class: invert
 ---
 
 # Debugging and agent mode
-## First without AI, then with
+## Your own tools first, then the agent
 
 ---
 
