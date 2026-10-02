@@ -193,17 +193,17 @@ The file grows with your project. Your commits on it show how you learned to ste
 
 **A.** Write `AGENTS.md`.
 **B.** Agent plans, then builds the Share button. You check the plan, review, lint, test on your phone.
-**C.** Agent fixes a bug. Cause, not workaround.
+**C.** Two bugs: one you find yourself, one the agent fixes. Cause, not workaround.
 **D.** Ask about it. Three answers in your own words in `docs/day-3.md`.
 **E.** Update your instructions. One new rule from B or C, committed.
 
-All five in class, about 50 minutes.
+All five in class, about an hour.
 
 ---
 
-# Before day 4: your route
+# Day 4
 
-- **Pokédex** or **battle simulator**: no need to tell me. Just start.
-- **Own idea**: process my feedback in your idea note before the holiday ends. Final go on day 4.
+- More agentic development: spec, issues, plan, review.
+- Start your own project: Pokédex, battle simulator, or your own idea.
 
-That is the homework. It is a holiday.
+The [final assignment](https://github.com/kevinvandenhoek/inholland-react-native-course/blob/main/exam/README.md) is already online. Want to start early? Go ahead.
