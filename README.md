@@ -6,7 +6,7 @@ Four days of React Native for ICT students at InHolland. One app runs through th
 |---|---|---|
 | 1 | Introduction: React Native, web vs. native, Expo | [material](./day-1/README.md) |
 | 2 | Fundamentals: components, styling, navigation | [material](./day-2/README.md) |
-| 3 | Data and debugging: state, TanStack Query, SQLite, agent mode | coming soon |
+| 3 | Data and debugging: state, TanStack Query, SQLite, agent mode | [material](./day-3/README.md) |
 | 4 | Your own product: structure, spec and issues, hand-in, use of AI | coming soon |
 
 Slides: `https://kevinvandenhoek.github.io/inholland-react-native-course/day-<n>/slides/<deck>.html`. Each day's README links to its decks.

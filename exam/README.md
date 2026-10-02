@@ -35,6 +35,25 @@ The assignment says **what** the app does, not **how**. You choose, the agent
 builds. Write two choices in `specs/product.md` before you build: what you
 store in SQLite, and which native feature. Each with the alternative and why.
 
+## How to work
+
+**Once per project**
+
+1. **Spec**: `specs/product.md` and one file per feature. Ask the agent to grill you: questions until the spec is sharp.
+2. **Issues**: one GitHub issue per feature.
+3. **Instructions**: `AGENTS.md` for your project.
+
+**Per issue**
+
+1. **New chat**: one issue per chat.
+2. **Prompt**: the issue, its spec file, the files it may touch.
+3. **Plan**: the agent posts a plan and a `- [ ]` task list as a comment on the issue (`gh issue comment`). You check it, then say go.
+4. **Build**: the agent builds and ticks off the tasks.
+5. **Review**: read the diff, run lint and tsc, test on your phone. Wrong? Say so, or fix it yourself. Rejected or changed something? Note it: you need it for question 3.
+6. **Ask**: ask the agent until you can explain the code in your own words.
+7. **Update instructions**: what you had to correct becomes a rule in `AGENTS.md`.
+8. **Commit**: `closes #12`. Next issue.
+
 ## What you hand in
 
 One GitHub repo with:
