@@ -10,7 +10,7 @@ Build a mobile app on live data from an API. Pick one of three routes.
 2. **Battle simulator.** Two Pokémon fight by the real rules. Your own design. See [appendix B](#appendix-b-battle-simulator).
 3. **Your own idea.** One clear core action (search, plan, collect, ...), 3 to 6 features, live data (not a list in your code). Your own specs and design: a sketch per screen is enough.
 
-**Own idea:** post your [idea note](../day-2/templates/idea.md) in Teams before day 3. Feedback on day 3, approval on day 4, in class: no go yet? Post your `specs/product.md` in Teams that day. After day 4 you can still ask, but I probably will not get to it in time. You can always switch back to a starter idea.
+**Own idea:** post your [idea note](../day-2/templates/idea.md) in Teams before day 3. Feedback on day 3, approval on day 4, in class: no go yet? Post your `specs/product.md` in Teams that day. After day 4 you can still ask. I may need more time to reply, so keep a starter idea as a backup.
 
 **Any API is fine, as long as I can run your app.** A key or a login is fine too:
 
