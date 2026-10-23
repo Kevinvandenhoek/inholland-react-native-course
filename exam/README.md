@@ -134,7 +134,13 @@ Every heading is one feature: one spec file, one issue.
 - [ ] All ~1300 Pokémon, as in the design, live from the API. Loads fast, scrolls smoothly.
 
 **Search**
-- [ ] Search by name finds every Pokémon, also one that is not loaded yet. PokeAPI has no search endpoint: you work out how.
+- [ ] A search field as in the design. Results show while you type.
+- [ ] Part of the name is enough, in any case: "pika" finds Pikachu.
+- [ ] Finds every Pokémon, also one you have not scrolled to yet.
+- [ ] Results look like the rows in the list. No match shows an empty state.
+
+PokeAPI has no search endpoint: you work out how. Look at what the API gives
+you before you let the agent build it.
 
 **Detail**
 - [ ] Reachable from the list and from favorites.
