@@ -29,10 +29,20 @@ Two things: **what it learned**, and **what it looks at**.
 
 ---
 
+# A neural network
+
+![h:330](../assets/neural-net.svg)
+
+- Words become numbers, go through the layers, and come out as a guess.
+- Every line is a **parameter**: how strong one connection is. Billions of them.
+- Same idea for photos, sound or sensor data. Language is just one.
+
+---
+
 # How it learns
 
 1. Take a piece of text. Hide the next word. Let it guess.
-2. Wrong? Its parameters shift a tiny bit.
+2. Wrong? Its parameters, the lines, shift a tiny bit.
 3. Repeat billions of times, until it predicts most of the text right.
 
 It learns to say **what is written most**. Not what is **true**.
