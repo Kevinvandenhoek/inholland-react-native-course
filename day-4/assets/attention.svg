@@ -12,13 +12,13 @@
 <text x="153.6" y="172" font-size="26" fill="#f2f2f2">evening</text>
 <text x="278.4" y="172" font-size="26" fill="#f2f2f2">she</text>
 <text x="340.8" y="172" font-size="26" fill="#f2f2f2">takes</text>
-<rect x="428.4" y="142" width="58.8" height="42" rx="8" fill="#f5a524" fill-opacity="0.85"/>
+<rect x="428.4" y="142" width="58.8" height="42" rx="8" fill="#f5a524" fill-opacity="0.25"/>
 <text x="434.4" y="172" font-size="26" fill="#f2f2f2">the</text>
-<rect x="490.8" y="142" width="90.0" height="42" rx="8" fill="#f5a524" fill-opacity="0.85"/>
+<rect x="490.8" y="142" width="90.0" height="42" rx="8" fill="#f5a524" fill-opacity="0.45"/>
 <text x="496.8" y="172" font-size="26" fill="#f2f2f2">train</text>
-<rect x="584.4" y="142" width="74.4" height="42" rx="8" fill="#f5a524" fill-opacity="0.85"/>
+<rect x="584.4" y="142" width="74.4" height="42" rx="8" fill="#f5a524" fill-opacity="0.7"/>
 <text x="590.4" y="172" font-size="26" fill="#f2f2f2">back</text>
-<rect x="662.4" y="142" width="43.2" height="42" rx="8" fill="#f5a524" fill-opacity="0.85"/>
+<rect x="662.4" y="142" width="43.2" height="42" rx="8" fill="#f5a524" fill-opacity="0.95"/>
 <text x="668.4" y="172" font-size="26" fill="#f2f2f2">to</text>
 <rect x="709.2" y="142" width="90.0" height="42" rx="8" fill="none" stroke="#ff6b6b" stroke-width="3" stroke-dasharray="6 5"/>
 <text x="715.2" y="172" font-size="26" font-weight="bold" fill="#ff6b6b">work?</text>
