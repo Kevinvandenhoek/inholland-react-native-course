@@ -43,11 +43,12 @@ The physics is in its data too. It still repeats the popular advice from install
 
 ---
 
-# Attention
+# Attention is all you need
 
 ![h:360](../assets/attention.svg)
 
-[Attention Is All You Need](https://arxiv.org/abs/1706.03762) (2017): every word weighs every other word.
+[The 2017 paper](https://arxiv.org/abs/1706.03762): every word weighs every other word. Several
+heads at once, each finds its own kind of link.
 
 ---
 

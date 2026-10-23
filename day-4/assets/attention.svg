@@ -24,9 +24,9 @@
 <text x="715.2" y="172" font-size="26" font-weight="bold" fill="#ff6b6b">work?</text>
 <line x1="60" y1="285" x2="860" y2="285" stroke="#444" stroke-width="2"/>
 <text x="60" y="340" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#9aa4b2">Attention: looks at the words that matter</text>
-<rect x="54.0" y="370" width="58.8" height="42" rx="8" fill="#f5a524" fill-opacity="0.3"/>
+<rect x="54.0" y="370" width="58.8" height="42" rx="8" fill="#4ea1ff" fill-opacity="0.8"/>
 <text x="60.0" y="400" font-size="26" fill="#f2f2f2">Sam</text>
-<rect x="116.4" y="370" width="90.0" height="42" rx="8" fill="#f5a524" fill-opacity="0.6"/>
+<rect x="116.4" y="370" width="90.0" height="42" rx="8" fill="#f5a524" fill-opacity="0.55"/>
 <text x="122.4" y="400" font-size="26" fill="#f2f2f2">lives</text>
 <text x="216.0" y="400" font-size="26" fill="#f2f2f2">in</text>
 <rect x="256.8" y="370" width="152.4" height="42" rx="8" fill="#f5a524" fill-opacity="0.95"/>
@@ -34,20 +34,27 @@
 <text x="418.8" y="400" font-size="26" fill="#f2f2f2">and</text>
 <text x="481.2" y="400" font-size="26" fill="#f2f2f2">works</text>
 <text x="574.8" y="400" font-size="26" fill="#f2f2f2">in</text>
-<rect x="615.6" y="370" width="136.8" height="42" rx="8" fill="#f5a524" fill-opacity="0.15"/>
+<rect x="615.6" y="370" width="136.8" height="42" rx="8" fill="#f5a524" fill-opacity="0.2"/>
 <text x="621.6" y="400" font-size="26" fill="#f2f2f2">Utrecht.</text>
+<rect x="54.0" y="432" width="90.0" height="42" rx="8" fill="#b07cff" fill-opacity="0.5"/>
 <text x="60.0" y="462" font-size="26" fill="#f2f2f2">Every</text>
-<rect x="147.6" y="432" width="121.2" height="42" rx="8" fill="#f5a524" fill-opacity="0.35"/>
+<rect x="147.6" y="432" width="121.2" height="42" rx="8" fill="#b07cff" fill-opacity="0.75"/>
 <text x="153.6" y="462" font-size="26" fill="#f2f2f2">evening</text>
-<rect x="272.4" y="432" width="58.8" height="42" rx="8" fill="#f5a524" fill-opacity="0.3"/>
+<rect x="272.4" y="432" width="58.8" height="42" rx="8" fill="#4ea1ff" fill-opacity="0.8"/>
 <text x="278.4" y="462" font-size="26" fill="#f2f2f2">she</text>
 <text x="340.8" y="462" font-size="26" fill="#f2f2f2">takes</text>
 <text x="434.4" y="462" font-size="26" fill="#f2f2f2">the</text>
-<rect x="490.8" y="432" width="90.0" height="42" rx="8" fill="#f5a524" fill-opacity="0.25"/>
+<rect x="490.8" y="432" width="90.0" height="42" rx="8" fill="#f5a524" fill-opacity="0.4"/>
 <text x="496.8" y="462" font-size="26" fill="#f2f2f2">train</text>
 <rect x="584.4" y="432" width="74.4" height="42" rx="8" fill="#f5a524" fill-opacity="0.7"/>
 <text x="590.4" y="462" font-size="26" fill="#f2f2f2">back</text>
 <text x="668.4" y="462" font-size="26" fill="#f2f2f2">to</text>
 <rect x="709.2" y="432" width="152.4" height="42" rx="8" fill="none" stroke="#5fd38d" stroke-width="3" stroke-dasharray="6 5"/>
 <text x="715.2" y="462" font-size="26" font-weight="bold" fill="#5fd38d">Amsterdam</text>
+<rect x="580" y="323" width="18" height="18" rx="4" fill="#f5a524"/>
+<text x="606" y="340" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#9aa4b2">where</text>
+<rect x="694" y="323" width="18" height="18" rx="4" fill="#4ea1ff"/>
+<text x="720" y="340" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#9aa4b2">who</text>
+<rect x="784" y="323" width="18" height="18" rx="4" fill="#b07cff"/>
+<text x="810" y="340" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#9aa4b2">when</text>
 </svg>
