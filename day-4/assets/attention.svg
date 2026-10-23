@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="45 15 830 470" font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace">
+<text x="60" y="50" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#9aa4b2">Autocomplete: looks at the last few words</text>
+<text x="60.0" y="110" font-size="26" fill="#f2f2f2">Sam</text>
+<text x="122.4" y="110" font-size="26" fill="#f2f2f2">lives</text>
+<text x="216.0" y="110" font-size="26" fill="#f2f2f2">in</text>
+<text x="262.8" y="110" font-size="26" fill="#f2f2f2">Amsterdam</text>
+<text x="418.8" y="110" font-size="26" fill="#f2f2f2">and</text>
+<text x="481.2" y="110" font-size="26" fill="#f2f2f2">works</text>
+<text x="574.8" y="110" font-size="26" fill="#f2f2f2">in</text>
+<text x="621.6" y="110" font-size="26" fill="#f2f2f2">Utrecht.</text>
+<text x="60.0" y="172" font-size="26" fill="#f2f2f2">Every</text>
+<text x="153.6" y="172" font-size="26" fill="#f2f2f2">evening</text>
+<text x="278.4" y="172" font-size="26" fill="#f2f2f2">she</text>
+<text x="340.8" y="172" font-size="26" fill="#f2f2f2">takes</text>
+<rect x="428.4" y="142" width="58.8" height="42" rx="8" fill="#f5a524" fill-opacity="0.85"/>
+<text x="434.4" y="172" font-size="26" fill="#f2f2f2">the</text>
+<rect x="490.8" y="142" width="90.0" height="42" rx="8" fill="#f5a524" fill-opacity="0.85"/>
+<text x="496.8" y="172" font-size="26" fill="#f2f2f2">train</text>
+<rect x="584.4" y="142" width="74.4" height="42" rx="8" fill="#f5a524" fill-opacity="0.85"/>
+<text x="590.4" y="172" font-size="26" fill="#f2f2f2">back</text>
+<rect x="662.4" y="142" width="43.2" height="42" rx="8" fill="#f5a524" fill-opacity="0.85"/>
+<text x="668.4" y="172" font-size="26" fill="#f2f2f2">to</text>
+<rect x="709.2" y="142" width="90.0" height="42" rx="8" fill="none" stroke="#ff6b6b" stroke-width="3" stroke-dasharray="6 5"/>
+<text x="715.2" y="172" font-size="26" font-weight="bold" fill="#ff6b6b">work?</text>
+<line x1="60" y1="285" x2="860" y2="285" stroke="#444" stroke-width="2"/>
+<text x="60" y="340" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#9aa4b2">Attention: looks at the words that matter</text>
+<rect x="54.0" y="370" width="58.8" height="42" rx="8" fill="#f5a524" fill-opacity="0.3"/>
+<text x="60.0" y="400" font-size="26" fill="#f2f2f2">Sam</text>
+<rect x="116.4" y="370" width="90.0" height="42" rx="8" fill="#f5a524" fill-opacity="0.6"/>
+<text x="122.4" y="400" font-size="26" fill="#f2f2f2">lives</text>
+<text x="216.0" y="400" font-size="26" fill="#f2f2f2">in</text>
+<rect x="256.8" y="370" width="152.4" height="42" rx="8" fill="#f5a524" fill-opacity="0.95"/>
+<text x="262.8" y="400" font-size="26" fill="#f2f2f2">Amsterdam</text>
+<text x="418.8" y="400" font-size="26" fill="#f2f2f2">and</text>
+<text x="481.2" y="400" font-size="26" fill="#f2f2f2">works</text>
+<text x="574.8" y="400" font-size="26" fill="#f2f2f2">in</text>
+<rect x="615.6" y="370" width="136.8" height="42" rx="8" fill="#f5a524" fill-opacity="0.15"/>
+<text x="621.6" y="400" font-size="26" fill="#f2f2f2">Utrecht.</text>
+<text x="60.0" y="462" font-size="26" fill="#f2f2f2">Every</text>
+<rect x="147.6" y="432" width="121.2" height="42" rx="8" fill="#f5a524" fill-opacity="0.35"/>
+<text x="153.6" y="462" font-size="26" fill="#f2f2f2">evening</text>
+<rect x="272.4" y="432" width="58.8" height="42" rx="8" fill="#f5a524" fill-opacity="0.3"/>
+<text x="278.4" y="462" font-size="26" fill="#f2f2f2">she</text>
+<text x="340.8" y="462" font-size="26" fill="#f2f2f2">takes</text>
+<text x="434.4" y="462" font-size="26" fill="#f2f2f2">the</text>
+<rect x="490.8" y="432" width="90.0" height="42" rx="8" fill="#f5a524" fill-opacity="0.25"/>
+<text x="496.8" y="462" font-size="26" fill="#f2f2f2">train</text>
+<rect x="584.4" y="432" width="74.4" height="42" rx="8" fill="#f5a524" fill-opacity="0.7"/>
+<text x="590.4" y="462" font-size="26" fill="#f2f2f2">back</text>
+<text x="668.4" y="462" font-size="26" fill="#f2f2f2">to</text>
+<rect x="709.2" y="432" width="152.4" height="42" rx="8" fill="none" stroke="#5fd38d" stroke-width="3" stroke-dasharray="6 5"/>
+<text x="715.2" y="462" font-size="26" font-weight="bold" fill="#5fd38d">Amsterdam</text>
+</svg>

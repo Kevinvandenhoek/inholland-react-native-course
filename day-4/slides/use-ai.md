@@ -11,11 +11,43 @@ class: invert
 
 ---
 
-# Your first issue
+# Poll
+## Will AI replace developers?
 
-You just built a feature with an agent.
+![bg right w:400](../assets/qr-ai-replace.png)
 
-## What did it get wrong?
+---
+
+# How an LLM works
+
+It predicts the next word. Then the next one. That is all it does.
+
+Your phone's autocomplete does that too. So why is one useless and the other
+writes your app?
+
+Two things: **what it learned**, and **what it looks at**.
+
+---
+
+# How it learns
+
+1. Take a piece of text. Hide the next word. Let it guess.
+2. Wrong? Its parameters shift a tiny bit.
+3. Repeat billions of times, until it predicts most of the text right.
+
+It learns to say **what is written most**. Not what is **true**.
+
+AI told me: set your heat pump's water temperature as low as possible. In my
+house that backfires: the heat cannot get out, so the pump keeps switching off.
+The physics is in its data too. It still repeats the popular advice from installers.
+
+---
+
+# Attention
+
+![h:360](../assets/attention.svg)
+
+[Attention Is All You Need](https://arxiv.org/abs/1706.03762) (2017): every word weighs every other word.
 
 ---
 
@@ -27,8 +59,9 @@ instead of `Pressable`. No error handling when sharing fails.
 
 Not because it does not know better. Because nobody told it.
 
-Your context is `AGENTS.md`, your specs and your issues. That is what you wrote
-today.
+Attention works on the words you give it. Name your file, your rule, your
+error message: that is what it looks at. Your `AGENTS.md`, your specs and your
+issues are those words.
 
 ---
 
@@ -66,8 +99,7 @@ Which of these could your app use?
 
 ![bg right fit](../assets/ai-debug.png)
 
-- **Confidently wrong**: it never says when it does not know.
-- **Bad data**: what it learned can be wrong or one-sided.
+- **Confidently wrong**: it always guesses a next word, also without knowing.
 - **Cognitive debt**: code that nobody in the room understands.
 - **Debugging** code you did not write or read: the slowest work there is.
 
@@ -75,14 +107,7 @@ This is true everywhere, not only in code.
 
 ---
 
-# Poll
-## Will AI replace developers?
-
-![bg right w:400](../assets/qr-ai-replace.png)
-
----
-
-# What gets cheap, what stays scarce
+# Back to the poll
 
 | Gets cheap | Stays scarce |
 |---|---|

@@ -41,6 +41,43 @@ need more time to reply, so keep a starter idea as a backup.
 The technical core checklist is in the template. Leave it in, tick it off as
 you go.
 
+What it looks like, shortened. Weekweather is a made-up weather app. The full
+version is in the [example](../../exam/templates/product-example.md).
+
+```markdown
+# Weekweather
+
+Plan your outdoor week. Weekweather shows the weather for the next seven days
+in the cities you care about. For people who plan a bike ride or a day at the
+beach and want to see which day is dry.
+
+## Core action
+Pick a city and see which days are dry.
+
+## Features
+1. [Search a city](./features/search-city.md)
+2. [Week forecast](./features/week-forecast.md)
+3. [Day detail](./features/day-detail.md)
+4. [My places](./features/my-places.md)
+
+## Data
+- **API**: Open-Meteo. No key.
+- **Endpoints**: `/v1/search` for cities, `/v1/forecast` for the weather.
+- **Stored on the phone**: table `places` in SQLite: id, name, latitude, longitude.
+
+## Technical choices
+- **Stored in SQLite**: my places, not the forecasts, because a forecast is
+  old after a day.
+- **Native feature**: Share on the day detail, as text, so it works in every
+  chat app.
+
+## Out of scope
+Accounts, your GPS location, weather alerts, a web version.
+```
+
+Every line answers a question the agent would otherwise guess: what the app
+is for, what is in it, where the data comes from, and what it must not build.
+
 #### 2. One file per feature (12 min)
 
 Copy [the template](../../exam/templates/feature.md) to `specs/features/<name>.md`
@@ -54,9 +91,41 @@ for every feature. Same four headings as in Dan's lessons:
 - **Out of Scope.** What this feature does not do. It is what keeps the agent
   from inventing.
 
-Starter idea? Take the list from appendix A or B in the
-[final assignment](../../exam/README.md) and give each heading its own file. Copying the list is
-fine. Turning each item into criteria is the exercise.
+Example, the first feature of Weekweather:
+
+```markdown
+# Search a city
+
+## Goal
+Find a city by typing its name, so I can see its week forecast.
+
+## Constraints
+- On the home screen. No new screen.
+- Open-Meteo `/v1/search?name=...`. Starts from two letters.
+- Colors and spacing from the theme. No new dependencies.
+
+## Acceptance Criteria
+- [ ] A search field at the top, placeholder "Search a city".
+- [ ] Results show name and country while I type.
+- [ ] No match shows "No city found".
+- [ ] Tapping a result opens the week forecast for that city.
+- [ ] A loading state while searching, an error with Retry when it fails.
+
+## Out of Scope
+Search by postcode, search history, my GPS location.
+```
+
+Test your criteria: could a classmate tick them off without asking you
+anything? Then the agent can build them.
+
+**Starter idea?** Take appendix A or B in the
+[final assignment](../../exam/README.md) and give each heading its own file.
+
+- The checkboxes under a heading are the start of your **Acceptance
+  Criteria**. Copy them, then make them concrete: what is on screen, what
+  happens on press, what a failure looks like.
+- **Goal**, **Constraints** and **Out of Scope** are not in the appendix. You
+  write those.
 
 #### 3. Let the agent grill you (8 min)
 
