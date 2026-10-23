@@ -8,8 +8,8 @@
 4. [Exercise 1: Your own repo](./exercises/exercise-1-repo.md)
 5. [Spec and issues](https://kevinvandenhoek.github.io/inholland-react-native-course/day-4/slides/spec-and-issues.html#1)
 6. [Exercise 2: Your spec and your issues](./exercises/exercise-2-spec.md)
-7. [Exercise 3: Your first feature with the agent](./exercises/exercise-3-first-feature.md)
-8. [Use of AI](https://kevinvandenhoek.github.io/inholland-react-native-course/day-4/slides/use-ai.html#1)
+7. [Use of AI](https://kevinvandenhoek.github.io/inholland-react-native-course/day-4/slides/use-ai.html#1)
+8. [Exercise 3: Your first feature with the agent](./exercises/exercise-3-first-feature.md)
 9. [Hand-in](https://kevinvandenhoek.github.io/inholland-react-native-course/day-4/slides/hand-in.html#1)
 10. Work time: build your app, or finish your spec for my go
 

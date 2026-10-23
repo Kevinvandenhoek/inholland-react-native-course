@@ -18,8 +18,8 @@ class: invert
 3. **Exercise 1** - your own repo
 4. **Spec Driven Development** - spec → issues → plan → build → review → commit
 5. **Exercise 2** - your spec and your issues
-6. **Exercise 3** - your first feature, built by the agent
-7. **Use of AI** - the discussion
+6. **Use of AI** - how it works, and what that means for you
+7. **Exercise 3** - your first feature, built by the agent
 8. **Hand-in** - what, how, when
 9. **Work time** - build your app, or finish your spec for my go
 

@@ -124,4 +124,15 @@ This is true everywhere, not only in code.
 > # _"The agent writes the code. You decide what is worth building."_
 
 Everything in your repo is yours to explain and defend. That is also how this
-course grades you. Next: the hand-in.
+course grades you.
+
+---
+
+# Next: exercise 3
+
+Your first feature, built by the agent. One issue, one chat: plan, go, review,
+commit with `closes #<number>`.
+
+Give it the right words: your spec, your `AGENTS.md`, the files it may touch.
+
+`day-4/exercises/exercise-3-first-feature.md`

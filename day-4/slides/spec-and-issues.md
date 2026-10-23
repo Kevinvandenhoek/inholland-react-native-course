@@ -216,13 +216,3 @@ Write `specs/product.md` and one file per feature in `specs/features/`.
 Let the agent grill you, answers go into the specs. Turn every feature into an issue.
 
 `day-4/exercises/exercise-2-spec.md`
-
----
-
-# After the break: exercise 3
-
-Your first feature, built by the agent. One issue, one chat: plan, go, review, commit with `closes #<number>`.
-
-No slides in between. Everything you need is in the exercise.
-
-`day-4/exercises/exercise-3-first-feature.md`
