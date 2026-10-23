@@ -63,7 +63,7 @@ build. If you change your mind later, change it here too.>
 - [ ] Dark mode: every screen looks right, all colours from the theme
 - [ ] Pagination: page by page while you scroll, not all at once
 - [ ] Clean TypeScript: no `any`, no `as` casts, no `@ts-ignore`
-- [ ] Design: pixel perfect (Pokédex) or a consistent own style with your own font
+- [ ] Design (not Pokédex): a consistent own style with your own font
 - [ ] Localization: two languages
 - [ ] No warnings: no `console.log`, none in the terminal or on screen
 - [ ] Offline: works in airplane mode with the last data

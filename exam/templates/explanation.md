@@ -19,20 +19,20 @@ Cursor, Claude Code, ...>
 paragraph each. Where is it in the code (file and line)? Did it change while
 you built? Say what and why.>
 
-*Example: "Favorites live in SQLite (`src/services/favorites-db.ts:12`), not AsyncStorage,
-because I want to sort and filter them. The agent proposed AsyncStorage; I
-said no."*
+*Example: "My places live in SQLite (`src/services/places-db.ts:12`), not
+AsyncStorage, because I sort them by date added and check for duplicates. The
+agent proposed AsyncStorage; I said no."*
 
 ## 2. Pick one feature and explain how it works, from API call to screen.
 
 <Which feature. Where the data comes in, where it is stored or cached, how it
 reaches the screen, what happens while loading or on error. Name the files.>
 
-*Example: "Favorites. `useFavorites` (`src/hooks/use-favorites.ts`) reads the ids
-from SQLite. For each id, `useQuery` fetches the Pokémon through
-`src/services/pokeapi.ts`; TanStack caches it, so going back from detail to list does
-not reload. `FavoritesScreen` shows a spinner until all are in, and an error
-with a retry button if one call fails."*
+*Example: "Week forecast. `useForecast` (`src/hooks/use-forecast.ts`) calls
+`getForecast` in `src/services/open-meteo.ts` with the latitude and longitude
+of the city. TanStack caches it per city, so going back and forth does not
+reload. `ForecastScreen` shows a spinner while it loads, and an error with a
+Retry button if the call fails."*
 
 ## 3. Name a suggestion from the agent that you rejected or changed.
 
@@ -40,7 +40,7 @@ with a retry button if one call fails."*
 notice (reading the diff, testing, your spec)? Point at the chat in
 `chat-history/` or the commit.>
 
-*Example: "For the search, the agent wanted to fetch every Pokémon on each
-keystroke. I saw it in the plan on issue 2 and said no: I load the name list
-once and filter it on the phone (`src/hooks/use-pokemon-list.ts:14`). One
-request instead of hundreds. Chat: `chat-history/issue-2.json`."*
+*Example: "For the week forecast, the agent wanted one request per day. I saw
+it in the plan on issue 2 and said no: the forecast endpoint gives all seven
+days in one call (`src/services/open-meteo.ts:20`). One request instead of
+seven. Chat: issue 2 in `chat-history/`."*

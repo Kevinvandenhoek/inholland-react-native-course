@@ -9,22 +9,22 @@ Criteria, Out of Scope. This is a worked example. Replace it with your own.
 
 ---
 
-# Search Pokémon by name
+# Search a city
 
 ## Goal
 
 <What can the user do when this is done, and why? One or two sentences.>
 
-Find a Pokémon by typing its name, so I do not scroll through 151 of them.
+Find a city by typing its name, so I can see its week forecast.
 
 ## Constraints
 
 <The walls the agent cannot see: which screen, which data, what to reuse,
 what not to add.>
 
-- Lives on the list screen, `src/app/(tabs)/index.tsx`. No new screen.
-- Filters the list already loaded with TanStack Query (`/pokemon?limit=151`).
-  No request per keystroke.
+- Lives on the home screen, `src/app/index.tsx`. No new screen.
+- Uses the Open-Meteo geocoding API (`/v1/search?name=...`). Starts from two
+  letters.
 - Colors and spacing from `src/constants/theme.ts`.
 - No new dependencies.
 
@@ -33,16 +33,16 @@ what not to add.>
 <Three to six things someone else can tick off without asking you anything.
 What is on screen, what happens on press, what a failure looks like.>
 
-- [ ] A search field at the top of the list, placeholder "Search".
-- [ ] Typing filters the list while I type, case-insensitive, on the name.
-- [ ] No match shows the text "No Pokémon found" instead of the list.
-- [ ] Clearing the field shows the full list again.
-- [ ] Loading state and error state stay the same as the list.
+- [ ] A search field at the top, placeholder "Search a city".
+- [ ] Results show name and country while I type.
+- [ ] No match shows the text "No city found".
+- [ ] Tapping a result opens the week forecast for that city.
+- [ ] A loading state while searching, an error with a Retry button when it fails.
 
 ## Out of Scope
 
 <What this feature does not do. The agent will not invent it.>
 
-- Search by type or number.
+- Search by postcode or coordinates.
 - Search history or suggestions.
-- A search field on the detail screen.
+- My location (GPS).

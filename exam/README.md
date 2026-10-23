@@ -8,7 +8,7 @@ Build a mobile app on live data from an API. Pick one of three routes.
 
 1. **Pokédex.** Follow the [Figma design](https://www.figma.com/design/dsgGXcu5WELIvRW90m5308/Pok%C3%A9mon-Code-Challenge?node-id=1-2) closely, plus one feature you design yourself: compare two Pokémon. See [appendix A](#appendix-a-pokédex).
 2. **Battle simulator.** Two Pokémon fight by the real rules. Your own design. See [appendix B](#appendix-b-battle-simulator).
-3. **Your own idea.** One clear core action (search, plan, collect, ...), 3 to 6 features, live data (not a list in your code). Your own specs and design: a sketch per screen is enough.
+3. **Your own idea.** One clear core action (search, plan, collect, ...), 3 to 6 features, live data (not a list in your code). Your own specs and design.
 
 **Own idea:** post your [idea note](../day-2/templates/idea.md) in Teams before day 3. Feedback on day 3, approval on day 4, in class: no go yet? Post your `specs/product.md` in Teams that day. After day 4 you can still ask. I may need more time to reply, so keep a starter idea as a backup.
 
@@ -62,14 +62,11 @@ One GitHub repo with:
 |---|---|---|
 | The app | Runs in Expo Go | |
 | `specs/product.md` | What the app is | [template](./templates/product.md), [example](./templates/product-example.md) |
-| `specs/features/*.md` | One file per feature, 3 to 6. Starter idea: one per item in the appendix | [template](./templates/feature.md) |
+| `specs/features/*.md` | One file per feature, 3 to 6. Starter idea: one per heading in the appendix | [template](./templates/feature.md) |
 | `AGENTS.md` | Your instructions for the agent, growing with the project | [template](./templates/AGENTS.md) |
 | GitHub Issues | One per feature, with the agent's plan as a comment, closed by a commit (`closes #12`) | |
 | `chat-history/` | The chat of at least one issue, start to finish | |
 | `docs/explanation.md` | Three questions | [template](./templates/explanation.md) |
-
-Keep the full git history: don't squash, don't start a fresh repo, don't
-force-push.
 
 ### The three questions
 
@@ -82,7 +79,8 @@ Short answers, your own words. Every file and line you name must exist.
 ### Chat history
 
 One issue, start to finish: prompt, plan, build, review, ask. Pick one where
-something did not work in one go. Save it as `chat-history/issue-<number>.json`:
+something did not work in one go. Save it in `chat-history/` with the issue number in the name, in any format
+your tool exports:
 
 - Copilot in VS Code: Command Palette → `Chat: Export Chat...`
 - Claude Code: `/export`
@@ -115,7 +113,7 @@ A 1.
 - [ ] Dark mode: every screen looks right, all colours from the theme.
 - [ ] Pagination: the list loads page by page while you scroll ([infinite scroll](https://tanstack.com/query/latest/docs/framework/react/guides/infinite-queries)), for example 20 at a time. Not the whole list at once.
 - [ ] Clean TypeScript: no `any`, no `as` casts (`as const` is fine), no `@ts-ignore`.
-- [ ] Design. Pokédex: pixel perfect to the Figma. Other routes: a consistent own style, with your own font ([Expo Font](https://docs.expo.dev/develop/user-interface/fonts/)), and buttons, cards and spacing that look the same on every screen.
+- [ ] Design (battle simulator and own idea): a consistent own style, with your own font ([Expo Font](https://docs.expo.dev/develop/user-interface/fonts/)), and buttons, cards and spacing that look the same on every screen.
 - [ ] [Localization](https://docs.expo.dev/guides/localization/): two languages, the app follows the phone's language.
 - [ ] No warnings: no `console.log`, no warnings in the terminal or on screen.
 - [ ] Offline: the app works in airplane mode with the last data it loaded.
@@ -130,8 +128,12 @@ A 1.
 
 Follow the [Figma file](https://www.figma.com/design/dsgGXcu5WELIvRW90m5308/Pok%C3%A9mon-Code-Challenge?node-id=1-2) closely: type colours, font, spacing, icons.
 
+Every heading is one feature: one spec file, one issue.
+
 **List**
 - [ ] All ~1300 Pokémon, as in the design, live from the API. Loads fast, scrolls smoothly.
+
+**Search**
 - [ ] Search by name finds every Pokémon, also one that is not loaded yet. PokeAPI has no search endpoint: you work out how.
 
 **Detail**
@@ -144,7 +146,7 @@ Follow the [Figma file](https://www.figma.com/design/dsgGXcu5WELIvRW90m5308/Pok%
 **Favorites**
 - [ ] Own screen, still there after a restart, with an empty state.
 
-**Other**
+**For every feature** (not a feature of its own: put these in the constraints)
 - [ ] Loading and error state on list, detail and evolution chain.
 - [ ] The font from the design with Expo Font ([fonts.zip](./assets/fonts.zip)).
 
@@ -158,6 +160,7 @@ Figma has no screen for this: follow its style.
 ## Appendix B: Battle simulator
 
 Your own design. Keep it simple: two Pokémon, HP bars, a log of the turns.
+Every heading is one feature: one spec file, one issue.
 [Impression](https://github.com/user-attachments/assets/634a72c3-d79d-4452-a650-2b80561c8d43).
 
 **Setup**
@@ -176,7 +179,7 @@ Your own design. Keep it simple: two Pokémon, HP bars, a log of the turns.
 - [ ] Every fight stored: who, who, winner, number of turns. Still there after a restart.
 - [ ] A history screen with an empty state.
 
-**Other**
+**For every feature** (not a feature of its own: put these in the constraints)
 - [ ] Loading and error state on search, Pokémon, moves and types.
 
 Out of scope: abilities, items, status effects, weather, special move effects

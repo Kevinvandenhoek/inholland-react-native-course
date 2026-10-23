@@ -59,7 +59,7 @@ Pick a city and see which days are dry.
 - [x] Dark mode: every screen looks right, all colours from the theme
 - [ ] Pagination: page by page while you scroll, not all at once
 - [x] Clean TypeScript: no `any`, no `as` casts, no `@ts-ignore`
-- [ ] Design: pixel perfect (Pokédex) or a consistent own style with your own font
+- [ ] Design (not Pokédex): a consistent own style with your own font
 - [ ] Localization: two languages
 - [ ] No warnings: no `console.log`, none in the terminal or on screen
 - [x] Offline: works in airplane mode with the last data
